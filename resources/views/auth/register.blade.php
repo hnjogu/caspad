@@ -37,25 +37,25 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="col-md-4 mb-3">
-                          <div class="form-group">
-                            <strong>Country:</strong>
+                          <div class="form-group row">
+                            <label for="Country" class="col-md-4 col-form-label text-md-right">{{ __('Country') }}</label>
+                            <div class="col-md-6">
                               <select id="country" name="country" class="form-control input-lg dynamic" data-dependent="capitalcity">
-                              <option value="">-- Select Country --</option>
-                              @foreach($country_list as $countrydata)
-                                <option value=" {{ $countrydata->country}}">{{ $countrydata->country }}</option>
-                              @endforeach
-                            </select>
-
-                          </div>
-                      </div>
-                      <div class="col-md-4 mb-3">
-                          <div class="form-group">
-                            <strong>Capital City:</strong>
-                              <select name="capitalcity" id="capitalcity" class="form-control input-lg" >
+                                <option value="">-- Select Country --</option>
+                                @foreach($country_list as $countrydata)
+                                  <option value=" {{ $countrydata->country}}">{{ $countrydata->country }}</option>
+                                @endforeach
                               </select>
+                            </div>
                           </div>
-                      </div>
+
+                        <div class="form-group row">
+                          <label for="Country" class="col-md-4 col-form-label text-md-right">{{ __('Capital City') }}</label>
+                          <div class="col-md-6">
+                            <select name="capitalcity" id="capitalcity" class="form-control input-lg" >
+                            </select>
+                          </div>
+                        </div>
                         <div class="form-group row">
                             <label for="Mobile" class="col-md-4 col-form-label text-md-right">{{ __('Mobile') }}</label>
 
@@ -135,7 +135,7 @@
      var _token = $('input[name="_token"]').val();
      $.ajax({
       //url:"{{ route('users.fetch') }}",
-      url:"{{ route('users.fetch') }}",
+      url:"{{ route('users.fetch2') }}",
       method:"get",
       data:{select:select, value:value, _token:_token, dependent:dependent},
       success:function(result)
