@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Caspad Projects</title>
+    <title>Caspad Transcription</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -32,9 +32,9 @@
 
                         @forelse ($Project as $Project)
                         <!--   {{$Project->id}} -->
-                            
-                          @empty       
-                        @endforelse 
+
+                          @empty
+                        @endforelse
 
   <div>
     <!-- <h6 align="center">Caspad</h6> -->
@@ -55,8 +55,8 @@
           <div class="row pb-5 p-5">
             <div class="col-md-6 text-center">
               <!--  <h4><p class="font-weight-bold mb-1">Plantation Location Details</p></h4> -->
-              <p class="mb-1"><b>Serial Number</b>:{{$Project->project_id}}</p>
-              <p class="mb-1"><b>Name</b>:{{$Project->customer_name}}</p>
+              <p class="mb-1"><b>Serial Number</b>: {{$Project->project_id}}</p>
+              <p class="mb-1"><b>Name</b>: {{$Project->customer_name}}</p>
             </div>
           </div>
         </div>
@@ -64,7 +64,7 @@
 	            <table class="table table-striped table-bordered"cellspacing="1" width="100%">
 		            <thead>
 		                <tr>
-		                    <th>Content</th>
+		                    <th></th>
 		                </tr>
 		            </thead>
 		            <tbody>
