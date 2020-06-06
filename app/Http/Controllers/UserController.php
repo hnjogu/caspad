@@ -252,4 +252,17 @@ class UserController extends Controller
         return redirect('/login');
 
     }
+
+    // user approve
+    public function approveDisapprove(Request $request)
+    {
+        if (Auth::id() != $request->user_id) {
+          $user = User::findOrFail($request->user_id);
+          $user->approved_at = !$user->approved_at;
+          $user->save();
+          return redirect()->route("users.index")->with('success', $user->name." status has been changed!");
+        } else  {
+          return redirect()->back()->withErrors(['You can\'t change your status!']);
+        }
+    }
 }

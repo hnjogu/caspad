@@ -87,7 +87,11 @@
                                       {{ Form::submit(($user->active == 0) ? 'Reactive' : 'Deactivate', ['name' => 'submit', 'class' => 'btn btn-warning']) }}
                                   {{ Form::close() }}
                                 @endcan
-                                <a class='btn btn-success btn-xs' href = 'index/{{ $user->id }}'>Approve</a>
+                                  {{ Form::open(['route' => ['users.approveDisapprove'], 'method' => 'POST']) }}
+                                      {{ Form::hidden('user_id', $user->id) }}
+                                      {{ Form::submit(($user->approved_at == 0) ? 'Approve' : 'Disapprove', ['name' => 'submit', 'class' => 'btn btn-success']) }}
+                                  {{ Form::close() }}
+                   <!--              <a class='btn btn-success btn-xs' href = 'index/{{ $user->id }}'>Approve</a> -->
                           </td>
                         </tr>
                        @endforeach

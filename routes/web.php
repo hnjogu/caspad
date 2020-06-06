@@ -16,7 +16,7 @@ Route::get('/pp', 'WebController@pp');
 Route::get('/cs', 'WebController@cs');
 
 Auth::routes();
-
+Route::get('users/fetch2', 'countryController@fetch2')->name('users.fetch2');
 
 Route::group(['middleware' => ['auth']], function() {
 	Route::get('/approval', 'HomeController@approval')->name('approval');
@@ -56,6 +56,7 @@ Route::group(['middleware' => ['auth']], function() {
 	        // user and role routes
 	    Route::get('users/fetch', 'UserController@fetch')->name('users.fetch');
 	    Route::post('users/activeDeactive', 'UserController@activeDeactive')->name('users.activeDeactive');
+	    Route::post('users/approveDisapprove', 'UserController@approveDisapprove')->name('users.approveDisapprove');
 	    Route::resource('roles','RoleController');
 		Route::resource('users','UserController');
 			// Find work routes
