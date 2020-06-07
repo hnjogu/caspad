@@ -43,6 +43,21 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <div class="collapse navbar-collapse" id="navbarCollapse">
+                                <div class="navbar-nav ml-auto">
+                                @auth
+                                    <a href="{{ url('/home') }}" class="nav-item nav-link active">Dashboard</a>
+                                 @else
+                                </div>
+                <!--                 <div class="navbar-nav ml-auto">
+                                  @if (Route::has('register'))
+                                    <a href="{{ route('register') }}" class="nav-item nav-link">Register</a>
+                                  @endif
+                                </div> -->
+                                @endauth 
+                            </div>
+                        </li>
                         <!-- Authentication Links -->
                         @guest
                         <li class="nav-item">
@@ -60,7 +75,7 @@
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link btn btn-primary btn-sm" href="{{ route('register') }}">{{ __('Customer Sign Up') }}</a>
+                                    <a class="nav-link btn btn-primary btn-sm" href="{{ route('register') }}">{{ __('Sign Up') }}</a>
                                 </li>
                             @endif
                         @else
