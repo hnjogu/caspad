@@ -17,6 +17,7 @@
                 <th>Pay / Min</th>
                 <th>Total Pay</th>
                 <th>Subject</th>
+                <th>Play</th>
                 <th>Options</th>
               </tr>
             </thead>
@@ -29,7 +30,14 @@
                         <td> 0.40 </td>
                         <td> {{$row->total_amount}} </td>
                         <td> {{$row->subject}} </td>
-                    <td> <a class="btn btn-success btn-sm" href="/workspace/{{$row->id}}">Claim</a> </td>
+                        <td>
+                            <audio controls>
+                                <source src="{{asset('/files/' .$row->file_name)}}" type="audio/ogg">
+                            </audio>
+                        </td>
+                        <td>
+                            <a class="btn btn-success btn-sm" href="/workspace/{{$row->id}}">Claim</a>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>
