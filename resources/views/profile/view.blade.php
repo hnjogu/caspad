@@ -60,9 +60,7 @@
                                 </div>
                                 <div class="panel-footer">
                                     <span class="pull-right">
-                                        <button class="btn btn-sm btn-warning" type="button"
-                                                data-toggle="tooltip"
-                                                data-original-title="Edit this user"><i class="fas fa-edit"></i></i></button>
+                                        <a class='btn btn-sm btn-warning btn-xs' href="{{ url('/geteditprofile/'.$user_id->id)}}"><i class="fas fa-edit"></i> Edit</a>
 
                                     </span>
                                 </div>

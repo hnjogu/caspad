@@ -28,6 +28,8 @@ Route::group(['middleware' => ['auth']], function() {
 		Route::get('/dashboard', 'AdminController@index');
 		    // profile Update
 		Route::get('/viewprofile/{id}', 'profileController@viewprofile')->name('viewprofile');
+	    Route::get('/geteditprofile/{id}', 'profileController@geteditprofile')->name('geteditprofile');
+	    Route::post('/editprofile/{id}','profileController@updateprofile')->name('updateprofile');
 
 		// projects route
 		Route::get('/getprojectsindex', 'ProjectsController@getprojectsindex')->name('getprojectsindex');
