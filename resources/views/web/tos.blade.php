@@ -11,86 +11,133 @@
                     OVERVIEW
                 </h5>
                 <p>
-                    This website is operated by Caspad Limited. Throughout the site, the terms “we”, “us” and
-                    “our” refer to Caspad Limited. Caspad Limited offers this website, including all
-                    information, tools and services available from this site to you, the user, conditioned upon
-                    your acceptance of all terms, conditions, policies and notices stated here. By visiting our
-                    site and/ or purchasing via our platform you engage in our “Service” and agree to be bound
-                    by the following terms and conditions (“Terms of Service”, “Terms”), including those
-                    additional terms and conditions and policies referenced herein and/or available by
-                    hyperlink. These Terms of Service apply to all users of the site, including without
-                    limitation users who are browsers, vendors, customers, merchants, and/ or contributors
-                    of content. Please read these Terms of Service carefully before accessing or using
-                    our website. By accessing or using any part of the site, you agree to be bound by
-                    these Terms of Service. If you do not agree to all the terms and conditions of this
-                    agreement, then you may not access the website or use any services. If these Terms
-                    of Service are considered an offer, acceptance is expressly limited to these Terms
-                    of Service. Any new features or tools which are added to the current store shall
-                    also be subject to the Terms of Service. You can review the most current version
-                    of the Terms of Service at any time on this page. We reserve the right to update
-                    , change or replace any part of these Terms of Service by posting updates and/or
-                    changes to our website. It is your responsibility to check this page periodically
-                    for changes. Your continued use of or access to the website following the
-                    posting of any changes constitutes acceptance of those changes.
+                    Welcome the website (the “Site”, “Platform”) of Caspad Ltd. This website is operated by Caspad Ltd. to provide information about our company; online transcription services and document related services to our users. The following terms of use affect your legal rights and obligations with regards to your use of our service. Please review these terms (the “Agreement” or “Terms of Use”) carefully. This is a legal agreement between you and Caspad Ltd. (“Caspad”, “we”, or “us) regarding the use of our online and/or mobile services, website, and software provided by us (collectively known as the “Service”, “Caspad Service”). By registering for an account or otherwise accessing or using the service, you agree to be bound by the terms of this agreement, including any updates or revisions to the terms or any policy, whether or not you are a registered user of the Caspad Service.
+                </p>
+
+                <p>
+                    We reserve the right to modify this Agreement at any time by notifying you as provided in this Agreement, provided that no notice shall be required or given for non-substantive changes to the Agreement. If we amend this Agreement substantively, we will allow at least seven (7) days before the changes take effect, during which period of time you may reject the changes by terminating your use of our Service. Your continued use of the service after any such change takes effect constitutes your acceptance of the new Terms of Use. Any new features or tools which are added to the site shall also be subject to these Terms of Use. If you do not agree to any of these terms or any future Terms of Use, you may not access or use Caspad Service.
                 </p>
 
                 <h5 class="card-title text-center blue">
-                        GENERAL CONDITIONS
+                    Eligibility
                 </h5>
                 <p>
-                    We reserve the right to refuse service to anyone for any reason at any time.
-                    You understand that your content (not including credit card information),
-                    may be transferred unencrypted and involve (a) transmissions over various networks;
-                    and (b) changes to conform and adapt to technical requirements of connecting networks
-                    or devices. Credit card information is always encrypted during transfer over networks.
-                    You agree not to reproduce, duplicate, copy, sell, resell or exploit any portion of the
-                    Service, use of the Service, or access to the Service or any contact on the website
-                    through which the service is provided, without express written permission by us.
-                    The headings used in this agreement are included for convenience only and will not
-                    limit or otherwise affect these Terms.
+                    You may use our Service only if you can form a binding contract with Caspad Ltd., and only in compliance with this Agreement and all applicable local, national, and international laws, rules and regulations. If you are entering into this agreement on behalf of a company or other legal entity, you represent and warrant that you are authorized and lawfully able to bind such entity to this Agreement. (In which case “you”, “your” shall refer to such entity). You represent and warrant that you are, over eighteen (18) years of age or of legal age to form a binding contract; not a person barred from using the Service under the laws of your country of residence or any other applicable jurisdiction. If you are under 18, your parent or guardian must enter into this Agreement on your behalf, and will be responsible for your use of and access to the Caspad Service. Any use or access to the Caspad Service by anyone under 13 is prohibited and in violation of this Agreement. If you are under 13, please do not attempt to register for the Caspad Service or send any information about yourself to us; (including but not limited to your name, address, telephone number, or email address). If we learn that we have collected personal information from anyone under age 13, we will delete that information from our database.
                 </p>
 
                 <h5 class="card-title text-center blue">
-                        ACCURACY, COMPLETENESS AND TIMELINESS OF INFORMATION
+                    Your Rights
+                </h5>
+
+                <p>
+                    Caspad grants you limited, non-exclusive, non-transferable, non-sublicensable, revocable license to access and view pages within the Service; to access and use any online software, applications or other similar components made available through the Service, only within the Service and only in the form found within the Service. All rights granted to you under this Agreement are subject to your compliance with these Terms of Service. We may terminate these rights at any time at our discretion.
+                </p>
+
+                <h5 class="card-title text-center blue">
+                    Accuracy, Completeness and Timeliness of Information and Delivery of the Service
                 </h5>
                 <p>
-                        We are not responsible if information made available on this site is not accurate, complete or current. The material on this site is provided for general information only and should not be relied upon or used as the sole basis for making decisions without consulting primary, more accurate, more complete or more timely sources of information. Any reliance on the material on this site is at your own risk. This site may contain certain historical information. Historical information, necessarily, is not current and is provided for your reference only. We reserve the right to modify the contents of this site at any time, but we have no obligation to update any information on our site. You agree that it is your responsibility to monitor changes to our site. The headings used in this agreement are included for convenience only and will not limit or otherwise affect these Terms.
+                    We are not responsible if information made available on this site is not accurate, complete or current. The material on this site is provided for general information only and should not be relied upon or used as the sole basis for making decisions without consulting primary, more accurate, more complete or more timely sources of information. Any reliance on the material on this site is at your own risk. Caspad reserves the right to modify the contents of this site at any time, but we have no obligation to update any information on our site. You agree that it is your responsibility to monitor changes to our site. To qualify for 15 hours turnaround, all uploads must be made prior to 000Hrs, East African Time. All other uploads made after midnight, will be processed from 0600Hrs, East African Time.
+                </p>
+                <p>
+                    While Caspad makes all attempts to complete the transcription work on time and accurately, it cannot absolutely guarantee the delivery date or quality of the transcripts to be acceptable when it is delivered. We will redo the transcript if it is not up to standard and attempt to deliver it on time. However, we cannot be held responsible for any losses due to a delay in delivery or inaccuracy that may occur. By agreeing to these terms, the client indemnifies Caspad, its contractors and its employees from any losses that may be incurred due to project delays, inaccuracy, publication, quotation, distribution or public use of part of/all transcript that may contain a typographical or factual error or even those without error of the transcripts.
                 </p>
 
-                <h5 class="card-title text-center">
-                    Access and Uses of the Service <br> <u> Member Account, Password & Security</u>
+                <h5 class="card-title text-center blue">
+                    Use of Our Services
                 </h5>
-                <p class="card-text">
-                    The user is responsible for maintaining the confidentiality of his/her passwords and account.
-                    The user is fully responsible for any and all activities that occur under his/her password or account.
-                    You agree to immediately notify the site of any authorized use of your password or account or any other
-                    breach of security and ensure that you exit from your account at the end of every session. The site will not
-                    be held accountable for matters arising from your failure to comply with the rules.
+                <h5>Conditions of Use</h5>
+                <p>
+                    You are required to create a user account on or Site in order to access and use the Service. You agree to provide and maintain true, accurate, current and complete information as prompted by the Service's registration form. The Customer and End Users shall be solely responsible for obtaining, configuring and maintaining any hardware, network connectivity and third-party software and services required to access or provide access to the Site, including the user account, computers, mobile devices, operating systems, web browsers and storage devices. The Customer acknowledges that we may establish general practices and limits concerning use of the Site, including but not limited to the maximum period of time that Customer Data will be retained by the Site and the maximum storage space that will be allotted on our servers on the Customer’s behalf. The Customer shall be responsible for backing-up Customer Data. You acknowledge that Caspad has no responsibility or liability for the deletion or failure to store any documents, data or other content maintained or uploaded by you to the Site. The Customer shall be solely responsible for complying with all applicable law relating to Customer’s access to and use of the Site and its collection, storage, processing and use of Customer Data. You agree not to access or use the Caspad Service if you work with or for a competitor, except with Caspad’s prior written consent. You may not use or access the Caspad Service for purposes of monitoring the performance or functionality for a competitor or for any third party, or for any other benchmarking or competitive purposes and you may not share any benchmarking data regarding the Service usage with any third party without Caspad’s prior written consent.
                 </p>
-                <h5 class="card-title text-center">
-                    Conditions of Use
+                <p>
+                    You agree not to engage in any of the following prohibited activities in connection with the Platform copying, distributing, or disclosing any part of the Site in any medium, including but not limited to, by any automated or non-automated “scraping”; using any automated system, including but not limited to “robots,” “spiders,” “offline readers,” to access the Site in a manner that sends more request messages to the Caspad servers than a human can reasonably produce in the same period of time by using a conventional on-line web browser; transmitting spam, chain letters, or other unsolicited email; attempting to interfere with, compromise the system integrity or security or decipher any transmissions to or from the servers running the Site; taking any action that imposes, or may impose at our discretion an unreasonable or disproportionately large load on our infrastructure; uploading invalid data, viruses, worms, or other software agents through the Site; collecting or harvesting any personally identifiable information, including account names, from the Site; using the Site for any commercial purposes without Caspad’s written authorization; impersonating another person or otherwise misrepresenting your affiliation with a person or entity, conducting fraud, hiding or attempting to hide your identity; interfering with the proper working of the Site; accessing any content on the Site through any technology or means other than those provided or authorized by Caspad; bypassing the measures we may use to prevent or restrict access to the Site, including but not limited to features that prevent or restrict use or copying of any content or enforce limitations on use of the Service or the content therein, or decompiling, reverse engineering, or otherwise attempting to obtain the source code of the Site.
+                </p>
+
+                <p>
+                    Caspad reserves the right to reject any project without providing any reason. Caspad reserves the right to reject any audio recording that it deems to be of such poor quality that: It is not possible to transcribe more than 30% of the audio; or the project is above and beyond Caspad’s resources. In the event that a project is rejected, the prepaid sum will be nonrefundable and will only be used to cover the cost (part or wholly) of future services offered to you by Caspad.
+                </p>
+
+                <p>
+                    The relationship between Caspad and the Customer established by this Agreement is solely that of independent contractors; neither party is in any way the partner or agent of the other, nor is either party authorized or empowered to create or assume any obligation of any kind, implied or expressed, on behalf of the other party, without the express prior written consent of such other party.
+                </p>
+
+                <h5 class="card-title text-center blue">
+                    User Account, Password and Security
                 </h5>
-                <p class="card-text">
-                    1. User is solely responsible for all documents, information, data, text, software, images,
-                    music, videos, photos, messages, and/or any other materialistic content that he/she uploads,
-                    posts, publishes or displays or email or otherwise use via the service. Whoever uses the site
-                    to i) infringe any intellectual property ii) upload fiduciary relationships iii) software
-                    viruses or anything that designed to interrupt, destroy or limit the functionality of any computer
-                     or telecommunication equipment iv) create a privacy or security risk to any person v) constitutes
-                      unauthorized advertizing, promotional materials or commercial activities of any kind vi) unlawful,
-                      vulgar, tortious, pornographic, invasive of people's privacy, racial or objectionable content
-                      vii) doing anything that may cause harm to the site or any of its users.
-                      Also anyone who also disrupts the service, servers, networks connected to the service or violates
-                      any applicable law either local or international, impersonate any person or entity, solicit personal
-                      information from a minor (age 18 and below), promote criminal activities or advertise or offer to sell
-                      or buy any goods or services for any business purpose that is not specifically authorized will be
-                      prosecuted and delt with in accordance with the law.
-                      2. In order to use the service one is required to make one or many payments and provide the site with
-                      accurate information regarding your credit card or any other instrument of payment.
+                <p>
+                    In order to access and use the Service, you are required to register an account on our Site. All data and other information provided for this process are governed by our Privacy Policy, which can be found at www.caspad.com/pp. The user is responsible for maintaining the confidentiality of his/her passwords and account. You are fully responsible for any and all activities that occur under your password or account. You agree to immediately notify us of any authorized use of your password or account or any other breach of security and ensure that you log out from your account at the end of every session. The site will not be held accountable for matters arising from your failure to comply with the rules.
+                </p>
 
+                <p>
+                    Caspad will, to the best of its capabilities; consistent with current best industry standards and such other requirements specified by the Customer based on the classification and sensitivity of Customer Information, maintain physical, administrative and technical safeguards and other security measures to: maintain the security and confidentiality of Customer Information accessed, collected, used, stored or transmitted by us; and to protect that information from known or reasonably anticipated threats or hazards to its security and integrity, accidental loss, alteration, disclosure and all other unlawful forms of processing. We will inform the Customer within 72 hours of detecting any actual or suspected unauthorized access, collection, acquisition, use, transmission, disclosure, corruption or loss of Customer Information, or breach of any environment containing Customer Information, (a “Security Incident”). We will remedy all Security Incidents in a timely manner and provide the Customer written details regarding our internal investigation regarding each Security Incident. Caspad agrees not to notify any regulatory authority, nor any customer, on behalf of the Customer unless the Customer specifically requests in writing that Caspad do so; and the Customer reserves the right to review and approve the form and content of any notification before it is provided to any party. Caspad will cooperate and work together with the Customer to formulate and execute a plan to rectify all confirmed Security Incidents.
+                </p>
 
+                <h5 class="card-title text-center blue">
+                    Fees and Payments
+                </h5>
+                <p>
+                    To use our Service, you (the “Customer” or the “Client”) will be required to make one or more payments and provide us with information regarding your credit card, PayPal, M-Pesa or any other payment instrument. You represent and warrant to Caspad that such information is true and that you are authorized to use the payment instrument. You will promptly update your account information with any changes (for example, change in billing address, PayPal email or credit card expiration date) that may occur. You agree to pay Caspad the amount that is specified by the Service in accordance with the terms therein and this Agreement. Caspad reserves the right to change our prices; if we change our prices, we will provide notice of the change on our website or in email to you. Your continued use of the Caspad Service after the price change becomes effective constitutes your agreement to pay the changed amount. Prepayments shall be nonrefundable and may only be used for future services. We have no refund, no cancellation policy; once an order is uploaded, the client is responsible for paying the full amount of the order.  The customer is responsible for any fees incurred during the process of making payments to Caspad (for example, wire transfer fees). You acknowledge that you are fully responsible for costs incurred due to duplicative uploads or incorrect selection of service type. You understand that our charges are per audio-minute and all fees specified herein are denominated in United States dollars unless otherwise specified. You (the freelancer/contractor/subcontractor/Caspad service providers) acknowledge and agree that Caspad will pay you the stated amount for a project only if it meets the standards specified on our style guide (including any future modifications made to the style guide) which can be downloaded from our Site.
+                </p>
+
+                <h5 class="card-title text-center blue">
+                    User Content
+                </h5>
+                <p>
+                    You are solely responsible for all audio and other data (“User Content”) that you upload, post, publish or display (hereinafter, “upload”) or email or otherwise use via the Caspad Service. You agree not to upload User Content that: may create a risk of harm, loss, physical or mental injury, emotional distress, death, disability, disfigurement, or physical or mental illness to you, to any other person; may create a risk of any other loss or damage to any person or property; seeks to harm or exploit children by exposing them to inappropriate content, asking for personally identifiable details or otherwise; may constitute or contribute to a crime or tort; contains any information or content that we deem to be unlawful, harmful, abusive, racially or ethnically offensive, defamatory, infringing, invasive of personal privacy or publicity rights, harassing, humiliating to other people (publicly or otherwise), libelous, threatening, profane, obscene, pornographic, or otherwise objectionable; contains any information or content that is illegal (including but not limited to, disclosure of any classified information under the law; disclosure of insider information under securities law or of another party’s trade secrets); contains any information or content that you do not have a right to make available under any law or under contractual or fiduciary relationships; or contains any information or content that you know is not correct and current. You agree that any User Content that you upload does not and will not violate third-party rights of any kind, including but not limited to Intellectual Property Rights.
+                </p>
+                <p>
+                    Caspad takes no responsibility and assumes no liability for any User Content that any user posts or sends over the Caspad Service. You acknowledge and agree that Caspad may preserve your User Content and may also disclose content if required to do so by law or in the good faith belief that such preservation or disclosure is reasonably necessary to: comply with legal process; enforce this Agreement; respond to claims that any content violates the rights of third parties; or protect the rights, property, or personal safety of Caspad, its users and the public. Disclosure of User Content is governed by our Privacy Policy, which can be found at www.caspad.com/pp. You understand that the technical processing and transmission of the Caspad Service, including your content, may involve transmissions over various networks; and changes to conform and adapt to technical requirements of connecting networks or devices. By uploading any User Content, you hereby grant and will grant Caspad and its affiliated companies a nonexclusive, worldwide, royalty free, fully paid up, transferable, sublicensable, perpetual, irrevocable license to copy, display, upload, perform, distribute, store, modify and otherwise use your User Content in connection with the operation of the Caspad Service, in any form, medium or technology now known or later developed. You acknowledge and agree that Caspad has no obligation to pre-screen Content, although Caspad reserves the right in its discretion to pre-screen, refuse or remove any Content. Caspad reserves the right to investigate and take appropriate legal action against anyone who, in Caspad's sole discretion, violates this provision, including but not limited to, removing the offending content from the Service, suspending or terminating the user’s account in violation and reporting you to the law enforcement authorities.
+                </p>
+
+                <h5 class="card-title text-center blue">
+                    Confidentiality
+                </h5>
+                <p>
+                    Any materials or data that you provide to Caspad for the purpose of providing the Service will be your “Confidential Information,” except to the extent such documents are known to Caspad prior to receipt from you from a source other than one having an obligation of confidentiality to you;
+                    become known (independently of disclosure by you) to Caspad directly or indirectly from a source other than one having an obligation of confidentiality to you; or become publicly known or otherwise cease to be secret or confidential, except through a breach of this section by Caspad. We will use the Confidential Information solely for the purpose of providing the Service to you (“Permitted Purpose”). Caspad will not, without your prior consent, disclose to any third party your Confidential Information, other than furnishing such Confidential Information to our directors, officers, service providers, employees, consultants, contractors, representatives or affiliated entities (collectively, “Associated Persons”) who need to have access to such Confidential Information in connection with the Permitted Purpose. We will use at least reasonable care to protect and maintain security of your Confidential Information from being disclosed to unauthorized persons. Caspad will use commercially reasonable efforts to give you notice in the event that Caspad is required by law to disclose your Confidential Information and will permit you to intervene in any relevant proceedings to protect your interests in your Confidential Information. Disclosure of Confidential Information is governed by our Privacy Policy, which can be found at www.caspad.com/pp.
+                </p>
+
+                <h5 class="card-title text-center blue">
+                    Intellectual Property Rights
+                </h5>
+                <p>
+                    For the purposes of this Agreement, “Intellectual Property Rights” means all patent rights, copyright rights, mask work rights, moral rights, rights of publicity, trademark, trade dress and service mark rights, goodwill, trade secret rights and other intellectual property rights as may now exist or hereafter come into existence, and all applications therefore and registrations, renewals and extensions thereof, under the laws of any state, country, territory or other jurisdiction. Each party reserves all rights not expressly granted under this Agreement.
+                </p>
+                <p>
+                    The Customer and End Users, and not Caspad, are solely responsible for all Customer Data and giving all required notices and obtaining all necessary consents (including all required permissions from Intellectual Property holders) before submitting Customer Data through or to the Site. Customer and End Users shall not submit, upload, email, transmit or otherwise make available through the Site any data not owned by Customer or End Users or for which Customer and End Users do not have all necessary authorization to submit, upload, email, transmit or otherwise make available through the Site. Caspad acknowledges and agrees that, as between the Customer and Caspad, the Customer owns all rights, title and interest (including all Intellectual Property) in and to Customer Data and any translations, transcriptions, or captions of such Customer Data. During the term of this Agreement, the Customer hereby grants Caspad and its service providers a worldwide, royalty-free, non-exclusive license to use, reproduce, modify, adapt, publicly perform, publicly display, distribute, make and have made Customer Data as necessary for Caspad to: provide access to the Site to the Customer and End Users; and monitor the performance of the Site. The Customer acknowledges and agrees that, as between Caspad and the Customer, Caspad owns all right, title and interest (including all Intellectual Property) in and to the Site and all improvements, enhancements or modifications thereto, including all data therein (except for Customer Data). The Customer acknowledges and agrees that Caspad may collect or generate Aggregate Data in connection with providing the Customer and End Users with access to the Site, and the Customer hereby grants Caspad and its service providers a perpetual, irrevocable, worldwide, royalty-free, fully-paid-up, non-exclusive, sublicensable, transferable license to use, reproduce, modify, adapt, publicly perform, publicly display, distribute, make and have made Aggregate Data for any lawful purpose. The Customer acknowledges and agrees that any Suggestions provided by you to Caspad are non-confidential, shall become the property of Caspad and Caspad will be entitled to the unrestricted use and dissemination of these Suggestions for any purpose, commercial or otherwise, without acknowledgment or compensation to you.  The Customer shall not remove, obscure or modify in any way any copyright or trademark notices or other notices or disclaimers that appear within the Site or any other materials made available by Caspad.
+                </p>
+                <p>
+                    In the event that some components of the Site may be provided with or have incorporated into them third-party software licensed under open source license agreements or other third-party license terms (“Third-Party Software”), the Customer acknowledges and agrees that: Caspad has no proprietary interest in any Third-Party Software; notwithstanding anything to the contrary, any Third-Party Software is provided “AS IS,” with all faults, and neither the licensor of Third-Party Software nor Caspad shall be liable for any direct, indirect, incidental, special, punitive or consequential damages, or loss or cost of cover, relating to arising from Third-Party Software, including access to or use of Third-Party Software; and Third-Party Software may be subject to separate terms and conditions set forth in the respective license agreements relating to such software.
+                </p>
+                <p>
+                    Any notice alleging that materials hosted by or distributed through the Caspad Service infringe intellectual property rights must include the following information: an electronic or physical signature of the person authorized to act on behalf of the owner of the copyright or other right being infringed; a description of the copyright-protected work or other intellectual property right that you claim has been infringed; a description of the material that you claim is infringing and where it is located on the Caspad Service; your address, telephone number, and email address; a statement by you that you have a good faith belief that the use of those materials on the Caspad Service is not authorized by the copyright owner, its agent, or the law; and a statement by you that the above information in your notice is accurate and that, under oath, you are the copyright or intellectual property owner or authorized to act on the copyright or intellectual property owner’s behalf. Infringement of intellectual property rights will lead to suspension or termination of use of the Caspad Service.
+                </p>
+
+                <h5 class="card-title text-center blue">
+                    Computer Misuse and Cybercrimes Act
+                </h5>
+                <p>
+                    We comply with the Computer Misuse and Cybercrimes Act, 2018, enacted by the Parliament of Kenya in 2018 to provide for offences relating to computer systems; cybercrime matters and related purposes. By using or accessing our Site or the Service, you agree to comply with this Act.
+                </p>
+
+                <h5 class="card-title text-center blue">
+                    Suspension and Termination
+                </h5>
+                <p>
+                    The term of this Agreement will commence on the date you begin using the Service and will continue as long as you maintain a user account, unless terminated by either party in accordance with the terms of this Agreement. Either party may terminate this agreement upon 30 days written notice to the other party. Caspad reserves the right to suspend or revoke access to the Site by any End User who violates this Agreement or any other of our policies. Caspad reserves the right to suspend the Customer or any End User’s access to the Site in the event of an emergency security issue; we will make commercially reasonable efforts to limit suspension to the minimum extent and duration necessary to eliminate the emergency security issue.
+                </p>
+                <p>
+                    Notwithstanding anything to the contrary, this Agreement may be terminated as follows: by the non-breaching party upon a material breach of this Agreement by the other party, which breach is not cured within thirty (30) days after receipt of written notice from the non-breaching party; or by either party in the event the other party becomes insolvent or bankrupt; becomes the subject of any proceedings under bankruptcy, insolvency or debtor’s relief law; has a receiver or manager appointed; makes an assignment for the benefit of creditors; or takes the benefit of any Applicable Law in force for the winding up or liquidation of such party’s business. Upon expiration or termination of this Agreement for any reason: all rights granted by the parties under this Agreement shall immediately terminate; and the Customer shall immediately cease all use of the Site made available under this Agreement. Upon expiration or termination of this Agreement each party shall immediately cease all use of the other party’s Confidential Information and upon written request, destroy all copies of such Confidential Information that are within its custody or control. Notwithstanding the termination of this Agreement for any reason, neither party will be relieved of any duty, obligation, debt or liability that arose or accrued prior to the effective date of termination. We may permanently or temporarily terminate or suspend your access to the Service without notice or liability to Caspad, for any reason or for no reason, including if in our discretion you violate any provision of this Agreement. Within 30 days of Termination, Caspad will return any prepaid, unused fees. Any provision that, by its terms, is intended to survive the expiration or termination of this Agreement shall survive such expiration or termination, including all other applicable terms for that provision.
+                </p>
+                <p>
+                    Should you wish to contact us with any questions, complaints or claims with respect to the Service, or this agreement, contact us via email, info@caspad.com or via any other contact means provided on our website.
+                </p>
+                <p>
+                    These terms of service were last modified on <b>07/June/2020</b>.
                 </p>
             </div>
+
             <div class="card-footer">
                 <p class="text-center">&copy; <?= date('Y'); ?> Caspad Ltd.</p>
             </div>
