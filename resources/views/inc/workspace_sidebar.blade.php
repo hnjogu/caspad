@@ -18,7 +18,6 @@
             <ul class="nav nav-pills nav-sidebar flex-column">
                 <li class="nav-item">
                     <a class="btn btn-info btn-sm" href="/findwork/{{$row->id}}/unclaim">Unclaim Project</a>
-                    <a class="btn btn-info btn-sm" href="">Unclaim Project</a>
                 </li>
             </ul>
         </div>
@@ -34,11 +33,6 @@
                     <p>Project : {{$row->project_id}}</p>
                     <hr>
                     <p>Pay : ${{$row->total_amount}}</p>
-                    <p>Customer : </p>
-                    <hr>
-                    <p>Project : </p>
-                    <hr>
-                    <p>Pay : </p>
                     <hr>
             </li>
           @endcan
