@@ -17,11 +17,8 @@
         <div class="info">
             <ul class="nav nav-pills nav-sidebar flex-column">
                 <li class="nav-item">
-<<<<<<< HEAD
                     <a class="btn btn-info btn-sm" href="/findwork/{{$row->id}}/unclaim">Unclaim Project</a>
-=======
                     <a class="btn btn-info btn-sm" href="">Unclaim Project</a>
->>>>>>> 760c73a27da802501ef9a7186508a72a62f7cbaf
                 </li>
             </ul>
         </div>

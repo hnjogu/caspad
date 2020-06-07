@@ -41,10 +41,12 @@ class profileController extends Controller
             'country' => 'required',
             'capitalcity' => 'required',
             'company' => 'required',
+            'id_number' => 'required',
+            'mobile' => 'required|string|min:10|max:13',
         ]);
         
      users::updateOrCreate(['id'=>$request->get('id')],
-    ['id' => $request->get('id'),'name' => $request->get('name'),'lastname' => $request->get('lastname'),'guard_name' => $request->get('guard_name')]); 
+    ['id' => $request->get('id'),'name' => $request->get('name'),'lastname' => $request->get('lastname'),'email' => $request->get('email'),'country' => $request->get('country'),'capitalcity' => $request->get('capitalcity'),'company' => $request->get('company'),'id_number' => $request->get('id_number'),'mobile' => $request->get('mobile')]); 
     //dd($permissions); 
 
 
