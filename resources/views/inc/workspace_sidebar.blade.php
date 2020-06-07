@@ -29,19 +29,16 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           @can('user-list')
             <li class="nav-item text-white">
-<<<<<<< HEAD
                     <p>Customer : {{$row->customer_name}}</p>
                     <hr>
                     <p>Project : {{$row->project_id}}</p>
                     <hr>
                     <p>Pay : ${{$row->total_amount}}</p>
-=======
                     <p>Customer : </p>
                     <hr>
                     <p>Project : </p>
                     <hr>
                     <p>Pay : </p>
->>>>>>> 760c73a27da802501ef9a7186508a72a62f7cbaf
                     <hr>
             </li>
           @endcan
