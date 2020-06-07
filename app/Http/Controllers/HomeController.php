@@ -35,8 +35,8 @@ class HomeController extends Controller
         $Total_users = User::all();
         $Today_new_users = User::whereDate('created_at', Carbon::today())->get();
         //role count 
-        $users_count = User::whereHas(['roles' => function($q){
-            //$q->where('name', 'admin');
+        $users_count = User::with(['roles' => function($q){
+            $q->where('name', 'admin');
             }])->get();
         //role loop dashboard
         $role = Auth::user()->roles->pluck('name');
