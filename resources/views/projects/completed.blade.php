@@ -4,11 +4,7 @@
 <div class="mt-4">
     <div class="card">
         <div class="card-header bg-success">
-
             <h4 class="text-center">Completed Projects</h4>
-
-            <h2 class="text-center">Completed Projects</h2>
-
         </div>
         <!-- /.card-header -->
         <div class="card-body p-0">
@@ -33,7 +29,7 @@
                         <td> {{$row->subject}} </td>
                         <td> {{$row->total_amount}} </td>
                         <td>
-                            <a class="btn btn-primary" href="{{ url('/clientpdf/'.$row->id) }}" role="button"><i class="fas fa-download"></i>Download</a>
+                            <a class="btn btn-primary" href="{{ url('/clientpdf/'.$row->id) }}" role="button"><i class="fas fa-download"></i> Download </a>
                         </td>
                     </tr>
                 @endforeach

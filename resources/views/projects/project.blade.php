@@ -23,10 +23,6 @@
                         <a class="btn btn-dblue btn-sm" href="/metrics"> <i class="fas fa-check-circle fa-3x"></i> <div class="mt-2">My <br> Metrics </div> </a>
                         <a class="btn btn-dblue btn-sm" href="/freelancer-earnings"> <i class="fas fa-star fa-3x"></i> <div class="mt-2">My <br> Earnings </div> </a>
 
-                        <a class="btn btn-dblue btn-sm" href="{{ route('projects.index') }}"> <i class="fas fa-user fa-3x"></i> <div class="mt-2">My <br>Completed Projects</div> </a>
-                        <a class="btn btn-dblue btn-sm" href="{{ route('projects.completed') }}"> <i class="fas fa-check-circle fa-3x"></i> <div class="mt-2">My <br> Metrics </div> </a>
-                        <a class="btn btn-dblue btn-sm" href="{{ route('projects.promotion') }}"> <i class="fas fa-star fa-3x"></i> <div class="mt-2">My <br> Earnings </div> </a>
-
                         <br>
                         <hr>
                         <p class="text-info">Grader Model</p>
@@ -35,11 +31,6 @@
                         <a class="btn btn-dblue btn-sm" href="/findwork/grader"> <i class="fas fa-edit fa-3x"></i> <div class="mt-2">Find <br> Projects</div> </a>
                         <a class="btn btn-dblue btn-sm" href="/findwork/graded-jobs"> <i class="fas fa-user fa-3x"></i> <div class="mt-2">My <br>Graded Projects</div> </a>
                         <a class="btn btn-dblue btn-sm" href="/grader-earnings"> <i class="fas fa-star fa-3x"></i> <div class="mt-2">My <br> Earnings </div> </a>
-
-                        <a class="btn btn-dblue btn-sm" href="{{ route('projects.create') }}"> <i class="fas fa-edit fa-3x"></i> <div class="mt-2">Find <br> Projects</div> </a>
-                        <a class="btn btn-dblue btn-sm" href="{{ route('projects.index') }}"> <i class="fas fa-user fa-3x"></i> <div class="mt-2">My <br>Graded Projects</div> </a>
-                        <a class="btn btn-dblue btn-sm" href="{{ route('projects.promotion') }}"> <i class="fas fa-star fa-3x"></i> <div class="mt-2">My <br> Earnings </div> </a>
-
                     </div>
                     <div class="card-footer"></div>
                 </div>

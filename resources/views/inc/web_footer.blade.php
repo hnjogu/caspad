@@ -114,7 +114,7 @@
         <hr>
 
         <!-- Social buttons -->
-        <ul class="list-unstyled list-inline text-center">
+        {{-- <ul class="list-unstyled list-inline text-center">
           <li class="list-inline-item">
             <a class="btn-floating btn-fb mx-1">
               <i class="fab fa-facebook-f"> </i>
@@ -140,8 +140,27 @@
               <i class="fab fa-dribbble"> </i>
             </a>
           </li>
-        </ul>
+        </ul> --}}
         <!-- Social buttons -->
+
+        {{-- Payments --}}
+        <ul class="list-unstyled list-inline text-center">
+            <li class="list-inline-item">
+              <a class="btn-floating btn-fb mx-1" title="PayPal">
+                <i class="fab fa-paypal fa-2x"> </i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn-floating btn-tw mx-1" title="VISA">
+                <i class="fab fa-cc-visa fa-2x"> </i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn-floating btn-gplus mx-1" title="Mastercard">
+                <i class="fab fa-cc-mastercard fa-2x"> </i>
+              </a>
+            </li>
+          </ul>
 
         <!-- Copyright -->
         <div class="footer-copyright bg-blue text-center py-3">© <?= date('Y'); ?> Caspad,   All Rights Reserved.
