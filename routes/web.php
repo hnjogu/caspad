@@ -29,7 +29,8 @@ Route::group(['middleware' => ['auth']], function() {
 		    // profile Update
 		Route::get('/viewprofile/{id}', 'profileController@viewprofile')->name('viewprofile');
 	    Route::get('/geteditprofile/{id}', 'profileController@geteditprofile')->name('geteditprofile');
-	    Route::post('/editprofile/{id}','profileController@updateprofile')->name('updateprofile');
+	    Route::post('/geteditprofile/{id}','profileController@updateprofile')->name('updateprofile');
+	    Route::get('users/fetch3', 'profileController@fetch3')->name('users.fetch3');
 
 		// projects route
 		Route::get('/getprojectsindex', 'ProjectsController@getprojectsindex')->name('getprojectsindex');

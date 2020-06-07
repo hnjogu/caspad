@@ -32,7 +32,7 @@ class profileController extends Controller
 
     public function updateprofile(Request $request, $id)
     {  
-        $users = new users;
+        $User = new User;
 
         $validatedData = $request->validate([
             'name' => 'required',
@@ -45,12 +45,31 @@ class profileController extends Controller
             'mobile' => 'required|string|min:10|max:13',
         ]);
         
-     users::updateOrCreate(['id'=>$request->get('id')],
+     User::updateOrCreate(['id'=>$request->get('id')],
     ['id' => $request->get('id'),'name' => $request->get('name'),'lastname' => $request->get('lastname'),'email' => $request->get('email'),'country' => $request->get('country'),'capitalcity' => $request->get('capitalcity'),'company' => $request->get('company'),'id_number' => $request->get('id_number'),'mobile' => $request->get('mobile')]); 
-    //dd($permissions); 
+    //dd($User); 
 
+       $User_data =DB::table('users')->select('*')->where('id', $id)->first();
+       
+       return redirect('viewprofile/'.$User_data->id)->with('message','Record updated successfully');
 
-     return redirect('showpermissions')->with('message','permissions Updated successfully');
+    }
+
+    function fetch3(Request $request)
+    {
+        $select = $request->get('select');
+        $value = $request->get('value');
+        $dependent = $request->get('dependent');
+        $data = DB::table('country')
+            ->where($select, $value)
+            ->groupBy($dependent)
+            ->get();
+            $output = '<option value="">Select '.ucfirst($dependent).'</option>';
+            foreach($data as $row)
+             {
+              $output .= '<option value="'.$row->$dependent.'">'.$row->$dependent.'</option>';
+             }
+             echo $output;
     }
 
 }

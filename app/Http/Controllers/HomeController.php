@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
+use App\User;
+use Carbon\Carbon;
 
 class HomeController extends Controller
 {
@@ -28,7 +31,20 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        // total users
+        $Total_users = User::all();
+        $Today_new_users = User::whereDate('created_at', Carbon::today())->get();
+        //role count 
+        $users_count = User::whereHas(['roles' => function($q){
+            //$q->where('name', 'admin');
+            }])->get();
+        //role loop dashboard
+        $role = Auth::user()->roles->pluck('name');
+
+            
+        return view('home',compact('Total_users','Today_new_users'))
+        ->with('role',$role)
+        ->with('users_count',$users_count);
     }
 
     public function approval()
