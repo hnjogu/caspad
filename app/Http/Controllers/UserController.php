@@ -12,6 +12,8 @@ use Spatie\Permission\Models\Role;
 use DB;
 use Hash;
 use Illuminate\Support\Facades\Auth;
+use App\Mail\approved;
+use Illuminate\Support\Facades\Mail;
 
 
 class UserController extends Controller
@@ -260,8 +262,11 @@ class UserController extends Controller
           $user = User::findOrFail($request->user_id);
           $user->approved_at = !$user->approved_at;
           $user->save();
+
+          Mail::to($user['email'])->send(new approved($user));
           return redirect()->route("users.index")->with('success', $user->name." status has been changed!");
         } else  {
+
           return redirect()->back()->withErrors(['You can\'t change your status!']);
         }
     }

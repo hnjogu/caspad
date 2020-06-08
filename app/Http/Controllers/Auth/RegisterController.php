@@ -10,6 +10,9 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use App\country;
 use DB;
+use App\Mail\welcomemail;
+use App\Mail\newuser;
+use Illuminate\Support\Facades\Mail;
 
 class RegisterController extends Controller
 {
@@ -74,7 +77,8 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
 
-        return User::create([
+        //return User::create([
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'country' => $data['country'],
@@ -83,6 +87,11 @@ class RegisterController extends Controller
             'mobile' => $data['mobile'],
             'password' => Hash::make($data['password']),
         ]);
+        Mail::to($data['email'])->send(new welcomemail($user));
+        Mail::to("harristars@gmail.com")->send(new newuser($user));
+
+    //return view('approval');
+    return $user;
     }
 
     public function showRegistrationForm()
