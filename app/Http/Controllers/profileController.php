@@ -10,6 +10,11 @@ use Spatie\Permission\Models\Role;
 
 class profileController extends Controller
 {
+    function __construct()
+    {
+         $this->middleware('permission:profile-view', ['only' => ['viewprofile']]);
+         $this->middleware('permission:profile-edit', ['only' => ['geteditprofile','updateprofile']]);
+    }
     //
     public function viewprofile($id)
     {

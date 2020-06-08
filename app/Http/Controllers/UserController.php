@@ -29,8 +29,11 @@ class UserController extends Controller
          $this->middleware('permission:user-create', ['only' => ['create','store']]);
          $this->middleware('permission:user-edit', ['only' => ['edit','update']]);
          $this->middleware('permission:user-activeDeactive', ['only' => ['activeDeactive']]);
+         $this->middleware('permission:user-approveDisapprove', ['only' => ['approveDisapprove']]);
+         $this->middleware('permission:user-changePassword', ['only' => ['showChangePasswordForm','changePassword']]); 
          $this->middleware('permission:user-delete', ['only' => ['destroy']]);
     }
+
 
 
     public function index(Request $request)

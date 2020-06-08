@@ -58,12 +58,14 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="panel-footer">
-                                    <span class="pull-right">
-                                        <a class='btn btn-sm btn-warning btn-xs' href="{{ url('/geteditprofile/'.$user_id->id)}}"><i class="fas fa-edit"></i> Edit</a>
+                                @can('profile-edit')
+                                    <div class="panel-footer">
+                                        <span class="pull-right">
+                                            <a class='btn btn-sm btn-warning btn-xs' href="{{ url('/geteditprofile/'.$user_id->id)}}"><i class="fas fa-edit"></i> Edit</a>
 
-                                    </span>
-                                </div>
+                                        </span>
+                                    </div>
+                                @endcan
                             </div>   
                         </div>
                     </div>
