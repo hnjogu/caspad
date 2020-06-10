@@ -46,8 +46,8 @@
                 </a>
             </li>
           @endcan
-            
-          @can('permissions-list')  
+
+          @can('permissions-list')
             <li class="nav-item">
                 <a class="nav-link {{ Request::is('showpermissions') ? 'active' : '' }}" href="{{ route('showpermissions') }}">
                     <i class="nav-icon fa fa-arrows-alt"></i>
@@ -56,7 +56,7 @@
             </li>
           @endcan
 
-          @can('Projects-dashboard') 
+          @can('Projects-dashboard')
             <li class="nav-item">
                 <a class="nav-link {{ Request::is('getprojectsindex') ? 'active' : '' }}" href="{{ route('getprojectsindex') }}">
                     <i class="nav-icon far fa-flag"></i>
@@ -64,11 +64,17 @@
                 </a>
             </li>
           @endcan
+
+          <li class="nav-item">
+              <a class="nav-link {{ Request::is('accounts') ? 'active' : '' }}" href="{{ route('accounts') }}">
+                  <i class="nav-icon far fa-flag"></i>
+                  <p>Manage Accounts</p>
+              </a>
+          </li>
+
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
   </aside>
-
-

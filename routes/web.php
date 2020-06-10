@@ -80,9 +80,10 @@ Route::group(['middleware' => ['auth']], function() {
         Route::get('/metrics/{id}/view', 'FindworkController@viewMetrics');
         Route::get('/freelancer-earnings', 'FindworkController@freelancerEarnings');
         Route::get('/grader-earnings', 'FindworkController@graderEarnings');
+				Route::get('/workspace', 'FindworkController@workspace')->name('workspace.index');
 
-		Route::get('/findwork', 'FindworkController@index')->name('findwork.index');
-		Route::get('/workspace', 'FindworkController@workspace')->name('workspace.index');
+				// Manage Account route
+				Route::get('/accounts', 'AccountsController@index')->name('accounts');
 
 	});
 
