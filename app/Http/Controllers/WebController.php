@@ -60,4 +60,34 @@ class WebController extends Controller
     {
         return view('web.cs');
     }
+
+    public function medical()
+    {
+        return view('web.medical');
+    }
+
+    public function research()
+    {
+        return view('web.research');
+    }
+
+    public function business()
+    {
+        return view('web.business');
+    }
+
+    public function academic()
+    {
+        return view('web.academic');
+    }
+
+    public function legal()
+    {
+        return view('web.legal');
+    }
+
+    public function podcast()
+    {
+        return view('web.podcast');
+    }
 }

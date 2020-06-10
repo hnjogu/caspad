@@ -3,14 +3,13 @@
 @section('content')
     <div class="container">
        <div class="jumbotron">
-           <h3 class="display-4 text-center">Privacy Policy</h3>
-           <hr class="my-2">
+           <h1 class="upper border-bottom border-primary text-center">Privacy Policy</h1>
            <p>
             At Caspad, we are committed to protecting your information and respecting your privacy. By using our services, you agree to this privacy policy. The terms “Caspad”, “we”, “our” or “us” refer to Caspad Ltd. This privacy policy however, does not apply to any co-branded pages of our partners, affiliates, service providers and sponsors.
             This privacy policy explains our uses and practices regarding your personal information, data that we collect and all electronic media files sent to our site. If you do not agree to this privacy policy, please do not use our services.
            </p>
 
-           <h3 class="display-5">Information Collection, Use and Sharing</h3>
+           <h3 class="display-5 text-success">Information Collection, Use and Sharing</h3>
            <hr class="my-2">
            <p>
             Caspad Ltd. is the sole owner of the information collected on this site. When you request information or content from Caspad and supply information or content that personally identifies you or allows us to contact you, you agree to share that information with Caspad, its agents, representatives, and affiliates. We only have access to information that you voluntarily give us via our online portal, marketing site, or related tools. You can log into your account, view any files and edit your personal information at any time. The account belongs to you and you have the right to review and change your personal information (contact information, name and password) at any time.
@@ -19,7 +18,7 @@
             Some instances where we may disclose your information would be when we have to comply with a legal obligation (e.g. warrants, subpoenas and court orders); enforce our company policies; protect our or others rights, property and safety; protect against legal liability. Otherwise, financial information or personally identifiable information will not be provided to other parties for marketing, advertising or any other uses.
            </p>
 
-           <h3 class="display-5">Cookies Privacy</h3>
+           <h3 class="display-5 text-success">Cookies Privacy</h3>
            <hr class="my-2">
            <p>
             Cookies are small text files which are transferred from our websites, applications or services to your devices hard drive through your web browser (if you allow). Cookies enable a site or service provider systems to recognize your browser, capture and remember certain information. We use cookies to help us provide you with a personalized service, and to improve the user-experience on our websites, applications and services.
@@ -30,7 +29,7 @@
        </div>
 
        <div class="jumbotron">
-           <h1 class="display-5">Changes to Our Privacy Policy</h1>
+           <h1 class="display-5 text-success">Changes to Our Privacy Policy</h1>
            <hr class="my-2">
            <p>
             For any changes to our Privacy Policy, we will update the Policy modification date below. This Policy was last revised on 25th-April-2020.

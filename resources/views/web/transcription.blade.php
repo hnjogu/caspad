@@ -2,11 +2,18 @@
 
 @section('content')
     <div class="container-fluid">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Transcription</li>
+        </ol>
+      </nav>
+
         <div class="jumbotron">
-            <h1 class="display-3 text-center">Professional Transcription Services.</h1>
-            <p class="lead text-center">100% Human Generated Transcripts.</p>
+            <h1 class="upper border-bottom border-primary text-center">Professional Transcription Services</h1>
+            <p class="lead text-center text-muted">100% Human Generated Transcripts.</p>
             <hr class="my-2">
-            <h2>Transcription </h2>
+            <h2 class="text-success">Transcription </h2>
             <p>
                 <ul>
                     <li>Convert your audio recordings into transcripts for $0.90 per audio minute.</li>
@@ -18,9 +25,8 @@
         </div>
 
         <div class="jumbotron">
-            <h2 class="text-center display-3">How it Works</h2>
-            <hr class="my-2">
-            <h2> 1. <a href="/register"> Upload Audio </a> </h2>
+            <h1 class="upper border-bottom border-primary text-center">How it Works</h1>
+            <h2 class="mt-4"> 1. <a class="text-success" href="/register"> Upload Audio </a> </h2>
             <p>
                 <ul>
                     <li>Once you create an account, go to your dashboard to upload an audio recording.</li>
@@ -35,7 +41,7 @@
 
         <div class="jumbotron">
             <hr class="my-2">
-            <h2> 2. Professional Transcription </h2>
+            <h2 class="text-success"> 2. Professional Transcription </h2>
             <p>
                 <ul>
                     <li>The audio recording is analyzed to be matched with the perfect transcriptionist for its category.</li>
@@ -47,7 +53,7 @@
 
         <div class="jumbotron">
             <hr class="my-2">
-            <h2> 3. Download Your Transcript </h2>
+            <h2 class="text-success"> 3. Download Your Transcript </h2>
             <p>
                 <ul>
                     <li>We notify you via email when your transcript is ready.</li>
@@ -58,9 +64,8 @@
         </div>
 
         <div class="jumbotron">
-            <h2 class="text-center display-3">Types of Transcriptions</h2>
-            <hr class="my-2">
-            <h2> 1. <strong>Verbatim:</strong> Every spoken word is captured. </h2>
+            <h1 class="upper border-bottom border-primary text-center">Types of Transcriptions</h1>
+            <h2 class="mt-4"> 1. <strong><span class="text-success">Verbatim</span>:</strong> Every spoken word is captured. </h2>
             <p>
                 <ul>
                     <li>All speech is captured word for word from the beginning to the end.</li>
@@ -70,7 +75,7 @@
                 The transcript is long and speech patterns don’t flow well making it hard to read.
             </p>
 
-            <h2> 2. <strong>Non-Verbatim:</strong> Clean read version transcript. </h2>
+            <h2> 2. <strong><span class="text-success">Non-Verbatim</span>:</strong> Clean read version transcript. </h2>
             <p>
                 Non-verbatim captures only what the speaker actually intended to say. This is our default style for all transcription services and the most commonly requested transcription.
 

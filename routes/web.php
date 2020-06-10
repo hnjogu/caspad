@@ -14,6 +14,13 @@ Route::post('/sendemail/send', 'WebController@send');
 Route::get('/tos', 'WebController@tos');
 Route::get('/pp', 'WebController@pp');
 Route::get('/cs', 'WebController@cs');
+Route::get('/medical', 'WebController@medical');
+Route::get('/research', 'WebController@research');
+Route::get('/business', 'WebController@business');
+Route::get('/academic', 'WebController@academic');
+Route::get('/legal', 'WebController@legal');
+Route::get('/podcast', 'WebController@podcast');
+
 
 Auth::routes();
 Route::get('users/fetch2', 'countryController@fetch2')->name('users.fetch2');
@@ -38,7 +45,7 @@ Route::group(['middleware' => ['auth']], function() {
 		Route::get('/promotions', 'ProjectsController@promotions')->name('projects.promotion');
         Route::resource('/projects', 'ProjectsController');
 
-        // download pdf file 
+        // download pdf file
 
         Route::get('/clientpdf/{id}', 'ProjectsController@clientpdf')->name('clientpdf');
 
@@ -78,7 +85,7 @@ Route::group(['middleware' => ['auth']], function() {
 		Route::get('/workspace', 'FindworkController@workspace')->name('workspace.index');
 
 	});
-	
+
 	// Payments
 	Route::get('payment/{id}/pay', 'PaymentController@pay');
 
