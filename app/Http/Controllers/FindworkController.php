@@ -12,7 +12,6 @@ class FindworkController extends Controller
 {
     public function index()
     {
-
         $rows = Project::all()->where('status', 'New')->where('paid', 1);
         return view('projects.findwork', compact('rows'));
     }
