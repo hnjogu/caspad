@@ -160,8 +160,6 @@ class ProjectsController extends Controller
     {
         $rows = Project::all()->where('status', 'Completed')->where('user_id', Auth::user()->id);
         return view('projects.completed', compact('rows'));
-
-        return view('projects.completed');
     }
 
     public function promotions()
@@ -180,7 +178,6 @@ class ProjectsController extends Controller
     public function clientpdf($id)
     {
         $Project = new Project();
-    
         $Project =DB::table('projects')->where('id', $id)->get();
 
         $pdf = PDF::loadView('projects/pdfviews.clients', ['Project' => $Project])->setPaper('a4', 'landscape');
