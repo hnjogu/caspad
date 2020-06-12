@@ -68,7 +68,7 @@ Route::group(['middleware' => ['auth']], function() {
 	    Route::post('users/activeDeactive', 'UserController@activeDeactive')->name('users.activeDeactive');
 	    Route::post('users/approveDisapprove', 'UserController@approveDisapprove')->name('users.approveDisapprove');
 	    Route::resource('roles','RoleController');
-		Route::resource('users','UserController');
+			Route::resource('users','UserController');
 			// Find work routes
         Route::get('/findwork', 'FindworkController@index')->name('findwork.index');
         Route::get('/findwork/grader', 'FindworkController@graderIndex');
