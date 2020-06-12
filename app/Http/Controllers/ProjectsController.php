@@ -11,11 +11,24 @@ use Illuminate\Support\Collection;
 
 class ProjectsController extends Controller
 {
-        //
+        // permission
     function __construct()
     {
      // createpermissions permissions
         $this->middleware('permission:Projects-dashboard', ['only' => ['getprojectsindex']]);
+
+            //Project create
+        $this->middleware('permission:job-list', ['only' => ['index']]);
+        $this->middleware('permission:job-create', ['only' => ['create','store']]);
+        //$this->middleware('permission:job-edit', ['only' => ['edit','update']]);
+        //$this->middleware('permission:job-delete', ['only' => ['destroy']]);
+                    //my posted Project
+        $this->middleware('permission:job-complete', ['only' => ['completedProjects']]);
+       // $this->middleware('permission:job-create', ['only' => ['create','store']]);
+                    //Project create
+        $this->middleware('permission:promotions-list', ['only' => ['promotions']]);
+        // download pdf
+        $this->middleware('permission:pdfview-completedProjects', ['only' => ['clientpdf']]); 
 
     }
     /**
@@ -158,10 +171,18 @@ class ProjectsController extends Controller
 
     public function completedProjects()
     {
-        $rows = Project::all()->where('status', 'Completed')->where('user_id', Auth::user()->id);
-        return view('projects.completed', compact('rows'));
 
-        return view('projects.completed');
+        $rows = Project::orderBy('id','DESC')
+         //->where('user_id', Auth::user()->id)
+          ->where('status', 'Completed')->where('user_id', Auth::user()->id)
+          ->get();
+        return view('projects.completed', compact('rows'))
+        ->with('rows', $rows);
+
+        // $rows = Project::all()->where('status', 'Completed')->where('user_id', Auth::user()->id);
+        // return view('projects.completed', compact('rows'));
+
+       // return view('projects.completed');
     }
 
     public function promotions()

@@ -14,13 +14,15 @@
         {{-- <div class="profile-image">
           <img src="{{ asset('storage/uploads/avatars/'. Auth::user()->avatar) }}" class="img-circle" alt="User Image">
         </div> --}}
-        <div class="info">
-            <ul class="nav nav-pills nav-sidebar flex-column">
-                <li class="nav-item">
-                    <a class="btn btn-info btn-sm" href="/findwork/{{$row->id}}/unclaim">Unclaim Project</a>
-                </li>
-            </ul>
-        </div>
+        @can('job-unclaim')
+          <div class="info">
+              <ul class="nav nav-pills nav-sidebar flex-column">
+                  <li class="nav-item">
+                      <a class="btn btn-info btn-sm" href="/findwork/{{$row->id}}/unclaim">Unclaim Project</a>
+                  </li>
+              </ul>
+          </div>
+        @endcan
       </div>
 
       <!-- Sidebar Menu -->

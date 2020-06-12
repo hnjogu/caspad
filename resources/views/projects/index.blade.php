@@ -28,12 +28,14 @@
                         <td> {{$row->project_id}} </td>
                         <td> {{$row->length}} </td>
                         <td> {{$row->subject}} </td>
-                        <td> ${{$row->total_amount}} </td>
-                        @if ($row->paid == 1)
-                            <td> Paid </td>
-                        @elseif($row->paid == 0)
-                            <td> <a class="btn btn-warning btn-sm" href="/payment/{{ $row->id }}/pay"> <i class="fa fa-paypal"></i>  Pay ${{$row->total_amount}}</a></td>
-                        @endif
+                        <td> ${{$row->total_amount}} </td>pay-projects
+                        @can('pay-projects')
+                            @if ($row->paid == 1)
+                                <td> Paid </td>
+                            @elseif($row->paid == 0)
+                                <td> <a class="btn btn-warning btn-sm" href="/payment/{{ $row->id }}/pay"> <i class="fa fa-paypal"></i>  Pay ${{$row->total_amount}}</a></td>
+                            @endif
+                        @endcan
                     </tr>
                 @endforeach
             </tbody>

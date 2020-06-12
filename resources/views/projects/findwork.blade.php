@@ -36,7 +36,10 @@
                             </audio>
                         </td>
                         <td>
-                            <a class="btn btn-success btn-sm" href="/workspace/{{$row->id}}">Claim</a>
+                            @can('freelancer-workspace')
+                                <a class="btn btn-success btn-sm" href="/workspace/{{$row->id}}">Claim
+                                </a>
+                            @endcan
                         </td>
                     </tr>
                 @endforeach

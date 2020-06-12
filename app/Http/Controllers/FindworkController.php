@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Project;
+use DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -10,6 +11,27 @@ use Illuminate\Support\Facades\Auth;
 
 class FindworkController extends Controller
 {
+            // permission
+    function __construct()
+    {
+     // createpermissions permissions
+        $this->middleware('permission:findwork-jobs', ['only' => ['index']]);
+
+            //Project create
+        $this->middleware('permission:freelancer-workspace', ['only' => ['workspace']]);
+        $this->middleware('permission:job-unclaim', ['only' => ['unclaim']]);
+        //$this->middleware('permission:job-edit', ['only' => ['edit','update']]);
+        //$this->middleware('permission:job-delete', ['only' => ['destroy']]);
+                    
+        $this->middleware('permission:job-complete', ['only' => ['completedProjects']]);
+                    //metric
+        $this->middleware('permission:freelancer-metrics', ['only' => ['metrics']]);
+        $this->middleware('permission:freelancer-viewMetrics', ['only' => ['viewMetrics']]);
+        $this->middleware('permission:freelancer-earnings', ['only' => ['freelancerEarnings']]);
+        // download pdf
+        $this->middleware('permission:pdfview-completedProjects', ['only' => ['clientpdf']]); 
+
+    }
     public function index()
     {
 

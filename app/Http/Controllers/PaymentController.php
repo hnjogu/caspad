@@ -10,6 +10,15 @@ use Illuminate\Support\Facades\Auth;
 
 class PaymentController extends Controller
 {
+
+            // permission
+    function __construct()
+    {
+     // payment permissions
+        $this->middleware('permission:pay-projects', ['only' => ['pay']]); 
+
+    }
+
     public $gateway;
  
     public function __construct()

@@ -29,7 +29,11 @@
                         <td> {{$row->subject}} </td>
                         <td> {{$row->formatting}} </td>
                         <td> {{$row->accuracy}} </td>
-                        <td> <a class="btn btn-primary btn-sm" href="/metrics/{{$row->id}}/view">View</a></td>
+                        <td>
+                        @can('freelancer-viewMetrics')
+                            <a class="btn btn-primary btn-sm" href="/metrics/{{$row->id}}/view">View</a>
+                        @endcan
+                        </td>
                     </tr>
                 @endforeach
             </tbody>

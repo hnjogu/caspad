@@ -29,7 +29,9 @@
                         <td> {{$row->subject}} </td>
                         <td> {{$row->total_amount}} </td>
                         <td>
+                          @can('pdfview-completedProjects')
                             <a class="btn btn-primary" href="{{ url('/clientpdf/'.$row->id) }}" role="button"><i class="fas fa-download"></i> Download </a>
+                          @endcan
                         </td>
                     </tr>
                 @endforeach

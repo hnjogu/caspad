@@ -10,27 +10,60 @@
                     <div class="card-body">
                         <p class="text-info">Client Model</p>
                         <hr>
-                        <a class="btn btn-dblue btn-sm" href="{{ route('projects.create') }}"> <i class="fas fa-edit fa-3x"></i> <div class="mt-2">Post <br> Job / Project</div> </a>
-                        <a class="btn btn-dblue btn-sm" href="{{ route('projects.index') }}"> <i class="fas fa-user fa-3x"></i> <div class="mt-2">My <br> Posted Jobs</div> </a>
-                        <a class="btn btn-dblue btn-sm" href="{{ route('projects.completed') }}"> <i class="fas fa-check-circle fa-3x"></i> <div class="mt-2">My <br> Completed Jobs </div> </a>
-                        <a class="btn btn-dblue btn-sm" href="{{ route('projects.promotion') }}"> <i class="fas fa-star fa-3x"></i> <div class="mt-2">My <br> Offers / Promotions </div> </a>
+                        @can('job-create')
+                          <a class="btn btn-dblue btn-sm" href="{{ route('projects.create') }}"> <i class="fas fa-edit fa-3x"></i> 
+                            <div class="mt-2">Post <br> Job / Project</div> 
+                          </a>
+                        @endcan
+                        @can('job-create')
+                          <a class="btn btn-dblue btn-sm" href="{{ route('projects.index') }}"> <i class="fas fa-user fa-3x"></i> <div class="mt-2">My <br> Posted Jobs</div>
+                           </a>
+                        @endcan
+                        @can('job-complete')
+                          <a class="btn btn-dblue btn-sm" href="{{ route('projects.completed') }}"> <i class="fas fa-check-circle fa-3x"></i> <div class="mt-2">My <br> Completed Jobs </div>
+                          </a>
+                        @endcan
+                        @can('promotions-list')
+                          <a class="btn btn-dblue btn-sm" href="{{ route('projects.promotion') }}"> <i class="fas fa-star fa-3x"></i> <div class="mt-2">My <br> Offers / Promotions </div> 
+                          </a>
+                        @endcan
                         <br>
                         <hr>
                         <p class="text-info">Freelancer Model</p>
                         <hr>
-                        <a class="btn btn-dblue btn-sm" href="{{ route('findwork.index') }}"> <i class="fas fa-edit fa-3x"></i> <div class="mt-2">Find <br> Projects</div> </a>
-                        <a class="btn btn-dblue btn-sm" href="/freelancer-completed-projects"> <i class="fas fa-user fa-3x"></i> <div class="mt-2">My <br>Completed Projects</div> </a>
-                        <a class="btn btn-dblue btn-sm" href="/metrics"> <i class="fas fa-check-circle fa-3x"></i> <div class="mt-2">My <br> Metrics </div> </a>
-                        <a class="btn btn-dblue btn-sm" href="/freelancer-earnings"> <i class="fas fa-star fa-3x"></i> <div class="mt-2">My <br> Earnings </div> </a>
+                        @can('findwork-jobs')
+                          <a class="btn btn-dblue btn-sm" href="{{ route('findwork.index') }}"> <i class="fas fa-edit fa-3x"></i> <div class="mt-2">Find <br> Projects</div>
+                          </a>
+                        @endcan
+                        @can('findwork-jobs')
+                          <a class="btn btn-dblue btn-sm" href="/freelancer-completed-projects"> <i class="fas fa-user fa-3x"></i> <div class="mt-2">My <br>Completed Projects</div> 
+                          </a>
+                        @endcan
+                        @can('freelancer-metrics')
+                          <a class="btn btn-dblue btn-sm" href="/metrics"> <i class="fas fa-check-circle fa-3x"></i> <div class="mt-2">My <br> Metrics </div> 
+                          </a>
+                        @endcan
+                        @can('freelancer-earnings')
+                          <a class="btn btn-dblue btn-sm" href="/freelancer-earnings"> <i class="fas fa-star fa-3x"></i> <div class="mt-2">My <br> Earnings </div>
+                          </a>
+                        @endcan
 
                         <br>
                         <hr>
                         <p class="text-info">Grader Model</p>
                         <hr>
-
-                        <a class="btn btn-dblue btn-sm" href="/findwork/grader"> <i class="fas fa-edit fa-3x"></i> <div class="mt-2">Find <br> Projects</div> </a>
-                        <a class="btn btn-dblue btn-sm" href="/findwork/graded-jobs"> <i class="fas fa-user fa-3x"></i> <div class="mt-2">My <br>Graded Projects</div> </a>
-                        <a class="btn btn-dblue btn-sm" href="/grader-earnings"> <i class="fas fa-star fa-3x"></i> <div class="mt-2">My <br> Earnings </div> </a>
+                        @can('graderprojects-find')
+                          <a class="btn btn-dblue btn-sm" href="/findwork/grader"> <i class="fas fa-edit fa-3x"></i> <div class="mt-2">Find <br> Projects</div> 
+                          </a>
+                        @endcan
+                        @can('graderprojects-myprojects')
+                          <a class="btn btn-dblue btn-sm" href="/findwork/graded-jobs"> <i class="fas fa-user fa-3x"></i> <div class="mt-2">My <br>Graded Projects</div>
+                          </a>
+                        @endcan
+                        @can('graderprojects-earnings')
+                          <a class="btn btn-dblue btn-sm" href="/grader-earnings"> <i class="fas fa-star fa-3x"></i> <div class="mt-2">My <br> Earnings </div> 
+                          </a>
+                        @endcan
                     </div>
                     <div class="card-footer"></div>
                 </div>
