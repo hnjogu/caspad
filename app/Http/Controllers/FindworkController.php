@@ -22,14 +22,14 @@ class FindworkController extends Controller
         $this->middleware('permission:job-unclaim', ['only' => ['unclaim']]);
         //$this->middleware('permission:job-edit', ['only' => ['edit','update']]);
         //$this->middleware('permission:job-delete', ['only' => ['destroy']]);
-                    
+
         $this->middleware('permission:job-complete', ['only' => ['completedProjects']]);
                     //metric
         $this->middleware('permission:freelancer-metrics', ['only' => ['metrics']]);
         $this->middleware('permission:freelancer-viewMetrics', ['only' => ['viewMetrics']]);
         $this->middleware('permission:freelancer-earnings', ['only' => ['freelancerEarnings']]);
         // download pdf
-        $this->middleware('permission:pdfview-completedProjects', ['only' => ['clientpdf']]); 
+        $this->middleware('permission:pdfview-completedProjects', ['only' => ['clientpdf']]);
 
     }
     public function index()
@@ -97,9 +97,4 @@ class FindworkController extends Controller
         return view('projects.findwork');
     }
 
-    // public function workspace()
-    // {
-    //     return view('projects.workspace');
-
-    // }
 }
