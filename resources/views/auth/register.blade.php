@@ -56,6 +56,19 @@
                             </select>
                           </div>
                         </div>
+
+                        <div class="form-group row">
+                            <label for="Type" class="col-md-4 col-form-label text-md-right">{{ __('Type') }}</label>
+                            <div class="col-md-6">
+                              <select id="type" name="type" class="form-control input-lg" required>
+                              <option value="">-- Select Type --</option>
+                                <option value="Freelancer">Freelancer</option>
+                                <option value="Graders">Graders</option>
+                                <option value="Client">Client</option>
+                            </select>
+                          </div>
+                        </div>
+
                         <div class="form-group row">
                             <label for="Mobile" class="col-md-4 col-form-label text-md-right">{{ __('Mobile') }}</label>
 

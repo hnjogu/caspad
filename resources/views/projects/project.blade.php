@@ -6,8 +6,10 @@
         <div class="row mt-4">
           <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header bg-success">Project Panel</div>
+                  <div class="card-header bg-success">Project Panel</div>
+                  @foreach ($role as $role_user)
                     <div class="card-body">
+                      @if($role_user == 'Client')
                         <p class="text-info">Client Model</p>
                         <hr>
                         @can('job-create')
@@ -28,6 +30,8 @@
                           </a>
                         @endcan
                         <br>
+                      @endif
+                      @if($role_user == 'Freelancer')
                         <hr>
                         <p class="text-info">Freelancer Model</p>
                         <hr>
@@ -49,6 +53,8 @@
                         @endcan
 
                         <br>
+                      @endif
+                      @if($role_user == 'Grader') 
                         <hr>
                         <p class="text-info">Grader Model</p>
                         <hr>
@@ -64,7 +70,9 @@
                           <a class="btn btn-dblue btn-sm" href="/grader-earnings"> <i class="fas fa-star fa-3x"></i> <div class="mt-2">My <br> Earnings </div> 
                           </a>
                         @endcan
+                      @endif
                     </div>
+                  @endforeach
                     <div class="card-footer"></div>
                 </div>
           </div>

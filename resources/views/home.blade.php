@@ -3,7 +3,7 @@
 @section('content')
 <div class="mt-4">
   @foreach ($role as $role_user)
-    @if($role_user == 'admin')
+    @if($role_user == 'Admin')
       <div class="row">
         <div class="col-md-3 col-sm-6 col-12">
           <div class="info-box">
@@ -37,7 +37,7 @@
 
             <div class="info-box-content">
               <span class="info-box-text">Projects</span>
-              <span class="info-box-number"></span>
+              <span class="info-box-number">{{ $Total_Projects->count() }}</span>
             </div>
             <!-- /.info-box-content -->
           </div>
@@ -94,6 +94,68 @@
 
             <div class="info-box-content">
               <span class="info-box-text">Freelancers</span>
+              <span class="info-box-number"> </span></span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
+        </div>
+        <!-- /.col -->
+        <div class="col-md-3 col-sm-6 col-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-success"><i class="far fa-flag"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text">Projects</span>
+              <span class="info-box-number"></span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
+        </div>
+        <!-- /.col -->
+        <!-- /.col -->
+      </div>
+    @endif
+    @if($role_user == 'Client')
+      <div class="row">
+        <div class="col-md-3 col-sm-6 col-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-info"><i class="fa fa-users"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text">Client</span>
+              <span class="info-box-number"> </span></span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
+        </div>
+        <!-- /.col -->
+        <div class="col-md-3 col-sm-6 col-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-success"><i class="far fa-flag"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text">Projects</span>
+              <span class="info-box-number"></span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
+        </div>
+        <!-- /.col -->
+        <!-- /.col -->
+      </div>
+    @endif
+    @if($role_user == 'Grader')
+      <div class="row">
+        <div class="col-md-3 col-sm-6 col-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-info"><i class="fa fa-users"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text">Grader</span>
               <span class="info-box-number"> </span></span>
             </div>
             <!-- /.info-box-content -->

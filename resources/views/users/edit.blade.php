@@ -70,6 +70,18 @@
                           </div>
                       </div>
                       <div class="col-md-4 mb-3">
+                          <div class="form-group">
+                            <strong>Type:</strong>
+                              <select id="type" name="type" class="form-control input-lg" required>
+                                <option value="">-- Select Type --</option>
+                                <option value="Freelancer"{{ $user->type == 'Freelancer'? 'selected' : ''}}>Freelancer</option>
+                                <option value="Graders" {{ $user->type == 'Graders'? 'selected' : ''}}>Graders</option>
+                                <option value="Client"{{ $user->type == 'Client'? 'selected' : ''}}>Client</option>
+                              </select>
+
+                          </div>
+                      </div>
+                      <div class="col-md-4 mb-3">
                         <div class="form-group">
                             <strong>Phone Number:</strong>
                             {!! Form::text('mobile', null, array('placeholder' => 'Phone Number','maxlength' => '13','minlength' => '10','class' => 'form-control')) !!}

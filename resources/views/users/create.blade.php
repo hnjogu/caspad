@@ -74,6 +74,19 @@
                       </div>
 
                       <div class="col-md-4 mb-3">
+                          <div class="form-group">
+                            <strong>Type:</strong>
+                              <select id="type" name="type" class="form-control input-lg" required>
+                              <option value="">-- Select Type --</option>
+                                <option value="Freelancer">Freelancer</option>
+                                <option value="Graders">Graders</option>
+                                <option value="Client">Client</option>
+                            </select>
+
+                          </div>
+                      </div>
+
+                      <div class="col-md-4 mb-3">
                         <div class="form-group">
                             <strong>Phone Number:</strong>
                             {!! Form::text('mobile', null, array('placeholder' => 'Phone Number','maxlength' => '13','class' => 'form-control')) !!}

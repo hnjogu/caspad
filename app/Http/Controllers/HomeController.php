@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
 use App\User;
+use App\Project;
 use Carbon\Carbon;
 
 class HomeController extends Controller
@@ -31,6 +32,8 @@ class HomeController extends Controller
      */
     public function index()
     {
+        // total Projects
+        $Total_Projects = Project::all();
         // total users
         $Total_users = User::all();
         $Today_new_users = User::whereDate('created_at', Carbon::today())->get();
@@ -42,7 +45,7 @@ class HomeController extends Controller
         $role = Auth::user()->roles->pluck('name');
 
             
-        return view('home',compact('Total_users','Today_new_users'))
+        return view('home',compact('Total_users','Today_new_users','Total_Projects'))
         ->with('role',$role)
         ->with('users_count',$users_count);
     }
