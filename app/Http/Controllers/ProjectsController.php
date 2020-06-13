@@ -171,7 +171,6 @@ class ProjectsController extends Controller
 
     public function completedProjects()
     {
-<<<<<<< HEAD
 
         $rows = Project::orderBy('id','DESC')
          //->where('user_id', Auth::user()->id)
@@ -184,10 +183,6 @@ class ProjectsController extends Controller
         // return view('projects.completed', compact('rows'));
 
        // return view('projects.completed');
-=======
-        $rows = Project::all()->where('status', 'Completed')->where('user_id', Auth::user()->id);
-        return view('projects.completed', compact('rows'));
->>>>>>> 49f5301ab35e79d0f387aa6b0b37e7f8383d95ac
     }
 
     public function promotions()
