@@ -30,18 +30,13 @@
                     <table id="dev-table" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
                       <thead>
                         <tr>
-                           <th>No</th>
-                           <th>Name</th>
-                           <th>Last Name</th>
-                           <th>Phone Number</th>
-                           <th>National ID</th>
-                           <th>Country</th>
-                           <th>Capital City</th>
+                           <th>#</th>
+                           <th>Names</th>
+                           <th>Mobile</th>
                            <th>Email</th>
-                           <th>Company Name</th>
-                           <th>Approve Status</th>
+                           <th>Status</th>
                            <th>Roles</th>
-                           <th width="280px">Action</th>
+                           <th>Action</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -49,13 +44,8 @@
                         <tr>
                           <td>{{ $key +1 }}</td>
                           <td>{{ $user->name }}</td>
-                          <td>{{ $user->lastname }}</td>
                           <td>{{ $user->mobile }}</td>
-                          <td>{{ $user->id_number }}</td>
-                          <td>{{ $user->country }}</td>
-                          <td>{{ $user->capitalcity }}</td>
                           <td>{{ $user->email }}</td>
-                          <td>{{ $user->company }}</td>
                           <td>
                               @if($user->approved_at == '1')
                                 <span class="badge badge-success">Approved</span>
@@ -72,28 +62,27 @@
                             @endif
                           </td>
                           <td>
-                             <a class="btn btn-info" href="{{ route('users.show',$user->id) }}">Show</a>
+                             <a class="btn btn-info btn-sm" href="{{ route('users.show',$user->id) }}"> <i class="fa fa-eye"></i> </a>
                                 @can('user-edit')
-                                  <a class="btn btn-primary" href="{{ route('users.edit',$user->id) }}">Edit</a>
+                                  <a class="btn btn-primary btn-sm" href="{{ route('users.edit',$user->id) }}"><i class="fa fa-edit"></i></a>
                                 @endcan
                                 @can('user-delete')
                                   {!! Form::open(['method' => 'DELETE','route' => ['users.destroy', $user->id],'style'=>'display:inline']) !!}
-                                      {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
+                                      {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-sm']) !!}
                                   {!! Form::close() !!}
                                 @endcan
                                 @can('user-activeDeactive')
                                   {{ Form::open(['route' => ['users.activeDeactive'], 'method' => 'POST']) }}
                                       {{ Form::hidden('user_id', $user->id) }}
-                                      {{ Form::submit(($user->active == 0) ? 'Reactive' : 'Deactivate', ['name' => 'submit', 'class' => 'btn btn-warning']) }}
+                                      {{ Form::submit(($user->active == 0) ? 'Reactive' : 'Deactivate', ['name' => 'submit', 'class' => 'btn btn-warning btn-sm']) }}
                                   {{ Form::close() }}
                                 @endcan
                                 @can('user-approveDisapprove')
                                   {{ Form::open(['route' => ['users.approveDisapprove'], 'method' => 'POST']) }}
                                       {{ Form::hidden('user_id', $user->id) }}
-                                      {{ Form::submit(($user->approved_at == 0) ? 'Approve' : 'Disapprove', ['name' => 'submit', 'class' => 'btn btn-success']) }}
+                                      {{ Form::submit(($user->approved_at == 0) ? 'Approve' : 'Disapprove', ['name' => 'submit', 'class' => 'btn btn-success btn-sm']) }}
                                   {{ Form::close() }}
                                 @endcan
-                   <!--              <a class='btn btn-success btn-xs' href = 'index/{{ $user->id }}'>Approve</a> -->
                           </td>
                         </tr>
                        @endforeach
