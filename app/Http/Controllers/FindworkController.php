@@ -30,6 +30,10 @@ class FindworkController extends Controller
         $this->middleware('permission:freelancer-earnings', ['only' => ['freelancerEarnings']]);
         // download pdf
         $this->middleware('permission:pdfview-completedProjects', ['only' => ['clientpdf']]);
+                          //grader
+        $this->middleware('permission:graderprojects-find', ['only' => ['graderIndex']]);
+        $this->middleware('permission:graderprojects-myprojects', ['only' => ['gradedJobs']]);
+        $this->middleware('permission:graderprojects-earnings', ['only' => ['graderEarnings']]);
 
     }
     public function index()

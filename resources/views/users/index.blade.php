@@ -35,6 +35,7 @@
                            <th>Mobile</th>
                            <th>Email</th>
                            <th>Status</th>
+                           <th>Type</th>
                            <th>Roles</th>
                            <th>Action</th>
                         </tr>
@@ -54,6 +55,7 @@
                                 <span class="badge badge-warning">Not Approved</span>
                               @endif
                           </td>
+                          <td>{{ $user->type }}</td>
                           <td>
                             @if(!empty($user->getRoleNames()))
                               @foreach($user->getRoleNames() as $v)

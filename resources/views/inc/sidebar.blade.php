@@ -65,12 +65,14 @@
             </li>
           @endcan
 
+        @can('accounts-list')
           <li class="nav-item">
               <a class="nav-link {{ Request::is('accounts') ? 'active' : '' }}" href="{{ route('accounts') }}">
                   <i class="nav-icon far fa-flag"></i>
                   <p>Manage Accounts</p>
               </a>
           </li>
+        @endcan
 
         </ul>
       </nav>

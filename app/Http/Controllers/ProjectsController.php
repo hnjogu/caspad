@@ -166,7 +166,10 @@ class ProjectsController extends Controller
 
     public function getprojectsindex()
     {
-        return view('projects.project');
+               //role loop dashboard
+        $role = Auth::user()->roles->pluck('name');   
+        return view('projects.project')
+        ->with('role',$role);
     }
 
     public function completedProjects()

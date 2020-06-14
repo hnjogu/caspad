@@ -63,6 +63,7 @@ class RegisterController extends Controller
             'country' => 'required',
             'capitalcity' => 'required',
             'company' => 'required',
+            'type' => 'required',
             'mobile' => 'required|unique:users,mobile,|min:10|max:13',
             //'id_number' => 'required|unique:users,id_number',
         ]);
@@ -85,6 +86,7 @@ class RegisterController extends Controller
             'capitalcity' => $data['capitalcity'],
             'company' => $data['company'],
             'mobile' => $data['mobile'],
+            'type' => $data['type'],
             'password' => Hash::make($data['password']),
         ]);
         Mail::to($data['email'])->send(new welcomemail($user));
