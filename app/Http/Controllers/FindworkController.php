@@ -93,8 +93,6 @@ class FindworkController extends Controller
     {
         $rows = Project::all()->where('status', 'Completed')->where('grader_id', Auth::user()->id);
         return view('projects.grader_earnings', compact('rows'));
-
-        return view('projects.findwork');
     }
 
 }
