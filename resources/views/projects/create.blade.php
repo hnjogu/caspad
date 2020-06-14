@@ -2,6 +2,10 @@
 
 @section('content')
 
+<!--bootstarp file input css --->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.4.7/css/fileinput.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet" type="text/css"/>
+
 <div class="mt-4">
     <div class="card">
         <div class="card-header text-center bg-success"> <h3>Post Project</h3> </div>
@@ -17,13 +21,32 @@
                     <input id="name" type="text" value="{{ Auth::user()->name}} {{ Auth::user()->lastname}}" class="form-control" readonly name="customer_name"  placeholder="Your Name" >
                 </div>
             </div>
-            <div class="col-md-4">
+{{--             <div class="col-md-4">
                 <div class="form-group">
                     <span class="form-group-addon">Choose Audio / Video to upload</span>
                     <input type="file" id="file" class="form-control" name="file_name">
                     <audio id="audio"></audio>
                 </div>
+            </div> --}}
+            <div class="col-md-4 mb-3">
+                <label for="validationServer024">Upload Tax Compliance Certificate</label>
+                <div class="form-group">
+                    <div class="input-group input-file" name="Fichier1">
+                        <span class="input-group-btn">
+                           
+                        </span>
+                        <input type="file" class="form-control" id="file" name="file_name" placeholder='Upload a file...' required data-parsley-error-message="Upload file"/>
+                        <audio id="audio"></audio>
+                    </div>
+                </div>
             </div>
+{{--             <div class="col-md-4">
+                <div class="form-group">
+                    <span class="form-group-addon">Choose Audio / Video to upload</span>
+                    <input type="file" id="file" class="form-control" name="file_name">
+                    <audio id="audio"></audio>
+                </div>
+            </div> --}}
             <div class="col-md-4">
                 <div class="form-group">
                     <span class="form-group-addon">Project Subject</span>
@@ -134,6 +157,60 @@
 
     </div>
 </div>
+
+     <!-- bootstrap file input script file -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.4.7/js/fileinput.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.4.7/themes/fa/theme.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" type="text/javascript"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- bootstrap file input script file ends here--> 
+
+<!-- file start here script--->
+    <script type="text/javascript">
+        $("#file").fileinput({
+            required: true,
+            showCancel:false,
+            showUpload: false,
+            showRemove: true,
+            showCaption: true,
+            showPreview: true,
+            showClose: false,
+            autoOrientImage: true,
+            showUploadedThumbs: false,
+            uploadAsync: false,
+            uploadUrlThumb: false,
+            indicatorLoading: true,
+            processData : true,
+        
+            deleteUrl: "/public/file",
+            //uploadUrl: "/company2/{applications_id}",
+            //uploadUrl: '/public/KFS_Tax_Compliance_Certificates', // you must set a valid URL here else you will get an error
+            theme: 'fa',
+            
+            allowedFileExtensions: ['vlc', 'wave', 'avi', 'mp3', 'mp4'],
+            overwriteInitial: false,
+            maxFileSize: 5000000,
+            maxFilesNum: 10,
+            //allowedFileTypes: ['image', 'video', 'flash'],
+            slugCallback: function (filename) {
+                return filename.replace('(', '_').replace(']', '_');
+            }
+        });
+
+        $('#file').on('fileuploaded', function(event, data, previewId, index) {
+            var form = data.form,
+              files = data.files,
+              extra = data.extra,
+              response = data.response,
+              reader = data.reader;
+            DisplayResults(response);
+        });
+    </script>
+<!-- file end here script--->
+
 @endsection
+
+
 
 

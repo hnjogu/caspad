@@ -28,7 +28,7 @@
                         <td> {{$row->project_id}} </td>
                         <td> {{$row->length}} </td>
                         <td> {{$row->subject}} </td>
-                        <td> ${{$row->total_amount}} </td>pay-projects
+                        <td> ${{$row->total_amount}} </td>
                         @can('pay-projects')
                             @if ($row->paid == 1)
                                 <td> Paid </td>

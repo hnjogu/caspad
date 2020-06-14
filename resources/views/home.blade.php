@@ -24,7 +24,7 @@
 
             <div class="info-box-content">
               <span class="info-box-text">Freelancers</span>
-              <span class="info-box-number">Freelancers({{count($role)}}) </span></span>
+              <span class="badge badge-secondary">Freelancers: {{ $roles->count() }}</span>
             </div>
             <!-- /.info-box-content -->
           </div>
@@ -84,6 +84,20 @@
           <!-- /.info-box -->
         </div>
         <!-- /.col -->
+        <!-- /.col -->
+        <div class="col-md-3 col-sm-6 col-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-info"><i class="fa fa-users"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text">Total Roles</span>
+              <span class="badge badge-secondary"> {{ $roles->count() }}</span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
+        </div>
+        <!-- /.col -->
       </div>     
     @endif
     @if($role_user == 'Freelancer')
@@ -121,30 +135,17 @@
       <div class="row">
         <div class="col-md-3 col-sm-6 col-12">
           <div class="info-box">
-            <span class="info-box-icon bg-info"><i class="fa fa-users"></i></span>
+            <span class="info-box-icon bg-info"><i class="fa fa-tasks"></i></span>
 
             <div class="info-box-content">
-              <span class="info-box-text">Client</span>
-              <span class="info-box-number"> </span></span>
+              <span class="info-box-text">My posted jobs</span>
+              <span class="badge badge-success">jobs({{count($client_jobs)}})</span>
+              {{-- <span class="info-box-number"> </span></span> --}}
             </div>
             <!-- /.info-box-content -->
           </div>
           <!-- /.info-box -->
         </div>
-        <!-- /.col -->
-        <div class="col-md-3 col-sm-6 col-12">
-          <div class="info-box">
-            <span class="info-box-icon bg-success"><i class="far fa-flag"></i></span>
-
-            <div class="info-box-content">
-              <span class="info-box-text">Projects</span>
-              <span class="info-box-number"></span>
-            </div>
-            <!-- /.info-box-content -->
-          </div>
-          <!-- /.info-box -->
-        </div>
-        <!-- /.col -->
         <!-- /.col -->
       </div>
     @endif
