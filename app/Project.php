@@ -5,11 +5,13 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use willvincent\Rateable\Rateable;
 
 class Project extends Model
 {
     //
     use Notifiable;
+    use Rateable;
     public $table = "projects";
     protected $primaryKey = 'id';
     public $timestamps = true;
