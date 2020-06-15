@@ -38,8 +38,12 @@ class FindworkController extends Controller
     }
     public function index()
     {
-        $rows = Project::all()->where('status', 'New')->where('paid', 1);
-        return view('projects.findwork', compact('rows'));
+        $rows = Project::orderBy('id','DESC')
+          ->where('status', 'New')->where('paid', 1)
+          ->get();
+        //$rows = Project::all()->where('status', 'New')->where('paid', 1);
+        return view('projects.findwork', compact('rows'))
+        ->with('rows', $rows);
     }
 
     public function workspace($id)

@@ -28,7 +28,7 @@
       <!-- Sidebar Menu -->
       <nav class="navbar mt-2 navbar-default" >
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          @can('user-list')
+          @can('freelancer-workspace')
             <li class="nav-item text-white">
                     <p>Customer : {{$row->customer_name}}</p>
                     <hr>
@@ -39,15 +39,18 @@
             </li>
           @endcan
         </ul>
-        <video width="200" controls class="mt-4">
-            <source src="mov_bbb.mp4" type="video/mp4">
-            <source src="mov_bbb.ogg" type="video/ogg">
-            Your browser does not support HTML5 video.
-        </video>
+            
       </nav>
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
   </aside>
+
+  <script type="text/javascript">
+    var vid = document.getElementById("myVideo");
+    vid.onplay = function() {
+      //alert("The video has started to play");
+    };
+  </script>
 
 

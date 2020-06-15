@@ -12,6 +12,7 @@
           <table class="table table-striped text-center">
             <thead>
               <tr>
+                <th>No</th>
                 <th>Customer Name</th>
                 <th>Project Length</th>
                 <th>Pay / Min</th>
@@ -21,19 +22,23 @@
                 <th>Options</th>
               </tr>
             </thead>
-
             <tbody>
-                @foreach ($rows as $row)
+                @foreach ($rows as $key => $row)
                     <tr>
+                        <td>{{ $key +1 }}</td>
                         <td> {{$row->customer_name}} </td>
                         <td> {{$row->length}} </td>
                         <td> 0.40 </td>
                         <td> {{$row->total_amount}} </td>
                         <td> {{$row->subject}} </td>
                         <td>
-                            <audio controls>
+                            <video id="myVideo" width="300" height="100" controls>
+                              <source src="{{asset('/files/' .$row->file_name)}}" type="audio/ogg">
+                              Your browser does not support HTML5 video.
+                            </video>
+{{--                             <audio controls>
                                 <source src="{{asset('/files/' .$row->file_name)}}" type="audio/ogg">
-                            </audio>
+                            </audio> --}}
                         </td>
                         <td>
                             @can('freelancer-workspace')
@@ -52,4 +57,11 @@
         </div>
       </div>
 </div>
+
+<script type="text/javascript">
+    var vid = document.getElementById("myVideo");
+    vid.onplay = function() {
+      //alert("The video has started to play");
+    };
+</script>
 @endsection

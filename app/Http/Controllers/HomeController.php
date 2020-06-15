@@ -68,11 +68,18 @@ class HomeController extends Controller
          ->where('user_id', Auth::id())
          ->get();
 
+                 ///// Freelancers dashboard
+        $Freelancer_jobs =DB::table('projects')
+         ->select('*')
+         ->where('user_id', Auth::id())
+         ->get();
+
             
         return view('home',compact('Total_users','Today_new_users','Total_Projects','roles'))
         ->with('role',$role)
         ->with('users_count',$users_count)
-         ->with('client_jobs', $client_jobs);
+         ->with('client_jobs', $client_jobs)
+         ->with('Freelancer_jobs', $Freelancer_jobs);
     }
 
     public function approval()
