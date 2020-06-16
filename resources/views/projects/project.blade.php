@@ -11,7 +11,7 @@
                     <div class="card-body">
                       <p class="text-info">Admin Model</p>
                       <hr>
-                        <a class="btn btn-dblue btn-sm" href="{{ route('projects.rated') }}"> <i class="fas fa-edit fa-3x"></i>
+                        <a class="btn btn-dblue btn-sm" href="{{ route('projects.rated') }}"> <i class="fas fa-star fa-3x"></i>
                           <div class="mt-2">Rated <br> Jobs </div>
                         </a>
                       @if($role_user == 'Client')
@@ -124,7 +124,7 @@
 
 /* Button Colours */
 .btn-dblue {
-  color: #ffffff;
+  color: white;
   background-color: #1B23BD;
   border-color: #000A7A;
 }
@@ -134,7 +134,7 @@
 .btn-dblue:active,
 .btn-dblue.active,
 .open .dropdown-toggle.btn-dblue {
-  color: #ffffff;
+  color: white !important;
   background-color: #18148C;
   border-color: #000A7A;
 }
@@ -179,7 +179,7 @@ fieldset[disabled] .btn-dblue.active {
 .btn-dred:active,
 .btn-dred.active,
 .open .dropdown-toggle.btn-dred {
-  color: #ffffff;
+  color: white;
   background-color: #7A2435;
   border-color: #69021F;
 }
@@ -224,7 +224,7 @@ fieldset[disabled] .btn-dred.active {
 .btn-dgreen:active,
 .btn-dgreen.active,
 .open .dropdown-toggle.btn-dgreen {
-  color: #ffffff;
+  color: white;
   background-color: #287A24;
   border-color: #026926;
 }
@@ -269,7 +269,7 @@ fieldset[disabled] .btn-dgreen.active {
 .btn-mblue:active,
 .btn-mblue.active,
 .open .dropdown-toggle.btn-mblue {
-  color: #6FF;
+  color: white;
   background-color: #247A7A;
   border-color: #025D69;
 }
@@ -314,7 +314,7 @@ fieldset[disabled] .btn-mblue.active {
 .btn-burnt:active,
 .btn-burnt.active,
 .open .dropdown-toggle.btn-burnt {
-  color: #fffccc;
+  color: white;
   background-color: #7A5024;
   border-color: #694302;
 }
@@ -359,7 +359,7 @@ fieldset[disabled] .btn-burnt.active {
 .btn-grey:active,
 .btn-grey.active,
 .open .dropdown-toggle.btn-grey {
-  color: #ffffff;
+  color: white;
   background-color: #413C47;
   border-color: #605D70;
 }
@@ -404,7 +404,7 @@ fieldset[disabled] .btn-grey.active {
 .btn-mred:active,
 .btn-mred.active,
 .open .dropdown-toggle.btn-mred {
-  color: #FFFFFF;
+  color: white;
   background-color: #871111;
   border-color: #BD4242;
 }
@@ -449,7 +449,7 @@ fieldset[disabled] .btn-mred.active {
 .btn-lblue:active,
 .btn-lblue.active,
 .open .dropdown-toggle.btn-lblue {
-  color: #FFFFFF;
+  color: white;
   background-color: #0F6773;
   border-color: #3E8A94;
 }
@@ -494,7 +494,7 @@ fieldset[disabled] .btn-lblue.active {
 .btn-orange:active,
 .btn-orange.active,
 .open .dropdown-toggle.btn-orange {
-  color: #FFFFFF;
+  color: white;
   background-color: #73570F;
   border-color: #B39852;
 }
@@ -539,7 +539,7 @@ fieldset[disabled] .btn-orange.active {
 .btn-yellow:active,
 .btn-yellow.active,
 .open .dropdown-toggle.btn-yellow {
-  color: #FFFFFF;
+  color: white;
   background-color: #858F00;
   border-color: #D7DE11;
 }
@@ -584,7 +584,7 @@ fieldset[disabled] .btn-yellow.active {
 .btn-purple:active,
 .btn-purple.active,
 .open .dropdown-toggle.btn-purple {
-  color: #ffffff;
+  color: white;
   background-color: #552299;
   border-color: #4430AB;
 }
@@ -629,7 +629,7 @@ fieldset[disabled] .btn-purple.active {
 .btn-dpurple:active,
 .btn-dpurple.active,
 .open .dropdown-toggle.btn-dpurple {
-  color: #ffffff;
+  color: white;
   background-color: #3C1173;
   border-color: #1D0D6B;
 }
@@ -719,7 +719,7 @@ fieldset[disabled] .btn-lilac.active {
 .btn-lgreen:active,
 .btn-lgreen.active,
 .open .dropdown-toggle.btn-lgreen {
-  color: #ffffff;
+  color: white;
   background-color: #4B9954;
   border-color: #6CC779;
 }
@@ -764,7 +764,7 @@ fieldset[disabled] .btn-lgreen.active {
 .btn-lime:active,
 .btn-lime.active,
 .open .dropdown-toggle.btn-lime {
-  color: #ffffff;
+  color: white;
   background-color: #4B9954;
   border-color: #6CC779;
 }
@@ -809,7 +809,7 @@ fieldset[disabled] .btn-lime.active {
 .btn-green:active,
 .btn-green.active,
 .open .dropdown-toggle.btn-green {
-  color: #ffffff;
+  color: white;
   background-color: #106E1B;
   border-color: #0B9C21;
 }
@@ -854,7 +854,7 @@ fieldset[disabled] .btn-green.active {
 .btn-mokka:active,
 .btn-mokka.active,
 .open .dropdown-toggle.btn-mokka {
-  color: #ffffff;
+  color: white;
   background-color: #6B641A;
   border-color: #856820;
 }
