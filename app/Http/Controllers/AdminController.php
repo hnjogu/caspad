@@ -3,10 +3,23 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
+use Auth;
+use App\User;
+use App\Project;
+use Carbon\Carbon;
+use DB;
+use Spatie\Permission\Models\Role;
+use App\Http\Controllers\Controller;
 
 class AdminController extends Controller
 {
+    public function __construct()
+    {
+
+             // createpermissions permissions
+        $this->middleware('permission:rateddJobs-view', ['only' => ['rateddJobs']]);
+
+    }
     public function index()
     {
         return view('caspad.index');
@@ -20,7 +33,11 @@ class AdminController extends Controller
 
     public function rateddJobs()
     {
-        $rows = Project::all()->where('status', 'Completed')->where('rate', '!=', 0);
-        return view('projects.ratedJobs', compact('rows'));
+        $rows = Project::orderBy('id','DESC')
+          ->where('status', 'Completed')->where('rate', '!=', 0)
+          ->get();
+        //$rows = Project::all()->where('status', 'Completed')->where('rate', '!=', 0);
+        return view('projects.ratedJobs', compact('rows'))
+         ->with('rows', $rows);
     }
 }

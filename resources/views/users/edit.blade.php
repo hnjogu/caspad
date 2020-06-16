@@ -53,7 +53,7 @@
                       <div class="col-md-4 mb-3">
                           <div class="form-group">
                             <strong>Country:{{ $user->country }}</strong>
-                              <select id="country" name="country" class="form-control input-lg dynamic" data-dependent="capitalcity" required>
+                              <select id="country" name="country" class="form-control input-lg" required>
                               <option value="">-- Select Country --</option>
                               @foreach($country_list as $countrydata)
                                 <option value=" {{ $countrydata->country}}">{{ $countrydata->country }}</option>
@@ -62,7 +62,7 @@
 
                           </div>
                       </div>
-                      <div class="col-md-4 mb-3">
+{{--                       <div class="col-md-4 mb-3">
                           <div class="form-group">
                             <strong>Capital City:{{ $user->capitalcity }}</strong>
                               <select name="capitalcity" id="capitalcity" class="form-control input-lg"required >
@@ -80,7 +80,7 @@
                               </select>
 
                           </div>
-                      </div>
+                      </div> --}}
                       <div class="col-md-4 mb-3">
                         <div class="form-group">
                             <strong>Phone Number:</strong>

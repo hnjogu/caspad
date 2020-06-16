@@ -40,7 +40,7 @@
                           <div class="form-group row">
                             <label for="Country" class="col-md-4 col-form-label text-md-right">{{ __('Country') }}</label>
                             <div class="col-md-6">
-                              <select id="country" name="country" class="form-control input-lg dynamic" data-dependent="capitalcity">
+                              <select id="country" name="country" class="form-control input-lg">
                                 <option value="">-- Select Country --</option>
                                 @foreach($country_list as $countrydata)
                                   <option value=" {{ $countrydata->country}}">{{ $countrydata->country }}</option>
@@ -48,16 +48,17 @@
                               </select>
                             </div>
                           </div>
+                          <input type="hidden"  name="type" value="Client">
 
-                        <div class="form-group row">
+{{--                         <div class="form-group row">
                           <label for="Country" class="col-md-4 col-form-label text-md-right">{{ __('Capital City') }}</label>
                           <div class="col-md-6">
                             <select name="capitalcity" id="capitalcity" class="form-control input-lg" >
                             </select>
                           </div>
-                        </div>
+                        </div> --}}
 
-                        <div class="form-group row">
+{{--                         <div class="form-group row">
                             <label for="Type" class="col-md-4 col-form-label text-md-right">{{ __('Type') }}</label>
                             <div class="col-md-6">
                               <select id="type" name="type" class="form-control input-lg" required>
@@ -67,7 +68,7 @@
                                 <option value="Client">Client</option>
                             </select>
                           </div>
-                        </div>
+                        </div> --}}
 
                         <div class="form-group row">
                             <label for="Mobile" class="col-md-4 col-form-label text-md-right">{{ __('Mobile') }}</label>
