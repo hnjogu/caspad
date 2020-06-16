@@ -55,13 +55,13 @@
                                     <a href="{{ route('register') }}" class="nav-item nav-link">Register</a>
                                   @endif
                                 </div> -->
-                                @endauth 
+                                @endauth
                             </div>
                         </li>
                         <!-- Authentication Links -->
                         @guest
                         <li class="nav-item">
-                            <a class="nav-link" href="/transcription">Transcription</a>
+                            <a class="nav-link" href="/transcription">How It Works</a>
                         </li>
 
                             <li class="nav-item">
