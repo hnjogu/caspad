@@ -33,6 +33,10 @@
                 @endforeach
             </tbody>
           </table>
+            @forelse ($Total_projects as $total)
+              <h5 class="modal-title" align="center"><i>Total Amount:   <b>{{$total->total_amount}}</b></i></h5>
+              @empty
+            @endforelse
         </div>
         <div class="card-footer">
             <a class="btn btn-primary btn-sm" href="{{ route('getprojectsindex') }}"> <i class="fa fa-reply"></i> Back</a>

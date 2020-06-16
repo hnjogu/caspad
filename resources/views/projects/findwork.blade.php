@@ -27,9 +27,9 @@
                     <tr>
                         <td>{{ $key +1 }}</td>
                         <td> {{$row->customer_name}} </td>
-                        <td> {{$row->length}} </td>
+                        <td class="length"> {{$row->length}} </td>
                         <td> 0.40 </td>
-                        <td> {{$row->total_amount}} </td>
+                        <td id="total">  </td>
                         <td> {{$row->subject}} </td>
                         <td>
                             <video id="myVideo" width="300" height="100" controls>
@@ -64,4 +64,18 @@
       //alert("The video has started to play");
     };
 </script>
+
+<script type="text/javascript">
+     $(document).ready(function(){
+        $('tr').each(function(){
+            var total = 0;
+            
+            $(this).find('.length').each(function(){
+                var price = $(this).text();
+                var a = price.split(':');
+                var seconds =  (+a[0]) + (+a[1]) / 60; 
+
+                total = parseFloat(seconds) * 0.40;
+            });
+    </script>
 @endsection

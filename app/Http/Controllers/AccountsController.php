@@ -43,12 +43,22 @@ class AccountsController extends Controller
     public function paidProjects()
     {
       $rows = Project::all()->where('paid', 1);
-      return view('accounts.paid_projects', compact('rows'));
+      $Total_projects = DB::table("projects")
+        ->select(DB::raw("SUM(projects.total_amount) as total_amount"))
+        ->get();
+      return view('accounts.paid_projects', compact('rows'))
+      ->with('Total_projects',$Total_projects);
     }
 
     public function clientPaidProjects()
     {
       $rows = Project::all()->where('paid', 1)->where('user_id', Auth::user()->id);
-      return view('accounts.client_paid_projects', compact('rows'));
+
+      $Total_projects = DB::table("projects")
+        ->select(DB::raw("SUM(projects.total_amount) as total_amount"))
+         ->where('user_id', Auth::id())
+        ->get();
+      return view('accounts.client_paid_projects', compact('rows'))
+       ->with('Total_projects',$Total_projects);
     }
 }
