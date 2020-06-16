@@ -9,19 +9,20 @@
         <div class="carousel-item active">
           <img src="{{ asset('storage/pics/banner.jpg') }}" class="d-block w-100" alt="...">
           <div class="carousel-caption d-none d-md-block">
-            <h1>Human Transcription Services</h1>
+            <h1> <a href="/register">Audio / Video Transcription</a> </h1>
           </div>
         </div>
         <div class="carousel-item">
           <img src="{{ asset('storage/pics/banner2.jpg') }}" class="d-block w-100" alt="...">
           <div class="carousel-caption d-none d-md-block">
-            <h1>99% ACCURACY GUARANTEE</h1>
+
+            <h1>Human Transcription Services</h1>
           </div>
         </div>
         <div class="carousel-item">
           <img src="{{ asset('storage/pics/banner3.jpg') }}" class="d-block w-100" alt="...">
           <div class="carousel-caption d-none d-md-block">
-            <h1>ASSURED DATA SECURITY</h1>
+              <h1>99% ACCURACY GUARANTEE</h1>
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-<div class="container-fluid mt-4">
+<div class=" mt-4">
     <!-- Footer -->
 <footer class="page-footer font-small bg-darkblue pt-4">
 
@@ -59,7 +59,7 @@
 
               <ul class="list-unstyled">
                 <li>
-                  <a href="/transcription">Transcription</a>
+                  <a href="/transcription">How It Works</a>
                 </li>
                 <li>
                   <a href="subtitles">FAQs</a>
@@ -163,7 +163,7 @@
           </ul>
 
         <!-- Copyright -->
-        <div class="footer-copyright bg-blue text-center py-3">© <?= date('Y'); ?> Caspad,   All Rights Reserved.
+        <div class="footer-copyright bg-blue text-center py-4">© <?= date('Y'); ?> Caspad,   All Rights Reserved.
         </div>
         <!-- Copyright -->
 

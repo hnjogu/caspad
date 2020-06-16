@@ -18,7 +18,7 @@
             Some instances where we may disclose your information would be when we have to comply with a legal obligation (e.g. warrants, subpoenas and court orders); enforce our company policies; protect our or others rights, property and safety; protect against legal liability. Otherwise, financial information or personally identifiable information will not be provided to other parties for marketing, advertising or any other uses.
            </p>
 
-           <h3 class="display-5 text-success">Cookies Privacy</h3>
+           <h3 class="display-5 text-success">Cookies Policy</h3>
            <hr class="my-2">
            <p>
             Cookies are small text files which are transferred from our websites, applications or services to your devices hard drive through your web browser (if you allow). Cookies enable a site or service provider systems to recognize your browser, capture and remember certain information. We use cookies to help us provide you with a personalized service, and to improve the user-experience on our websites, applications and services.

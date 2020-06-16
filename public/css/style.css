@@ -20,6 +20,10 @@ body {
     background: rgba(0, 0, 0, 0.6);
 }
 
+a{
+  color: green !important;
+}
+
 p{
   font-size: 17px !important;
 }
