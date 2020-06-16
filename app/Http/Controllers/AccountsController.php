@@ -3,6 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
+use App\User;
+use App\Project;
+use Carbon\Carbon;
+use DB;
+use Spatie\Permission\Models\Role;
+use App\Http\Controllers\Controller;
 
 class AccountsController extends Controller
 {
@@ -28,6 +35,8 @@ class AccountsController extends Controller
 
     public function index()
     {
-        return view('accounts.dashboard');
+      $role = Auth::user()->roles->pluck('name');
+        return view('accounts.dashboard')
+        ->with('role',$role);
     }
 }

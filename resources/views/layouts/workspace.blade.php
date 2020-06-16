@@ -63,10 +63,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="container-fluid">
                     {{-- @include('inc.messages') --}}
                     <div class="row mb-2">
-                        <div class="col-sm-6">
+                        <div class="col-sm-3">
                           <h4 class="m-0 text-dark">Dashboard</h4>
                         </div>
-                        <div class="col-sm-6">
+                        <div class="col-sm-3">
+                          <div class="card-block">
+                            <div id="countdown">
+                                <div class="well">
+                                    <span id="countTime" class="timer bg-success"></span>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
                           <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="/home">Home</a></li>
                             <li class="breadcrumb-item active">Caspad Transcription Ltd</li>
@@ -83,6 +92,48 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 </div>
 
+
+<!-- timer start here -->
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+  $( document ).ready(function() {
+  setInterval(function time(){
+  var d = new Date();
+  var hours = 15 - d.getHours();
+  var min = 60 - d.getMinutes();
+  if((min + '').length == 1){
+    min = '0' + min;
+  }
+  var sec = 60 - d.getSeconds();
+  if((sec + '').length == 1){
+        sec = '0' + sec;
+  }
+  jQuery('#countdown #hour').html(hours);
+  jQuery('#countdown #min').html(min);
+  jQuery('#countdown #sec').html(sec);
+}, 1000); });
+</script>
+
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script>
+  var countdown = 900 * 60 * 1000;
+  var timerId = setInterval(function(){
+    countdown -= 1000;
+    var min = Math.floor(countdown / (60 * 1000));
+    var sec = Math.floor((countdown - (min * 60 * 1000)) / 1000);
+    if (countdown <= 0) {
+       alert("900 min!");
+       clearInterval(timerId);
+    } else {
+       $("#countTime").html(min + " : " + sec);
+    }
+  }, 1000);
+  </script>
+<!-- timer end here -->
 
 <!-- REQUIRED SCRIPTS -->
      <!-- Datatable  -->
@@ -211,3 +262,117 @@ const calc_Amount=(videoSeconds)=>{
     </script>
 </body>
 </html>
+
+
+<style type="text/css">
+  @import url(http://fonts.googleapis.com/css?family=Lato:100,400);
+  .mb20{
+      margin-bottom:20px;
+  }
+  section {
+      padding: 40px 0;
+  }
+  #timer .countdown-wrapper {
+      margin: 0 auto;
+  }
+  #timer #countdown {
+      font-family: 'Lato', sans-serif;
+      text-align: center;
+      color: #eee;
+      text-shadow: 1px 1px 5px black;
+      padding: 40px 0;
+  }
+  #timer .countdown-wrapper #countdown .timer {
+      margin: 10px;
+      padding: 20px;
+      font-size: 90px;
+      border-radius: 50%;
+      cursor: pointer;
+  }
+  #timer .col-md-4.countdown-wrapper #countdown .timer {
+      margin: 10px;
+      padding: 20px;
+      font-size: 35px;
+      border-radius: 50%;
+      cursor: pointer;
+  }
+  #timer .countdown-wrapper #countdown #hour {
+      -webkit-box-shadow: 0 0 0 5px rgba(92, 184, 92, .5);
+      -moz-box-shadow: 0 0 0 5px rgba(92, 184, 92, .5);
+      box-shadow: 0 0 0 5px rgba(92, 184, 92, .5);
+  }
+  #timer .countdown-wrapper #countdown #hour:hover {
+      -webkit-box-shadow: 0px 0px 15px 1px rgba(92, 184, 92, 1);
+      -moz-box-shadow: 0px 0px 15px 1px rgba(92, 184, 92, 1);
+      box-shadow: 0px 0px 15px 1px rgba(92, 184, 92, 1);
+  }
+  #timer .countdown-wrapper #countdown #min {
+      -webkit-box-shadow: 0 0 0 5px rgba(91, 192, 222, .5);
+      -moz-box-shadow: 0 0 0 5px rgba(91, 192, 222, .5);
+      box-shadow: 0 0 0 5px rgba(91, 192, 222, .5);
+  }
+  #timer .countdown-wrapper #countdown #min:hover {
+      -webkit-box-shadow: 0px 0px 15px 1px rgb(91, 192, 222);
+      -moz-box-shadow: 0px 0px 15px 1px rgb(91, 192, 222);
+      box-shadow: 0px 0px 15px 1px rgb(91, 192, 222);
+  }
+  #timer .countdown-wrapper #countdown #sec {
+      -webkit-box-shadow: 0 0 0 5px rgba(2, 117, 216, .5);
+      -moz-box-shadow: 0 0 0 5px rgba(2, 117, 216, .5);
+      box-shadow: 0 0 0 5px rgba(2, 117, 216, .5)
+  }
+  #timer .countdown-wrapper #countdown #sec:hover {
+      -webkit-box-shadow: 0px 0px 15px 1px rgba(2, 117, 216, 1);
+      -moz-box-shadow: 0px 0px 15px 1px rgba(2, 117, 216, 1);
+      box-shadow: 0px 0px 15px 1px rgba(2, 117, 216, 1);
+  }
+  #timer .countdown-wrapper .card .card-footer .btn {
+      margin: 2px 0;
+  }
+  @media (min-width: 992px) and (max-width: 1199px) {
+      #timer .countdown-wrapper #countdown .timer {
+          margin: 10px;
+          padding: 20px;
+          font-size: 65px;
+          border-radius: 50%;
+          cursor: pointer;
+      }
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+       #timer .countdown-wrapper #countdown .timer {
+          margin: 10px;
+          padding: 20px;
+          font-size: 72px;
+          border-radius: 50%;
+          cursor: pointer;
+      }
+  }
+  @media (max-width: 768px) {
+      #timer .countdown-wrapper #countdown .timer {
+          margin: 10px;
+          padding: 20px;
+          font-size: 73px;
+          border-radius: 50%;
+          cursor: pointer;
+      }
+  }
+  @media (max-width: 767px) {
+      #timer .countdown-wrapper #countdown #hour,
+      #timer .countdown-wrapper #countdown #min,
+      #timer .countdown-wrapper #countdown #sec {
+          font-size: 60px;
+          border-radius: 4%;
+      }
+  }
+  @media (max-width: 576px){
+      #timer .countdown-wrapper #countdown #hour,
+      #timer .countdown-wrapper #countdown #min,
+      #timer .countdown-wrapper #countdown #sec {
+          font-size: 25px;
+          border-radius: 4%;
+      }
+      #timer .countdown-wrapper #countdown .timer {
+          padding: 13px;
+      }
+  }
+</style>

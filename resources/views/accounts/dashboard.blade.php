@@ -2,64 +2,87 @@
 
 @section('content')
 
-<div class="container">
-        <div class="row mt-4">
-          <div class="col-md-12">
-                <div class="card">
-                    <div class="card-header bg-success">Accounts Panel</div>
-                    <div class="card-body">
-                        <p class="text-info">Administrator's Accounts Manager</p>
-                        <a class="btn btn-dblue btn-sm" href="{{ route('projects.create') }}"> <i class="fas fa-edit fa-3x"></i> <div class="mt-2">Pay <br>Freelancers</div> </a>
-                        <a class="btn btn-dblue btn-sm" href="{{ route('projects.create') }}"> <i class="fas fa-edit fa-3x"></i> <div class="mt-2">Pay <br>Graders</div> </a>
-                        <a class="btn btn-dblue btn-sm" href="{{ route('projects.create') }}"> <i class="fas fa-edit fa-3x"></i> <div class="mt-2">Paid <br>Project by Clients</div> </a>
-                        <a class="btn btn-dblue btn-sm" href="{{ route('projects.create') }}"> <i class="fas fa-edit fa-3x"></i> <div class="mt-2">Paid <br>Users</div> </a>
-                        <br>
-                        <hr>
-                        <p class="text-info">Client's Accounts Manager</p>
-                        <hr>
-                        <a class="btn btn-dblue btn-sm" href="{{ route('projects.create') }}"> <i class="fas fa-edit fa-3x"></i> <div class="mt-2">Paid <br>Projects</div> </a>
-                        <br>
-                        <hr>
-                        <p class="text-info">Freelancer's Account Manager</p>
-                        <hr>
-                        <a class="btn btn-dblue btn-sm" href="{{ route('findwork.index') }}"> <i class="fas fa-edit fa-3x"></i> <div class="mt-2">My  <br> Earnings</div> </a>
+  <div class="container">
+    <div class="row mt-4">
+      <div class="col-md-12">
+            <div class="card">
+                <div class="card-header bg-success">Accounts Panel</div>
+                <div class="card-body">
+        @foreach ($role as $role_user)
+          @if($role_user == 'Admin')
+                    <p class="text-info">Administrator's Accounts Manager</p>
+                      <a class="btn btn-dblue btn-sm" href="{{ route('projects.create') }}"> <i class="fas fa-edit fa-3x"></i> 
+                        <div class="mt-2">Pay <br>Freelancers</div> 
+                      </a>
+                      <a class="btn btn-dblue btn-sm" href="{{ route('projects.create') }}"> <i class="fas fa-edit fa-3x"></i>
+                       <div class="mt-2">Pay <br>Graders</div> 
+                      </a>
+                      <a class="btn btn-dblue btn-sm" href="{{ route('projects.create') }}"> <i class="fas fa-edit fa-3x"></i> 
+                        <div class="mt-2">Paid <br>Project by Clients</div>
+                       </a>
+                      <a class="btn btn-dblue btn-sm" href="{{ route('projects.create') }}"> <i class="fas fa-edit fa-3x"></i> 
+                        <div class="mt-2">Paid <br>Users</div>
+                      </a>
+                    <br>
+          @endif
+          @if($role_user == 'Client')
+                    <hr>
+                    <p class="text-info">Client's Accounts Manager</p>
+                    <hr>
+                      <a class="btn btn-dblue btn-sm" href="{{ route('projects.create') }}"> <i class="fas fa-edit fa-3x"></i> 
+                        <div class="mt-2">Paid <br>Projects</div> 
+                      </a>
+                    <br>
+          @endif
+          @if($role_user == 'Freelancer')
+                    <hr>
+                    <p class="text-info">Freelancer's Account Manager</p>
+                    <hr>
+                      <a class="btn btn-dblue btn-sm" href="{{ route('findwork.index') }}"> <i class="fas fa-edit fa-3x"></i>
+                        <div class="mt-2">My  <br> Earnings</div>
+                      </a>
 
-                        <br>
-                        <hr>
-                        <p class="text-info">Grader's Account Manager</p>
-                        <hr>
-
-                        <a class="btn btn-dblue btn-sm" href="/findwork/grader"> <i class="fas fa-edit fa-3x"></i> <div class="mt-2">My <br> Earnings</div> </a>
-                    </div>
-                    <div class="card-footer"></div>
+                    <br>
+          @endif
+          @if($role_user == 'Grader')
+                    <hr>
+                    <p class="text-info">Grader's Account Manager</p>
+                    <hr>
+                      <a class="btn btn-dblue btn-sm" href="/findwork/grader"> <i class="fas fa-edit fa-3x"></i>
+                        <div class="mt-2">My <br> Earnings</div> 
+                      </a>
+          @endif
+        @endforeach
                 </div>
-          </div>
-	      </div>
-</div>
+                <div class="card-footer"></div>
+            </div>
+      </div>
+    </div>
+  </div>
 
 @endsection
 
 <style type="text/css">
-	body { padding-top:20px; }
+  body { padding-top:20px; }
 .container {
     max-width: 1200px;
 }
 .card-body
 .btn:not(.btn-block) {
-	width:140px !important;
-	height:135px !important;
-	margin-bottom:10px !important;
-	vertical-align: middle !important;
-	text-align: center !important;
-	text-wrap: normal !important;
-	padding: 15px 0 0 0 !important;
+  width:140px !important;
+  height:135px !important;
+  margin-bottom:10px !important;
+  vertical-align: middle !important;
+  text-align: center !important;
+  text-wrap: normal !important;
+  padding: 15px 0 0 0 !important;
 }
 /* Font Size For Button Text */
 .glyphsize {
-	font-size:48px !important;
+  font-size:48px !important;
 }
 .card-footer {
-	line-height:inherit !important;
+  line-height:inherit !important;
 }
 /* Colours Used for Glyphicons and some text */
 .black { color: #000;}
