@@ -19,10 +19,10 @@
                       <th>Customer</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    @foreach ($rows as $row)
+                  <tbody> 
+                    @foreach ($rows as $key => $row)
                         <tr>
-                            <td> {{$loop->index+1}} </td>
+                            <td>{{ $key +1 }}</td>
                             <td> {{$row->project_id}} </td>
                             <td> {{$row->rate}} </td>
                             <td> {{$row->length}} </td>

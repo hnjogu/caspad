@@ -43,10 +43,12 @@ Route::group(['middleware' => ['auth']], function() {
 		Route::get('/getprojectsindex', 'ProjectsController@getprojectsindex')->name('getprojectsindex');
 		Route::get('/completed-projects', 'ProjectsController@completedProjects')->name('projects.completed');
 		Route::get('/promotions', 'ProjectsController@promotions')->name('projects.promotion');
-    Route::resource('/projects', 'ProjectsController');
-    Route::get('/rate/{id}', 'ProjectsController@rate')->name('rate');
-    Route::post('/rate/store/{id}', 'ProjectsController@storeRate')->name('rate.store');
-    Route::get('/projects/rated-projects', 'AdminController@rateddJobs')->name('projects.rated');
+	    Route::resource('/projects', 'ProjectsController');
+	    Route::get('/rate/{id}', 'ProjectsController@rate')->name('rate');
+	    Route::post('/rate/store/{id}', 'ProjectsController@storeRate')->name('rate.store');
+	    Route::get('/rateddJobs', 'AdminController@rateddJobs')->name('rateddJobs');
+	    //Route::get('tt/projects/rated-projects', 'AdminController@rateddJobs')->name('projects.rated');
+	    
 
         // download pdf file
 

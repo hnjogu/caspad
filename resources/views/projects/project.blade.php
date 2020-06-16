@@ -9,11 +9,15 @@
                   <div class="card-header bg-success">Project Panel</div>
                   @foreach ($role as $role_user)
                     <div class="card-body">
-                      <p class="text-info">Admin Model</p>
-                      <hr>
-                        <a class="btn btn-dblue btn-sm" href="{{ route('projects.rated') }}"> <i class="fas fa-star fa-3x"></i>
-                          <div class="mt-2">Rated <br> Jobs </div>
-                        </a>
+                      @if($role_user == 'Admin')
+                        <p class="text-info">Admin Model</p>
+                        <hr>
+                        @can('rateddJobs-view')
+                          <a class="btn btn-dblue btn-sm" href="{{ url('/rateddJobs') }}"> <i class="fas fa-star fa-3x"></i>
+                            <div class="mt-2">Rated <br> Jobs </div>
+                          </a>
+                        @endcan
+                      @endif
                       @if($role_user == 'Client')
                         <p class="text-info">Client Model</p>
                         <hr>
