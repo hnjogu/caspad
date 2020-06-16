@@ -20,7 +20,17 @@
                     </tr>
                   </thead>
                   <tbody>
-                    
+                    @foreach ($rows as $row)
+                        <tr>
+                            <td> {{$loop->index+1}} </td>
+                            <td> {{$row->project_id}} </td>
+                            <td> {{$row->rate}} </td>
+                            <td> {{$row->length}} </td>
+                            <td> {{$row->freelancer_id}} </td>
+                            <td> {{$row->grader}} </td>
+                            <td> {{$row->customer_name}} </td>
+                        </tr>
+                    @endforeach
                   </tbody>
               </table>
           </div>

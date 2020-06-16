@@ -9,12 +9,17 @@
                   <div class="card-header bg-success">Project Panel</div>
                   @foreach ($role as $role_user)
                     <div class="card-body">
+                      <p class="text-info">Admin Model</p>
+                      <hr>
+                        <a class="btn btn-dblue btn-sm" href="{{ route('projects.rated') }}"> <i class="fas fa-edit fa-3x"></i>
+                          <div class="mt-2">Rated <br> Jobs </div>
+                        </a>
                       @if($role_user == 'Client')
                         <p class="text-info">Client Model</p>
                         <hr>
                         @can('job-create')
-                          <a class="btn btn-dblue btn-sm" href="{{ route('projects.create') }}"> <i class="fas fa-edit fa-3x"></i> 
-                            <div class="mt-2">Post <br> Job / Project</div> 
+                          <a class="btn btn-dblue btn-sm" href="{{ route('projects.create') }}"> <i class="fas fa-edit fa-3x"></i>
+                            <div class="mt-2">Post <br> Job / Project</div>
                           </a>
                         @endcan
                         @can('job-create')
@@ -26,7 +31,7 @@
                           </a>
                         @endcan
                         @can('promotions-list')
-                          <a class="btn btn-dblue btn-sm" href="{{ route('projects.promotion') }}"> <i class="fas fa-star fa-3x"></i> <div class="mt-2">My <br> Offers / Promotions </div> 
+                          <a class="btn btn-dblue btn-sm" href="{{ route('projects.promotion') }}"> <i class="fas fa-star fa-3x"></i> <div class="mt-2">My <br> Offers / Promotions </div>
                           </a>
                         @endcan
                         <br>
@@ -40,11 +45,11 @@
                           </a>
                         @endcan
                         @can('job-complete')
-                          <a class="btn btn-dblue btn-sm" href="/freelancer-completed-projects"> <i class="fas fa-user fa-3x"></i> <div class="mt-2">My <br>Completed Projects</div> 
+                          <a class="btn btn-dblue btn-sm" href="/freelancer-completed-projects"> <i class="fas fa-user fa-3x"></i> <div class="mt-2">My <br>Completed Projects</div>
                           </a>
                         @endcan
                         @can('freelancer-metrics')
-                          <a class="btn btn-dblue btn-sm" href="/metrics"> <i class="fas fa-check-circle fa-3x"></i> <div class="mt-2">My <br> Metrics </div> 
+                          <a class="btn btn-dblue btn-sm" href="/metrics"> <i class="fas fa-check-circle fa-3x"></i> <div class="mt-2">My <br> Metrics </div>
                           </a>
                         @endcan
                         @can('freelancer-earnings')
@@ -54,12 +59,12 @@
 
                         <br>
                       @endif
-                      @if($role_user == 'Grader') 
+                      @if($role_user == 'Grader')
                         <hr>
                         <p class="text-info">Grader Model</p>
                         <hr>
                         @can('graderprojects-find')
-                          <a class="btn btn-dblue btn-sm" href="/findwork/grader"> <i class="fas fa-edit fa-3x"></i> <div class="mt-2">Find <br> Projects</div> 
+                          <a class="btn btn-dblue btn-sm" href="/findwork/grader"> <i class="fas fa-edit fa-3x"></i> <div class="mt-2">Find <br> Projects</div>
                           </a>
                         @endcan
                         @can('graderprojects-myprojects')
@@ -67,7 +72,7 @@
                           </a>
                         @endcan
                         @can('graderprojects-earnings')
-                          <a class="btn btn-dblue btn-sm" href="/grader-earnings"> <i class="fas fa-star fa-3x"></i> <div class="mt-2">My <br> Earnings </div> 
+                          <a class="btn btn-dblue btn-sm" href="/grader-earnings"> <i class="fas fa-star fa-3x"></i> <div class="mt-2">My <br> Earnings </div>
                           </a>
                         @endcan
                       @endif

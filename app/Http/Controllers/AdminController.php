@@ -18,7 +18,7 @@ class AdminController extends Controller
         return view('caspad.profile', compact('user'));
     }
 
-    public function ratedJobs()
+    public function rateddJobs()
     {
         $rows = Project::all()->where('status', 'Completed')->where('rate', '!=', 0);
         return view('projects.ratedJobs', compact('rows'));
