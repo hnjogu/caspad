@@ -19,12 +19,44 @@
                       <th>Customer</th>
                     </tr>
                   </thead>
-                  <tbody> 
-                    @foreach ($rows as $key => $row)
+                  <tbody>
+                    @foreach ($rows as $row)
                         <tr>
-                            <td>{{ $key +1 }}</td>
+                            <td>{{ $loop->index+1 }}</td>
                             <td> {{$row->project_id}} </td>
-                            <td> {{$row->rate}} </td>
+                            <td>
+                                @if($row->rate == 1)
+                                  <i class="fa fa-star star-checked"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                @elseif($row->rate ==2)
+                                  <i class="fa fa-star star-checked"></i>
+                                  <i class="fa fa-star star-checked"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                @elseif($row->rate ==3)
+                                  <i class="fa fa-star star-checked"></i>
+                                  <i class="fa fa-star star-checked"></i>
+                                  <i class="fa fa-star star-checked"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                @elseif($row->rate ==4)
+                                  <i class="fa fa-star star-checked"></i>
+                                  <i class="fa fa-star star-checked"></i>
+                                  <i class="fa fa-star star-checked"></i>
+                                  <i class="fa fa-star star-checked"></i>
+                                  <i class="fa fa-star"></i>
+                                @elseif($row->rate ==5)
+                                  <i class="fa fa-star star-checked"></i>
+                                  <i class="fa fa-star star-checked"></i>
+                                  <i class="fa fa-star star-checked"></i>
+                                  <i class="fa fa-star star-checked"></i>
+                                  <i class="fa fa-star star-checked"></i>
+                                @endif
+                            </td>
                             <td> {{$row->length}} </td>
                             <td> {{$row->freelancer_id}} </td>
                             <td> {{$row->grader}} </td>

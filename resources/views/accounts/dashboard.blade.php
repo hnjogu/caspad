@@ -11,17 +11,8 @@
         @foreach ($role as $role_user)
           @if($role_user == 'Admin')
                     <p class="text-info">Administrator's Accounts Manager</p>
-                      <a class="btn btn-dblue btn-sm" href="{{ route('projects.create') }}"> <i class="fas fa-edit fa-3x"></i> 
-                        <div class="mt-2">Pay <br>Freelancers</div> 
-                      </a>
-                      <a class="btn btn-dblue btn-sm" href="{{ route('projects.create') }}"> <i class="fas fa-edit fa-3x"></i>
-                       <div class="mt-2">Pay <br>Graders</div> 
-                      </a>
-                      <a class="btn btn-dblue btn-sm" href="{{ route('projects.create') }}"> <i class="fas fa-edit fa-3x"></i> 
-                        <div class="mt-2">Paid <br>Project by Clients</div>
-                       </a>
-                      <a class="btn btn-dblue btn-sm" href="{{ route('projects.create') }}"> <i class="fas fa-edit fa-3x"></i> 
-                        <div class="mt-2">Paid <br>Users</div>
+                      <a class="btn btn-dblue btn-sm" href="{{ route('projects.paid') }}"> <i class="fa fa-check-circle fa-3x"></i>
+                        <div class="mt-2">Paid <br>Projects</div>
                       </a>
                     <br>
           @endif
@@ -29,8 +20,8 @@
                     <hr>
                     <p class="text-info">Client's Accounts Manager</p>
                     <hr>
-                      <a class="btn btn-dblue btn-sm" href="{{ route('projects.create') }}"> <i class="fas fa-edit fa-3x"></i> 
-                        <div class="mt-2">Paid <br>Projects</div> 
+                      <a class="btn btn-dblue btn-sm" href="{{ route('projects.clientPaid') }}"> <i class="fa fa-check-circle fa-3x"></i>
+                        <div class="mt-2">Paid <br>Projects</div>
                       </a>
                     <br>
           @endif
@@ -49,7 +40,7 @@
                     <p class="text-info">Grader's Account Manager</p>
                     <hr>
                       <a class="btn btn-dblue btn-sm" href="/findwork/grader"> <i class="fas fa-edit fa-3x"></i>
-                        <div class="mt-2">My <br> Earnings</div> 
+                        <div class="mt-2">My <br> Earnings</div>
                       </a>
           @endif
         @endforeach

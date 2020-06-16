@@ -103,4 +103,16 @@ class FindworkController extends Controller
         return view('projects.grader_earnings', compact('rows'));
     }
 
+    public function workspaceStore(Request $request, $id)
+    {
+
+        $row = Project::find($id);
+        $row ->status = 'Submitted';
+        $row ->freelancer = Auth::user()->name;
+        $row ->freelancer_id = Auth::user()->id;
+        $row->save();
+
+        return redirect()->route('findwork.index')->with('success', 'Project Submitted successfully.');
+    }
+
 }

@@ -48,7 +48,11 @@ Route::group(['middleware' => ['auth']], function() {
 	    Route::post('/rate/store/{id}', 'ProjectsController@storeRate')->name('rate.store');
 	    Route::get('/rateddJobs', 'AdminController@rateddJobs')->name('rateddJobs');
 	    //Route::get('tt/projects/rated-projects', 'AdminController@rateddJobs')->name('projects.rated');
-	    
+
+			// Accounts Panel
+	    Route::get('/paid-projects', 'AccountsController@paidProjects')->name('projects.paid');
+	    Route::get('/client/paid-projects', 'AccountsController@clientPaidProjects')->name('projects.clientPaid');
+
 
         // download pdf file
 
@@ -86,6 +90,7 @@ Route::group(['middleware' => ['auth']], function() {
         Route::get('/freelancer-earnings', 'FindworkController@freelancerEarnings');
         Route::get('/grader-earnings', 'FindworkController@graderEarnings');
 				Route::get('/workspace', 'FindworkController@workspace')->name('workspace.index');
+				Route::post('/workspace/store/{id}', 'FindworkController@workspaceStore')->name('workspace.store');
 
 				// Manage Account route
 				Route::get('/accounts', 'AccountsController@index')->name('accounts');

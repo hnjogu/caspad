@@ -22,7 +22,7 @@ body {
 } */
 
 a{
-  color: green !important;
+  /* color: green !important; */
   text-decoration: none;
 }
 
@@ -63,6 +63,10 @@ p{
                 Custom Styles
 ----------------------------------------------
 */
+
+.star-checked {
+  color: orange;
+}
 
 .mt-6{
   margin-top: 6rem !important;

@@ -2,7 +2,9 @@
 
 @section('content')
 <div class="mt-4">
-    <form action="">
+    <form action="{{ route('workspace.store', $row->id) }}" method="POST">
+      @csrf
+      @method('POST')
         <div class="card">
             <div class="card-header bg-info"></div>
             <div class="card-body">
@@ -17,8 +19,11 @@
                             <b>Instructions</b> : {{$row->instructions}}
                         </p>
                     </div>
+                    <hr>
                 </div>
-                <textarea name="" id="summernote" cols="50"></textarea>
+                <div class="form-group mt-4">
+                    <textarea class="form-control" name="body" id="summernote" cols="50"></textarea>
+                </div>
             </div>
             <div class="card-footer">
                 <button class="btn btn-success btn-sm">Submit</button>
@@ -27,5 +32,3 @@
     </form>
 </div>
 @endsection
-
-

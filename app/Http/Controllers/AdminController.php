@@ -33,9 +33,9 @@ class AdminController extends Controller
 
     public function rateddJobs()
     {
-        $rows = Project::orderBy('id','DESC')
-          ->where('status', 'Completed')->where('rate', '!=', 0)
-          ->get();
+        // $rows = Project::orderBy('id','DESC')
+        $rows = Project::all()
+          ->where('status', 'Completed')->where('rate', '!=', 0);
         //$rows = Project::all()->where('status', 'Completed')->where('rate', '!=', 0);
         return view('projects.ratedJobs', compact('rows'))
          ->with('rows', $rows);

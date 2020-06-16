@@ -30,7 +30,7 @@ class UserController extends Controller
          $this->middleware('permission:user-edit', ['only' => ['edit','update']]);
          $this->middleware('permission:user-activeDeactive', ['only' => ['activeDeactive']]);
          $this->middleware('permission:user-approveDisapprove', ['only' => ['approveDisapprove']]);
-         $this->middleware('permission:user-changePassword', ['only' => ['showChangePasswordForm','changePassword']]); 
+         $this->middleware('permission:user-changePassword', ['only' => ['showChangePasswordForm','changePassword']]);
          $this->middleware('permission:user-delete', ['only' => ['destroy']]);
     }
 
@@ -95,10 +95,7 @@ class UserController extends Controller
             'email' => 'required|email|unique:users,email',
             'password' => 'required|same:confirm-password',
             'country' => 'required',
-            'type' => 'required',
-            'capitalcity' => 'required',
-            'company' => 'required',
-            'mobile' => 'required|unique:users,mobile,|min:10|max:13',
+            'mobile' => 'required|unique:users,mobile,|min:6|max:15',
             'id_number' => 'required|unique:users,id_number',
 
         ]);

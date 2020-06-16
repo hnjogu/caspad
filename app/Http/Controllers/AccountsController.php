@@ -29,7 +29,7 @@ class AccountsController extends Controller
        //              //Project create
        //  $this->middleware('permission:promotions-list', ['only' => ['promotions']]);
        //  // download pdf
-       //  $this->middleware('permission:pdfview-completedProjects', ['only' => ['clientpdf']]); 
+       //  $this->middleware('permission:pdfview-completedProjects', ['only' => ['clientpdf']]);
 
     }
 
@@ -38,5 +38,17 @@ class AccountsController extends Controller
       $role = Auth::user()->roles->pluck('name');
         return view('accounts.dashboard')
         ->with('role',$role);
+    }
+
+    public function paidProjects()
+    {
+      $rows = Project::all()->where('paid', 1);
+      return view('accounts.paid_projects', compact('rows'));
+    }
+
+    public function clientPaidProjects()
+    {
+      $rows = Project::all()->where('paid', 1)->where('user_id', Auth::user()->id);
+      return view('accounts.client_paid_projects', compact('rows'));
     }
 }
