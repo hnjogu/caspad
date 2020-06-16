@@ -11,18 +11,21 @@ body {
 }
 
 .body-bg {
-    background-image: url('../storage/pics/background.jpg');
+    /* background-image: url('../storage/pics/background.jpg');
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: fixed; */
+    background-color: beige;
 }
 
-.body-bg:after {
+/* .body-bg:after {
     background: rgba(0, 0, 0, 0.6);
-}
+} */
 
 a{
   color: green !important;
+  text-decoration: none;
 }
+
 
 p{
   font-size: 17px !important;
@@ -212,6 +215,11 @@ hr-break {
 
 footer {
     color: white;
+}
+
+footer a:hover{
+  color: white !important;
+  text-decoration: none;
 }
 
 

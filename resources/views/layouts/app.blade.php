@@ -102,7 +102,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main>
             @yield('content')
             @include('inc.web_footer')
         </main>
