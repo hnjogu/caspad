@@ -37,36 +37,15 @@
                         <td> {{$row->subject}} </td>
                         <td> {{$row->total_amount}} </td>
                         <td>
-                            {{-- <input id="input-1" name="input-1" class="rating rating-loading" data-min="0" data-max="5" data-step="0.1" value="" data-size="xs" disabled=""> --}}
-                            <div class="rating">
-
-                                <input id="input-1" name="rate" class="rating rating-loading" data-min="0" data-max="5" data-step="1" value="" data-size="xs">
-
-                                <input type="hidden" name="id" required="" value="}">
-
-                                <span class="review-no">422 reviews</span>
-
-                                <br/>
-
-                                <button class="btn btn-success">Submit Review</button>
-
-                                    <h5 class="sizes">sizes:
-
-                                        <span class="size" data-toggle="tooltip" title="small">s</span>
-
-                                        <span class="size" data-toggle="tooltip" title="medium">m</span>
-
-                                        <span class="size" data-toggle="tooltip" title="large">l</span>
-
-                                        <span class="size" data-toggle="tooltip" title="xtra large">xl</span>
-
-                                    </h5>
-
-                            </div>
+                            @if($row->rate == 0)
+                              <a class="btn btn-warning btn-sm" href="{{ url('/rate/'.$row->id) }}"> <i class="fa fa-star"></i> Rate  </a>
+                            @else
+                              <a class="btn btn-success btn-sm" href="!#"> <i class="fa fa-check-circle"></i> Rated  </a>
+                            @endif
                         </td>
                         <td>
                           @can('pdfview-completedProjects')
-                            <a class="btn btn-primary" href="{{ url('/clientpdf/'.$row->id) }}" role="button"><i class="fas fa-download"></i> Download </a>
+                            <a class="btn btn-primary btn-sm" href="{{ url('/clientpdf/'.$row->id) }}" role="button"><i class="fas fa-download"></i> Download </a>
                           @endcan
                         </td>
                     </tr>

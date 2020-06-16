@@ -17,4 +17,10 @@ class AdminController extends Controller
         $user = Auth::user();
         return view('caspad.profile', compact('user'));
     }
+
+    public function ratedJobs()
+    {
+        $rows = Project::all()->where('status', 'Completed')->where('rate', '!=', 0);
+        return view('projects.ratedJobs', compact('rows'));
+    }
 }

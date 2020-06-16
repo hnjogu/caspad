@@ -28,7 +28,7 @@ class ProjectsController extends Controller
                     //Project create
         $this->middleware('permission:promotions-list', ['only' => ['promotions']]);
         // download pdf
-        $this->middleware('permission:pdfview-completedProjects', ['only' => ['clientpdf']]); 
+        $this->middleware('permission:pdfview-completedProjects', ['only' => ['clientpdf']]);
 
     }
     /**
@@ -167,7 +167,7 @@ class ProjectsController extends Controller
     public function getprojectsindex()
     {
                //role loop dashboard
-        $role = Auth::user()->roles->pluck('name');   
+        $role = Auth::user()->roles->pluck('name');
         return view('projects.project')
         ->with('role',$role);
     }
@@ -196,7 +196,7 @@ class ProjectsController extends Controller
 
     public function pdf($id)
     {
-       $row = Job::find($id);
+       $row = Project::find($id);
        $pdf =$pdf = PDF::loadView('clients.pdf', compact('row'));
        return $pdf->download('project.pdf', compact('row'));
     }
@@ -210,6 +210,22 @@ class ProjectsController extends Controller
         // return $pdf->setPaper('a4')->stream();
         return $pdf->download('clients.pdf');
 
+    }
+
+    public function rate($id)
+    {
+       $row = Project::find($id);
+       return view('projects.rate', compact('row'));
+    }
+
+    public function storeRate(Request $request, $id)
+    {
+
+        $row = Project::find($id);
+        $row ->rate = $request->input('rate');
+        $row->save();
+
+        return redirect()->route('projects.completed')->with('success', 'Project Rated successfully.');
     }
 
 }

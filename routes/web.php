@@ -43,8 +43,9 @@ Route::group(['middleware' => ['auth']], function() {
 		Route::get('/getprojectsindex', 'ProjectsController@getprojectsindex')->name('getprojectsindex');
 		Route::get('/completed-projects', 'ProjectsController@completedProjects')->name('projects.completed');
 		Route::get('/promotions', 'ProjectsController@promotions')->name('projects.promotion');
-        Route::resource('/projects', 'ProjectsController');
-
+    Route::resource('/projects', 'ProjectsController');
+    Route::get('/rate/{id}', 'ProjectsController@rate')->name('rate');
+    Route::post('/rate/store/{id}', 'ProjectsController@storeRate')->name('rate.store');
         // download pdf file
 
         Route::get('/clientpdf/{id}', 'ProjectsController@clientpdf')->name('clientpdf');

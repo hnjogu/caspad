@@ -33,7 +33,7 @@
                 <div class="form-group">
                     <div class="input-group input-file" name="Fichier1">
                         <span class="input-group-btn">
-                           
+
                         </span>
                         <input type="file" class="form-control" id="file" name="file_name" placeholder='Upload a file...' required data-parsley-error-message="Upload file"/>
                         <audio id="audio"></audio>
@@ -146,8 +146,8 @@
                 </div>
             </div>
         </div>
-       
-        
+
+
         </div>
         <div class="card-footer">
             <button type="submit" class="btn btn-success btn-sm">Save & Continue &raquo;</button>
@@ -164,7 +164,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.4.7/themes/fa/theme.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" type="text/javascript"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" type="text/javascript"></script>
-    <!-- bootstrap file input script file ends here--> 
+    <!-- bootstrap file input script file ends here-->
 
 <!-- file start here script--->
     <script type="text/javascript">
@@ -182,13 +182,13 @@
             uploadUrlThumb: false,
             indicatorLoading: true,
             processData : true,
-        
+
             deleteUrl: "/public/file",
             //uploadUrl: "/company2/{applications_id}",
             //uploadUrl: '/public/KFS_Tax_Compliance_Certificates', // you must set a valid URL here else you will get an error
             theme: 'fa',
-            
-            allowedFileExtensions: ['vlc', 'wave', 'avi', 'mp3', 'mp4'],
+
+            allowedFileExtensions: ['vlc', 'wave', 'avi', 'mp3', 'mp4', 'mkv'],
             overwriteInitial: false,
             maxFileSize: 5000000,
             maxFilesNum: 10,
@@ -210,7 +210,3 @@
 <!-- file end here script--->
 
 @endsection
-
-
-
-
