@@ -25,7 +25,8 @@ class UserController extends Controller
      */
     function __construct()
     {
-         $this->middleware('permission:user-list');
+         //$this->middleware('permission:user-list');
+          $this->middleware('permission:user-list', ['only' => ['index']]);
          $this->middleware('permission:user-create', ['only' => ['create','store']]);
          $this->middleware('permission:user-edit', ['only' => ['edit','update']]);
          $this->middleware('permission:user-activeDeactive', ['only' => ['activeDeactive']]);
@@ -40,11 +41,16 @@ class UserController extends Controller
     {
         //$data = User::orderBy('id','DESC')->paginate(5);
         $data = User::orderBy('id','DESC')
+        ->where('approved_at', '0')
+        ->get();
 
+        $approved_data = User::orderBy('id','DESC')
+        ->where('approved_at', '1')
         ->get();
         return view('users.index',compact('data'))
             //->with('i', ($request->input('page', 1) - 1) * 5);
-        ->with('data', $data);
+        ->with('data', $data)
+        ->with('approved_data', $approved_data);
     }
 
 

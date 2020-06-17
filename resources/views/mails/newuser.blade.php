@@ -10,7 +10,7 @@
 <br/>
 Dear Admin. New user has registered with Caspad Transcription.
 Kindly confirm the details provided and follow the link below to activate the account.
-<a href="http://0.0.0.0:8060/users">Activate New user</a><br>
+<a href="https://caspad.com/users">Activate New user</a><br>
 Username is {{$user->email}}}<br>
 Names: {{$user->name}} {{$user->lastname}}<br>
 Mobile Phone {{$user->mobile}}<br>

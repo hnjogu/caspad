@@ -45,6 +45,7 @@ class AccountsController extends Controller
       $rows = Project::all()->where('paid', 1);
       $Total_projects = DB::table("projects")
         ->select(DB::raw("SUM(projects.total_amount) as total_amount"))
+        ->where('paid', '1')
         ->get();
       return view('accounts.paid_projects', compact('rows'))
       ->with('Total_projects',$Total_projects);
@@ -57,6 +58,7 @@ class AccountsController extends Controller
       $Total_projects = DB::table("projects")
         ->select(DB::raw("SUM(projects.total_amount) as total_amount"))
          ->where('user_id', Auth::id())
+         ->where('paid', '1')
         ->get();
       return view('accounts.client_paid_projects', compact('rows'))
        ->with('Total_projects',$Total_projects);
