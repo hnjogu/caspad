@@ -15,19 +15,23 @@ class PaymentController extends Controller
     function __construct()
     {
      // payment permissions
-        $this->middleware('permission:pay-projects', ['only' => ['pay']]); 
-
-    }
-
-    public $gateway;
- 
-    public function __construct()
-    {
+        $this->middleware('permission:pay-projects', ['only' => ['pay']]);
         $this->gateway = Omnipay::create('PayPal_Rest');
         $this->gateway->setClientId(env('PAYPAL_CLIENT_ID'));
         $this->gateway->setSecret(env('PAYPAL_CLIENT_SECRET'));
         $this->gateway->setTestMode(false); //set it to 'false' when go live
+
     }
+
+    public $gateway;
+
+    // public function __construct()
+    // {
+    //     $this->gateway = Omnipay::create('PayPal_Rest');
+    //     $this->gateway->setClientId(env('PAYPAL_CLIENT_ID'));
+    //     $this->gateway->setSecret(env('PAYPAL_CLIENT_SECRET'));
+    //     $this->gateway->setTestMode(false); //set it to 'false' when go live
+    // }
 
     public function pay(Request $request, $id)
     {
@@ -95,18 +99,18 @@ class PaymentController extends Controller
 
 
                 // return "Payment is successful. Your transaction id is: ". $arr_body['id'];
-                return view('projects.index')->with('success', 'Payment Success');
+                return redirect()->route('projects.index')->with('success', 'Payment Success');
             } else {
                 return $response->getMessage();
             }
         } else {
-            return view('project.index')->with('success', 'Payment Cancelled');
+            return redirect()->route('project.index')->with('success', 'Payment Cancelled');
         }
     }
 
     public function payment_error()
     {
-        return view('projects.index')->with('success', 'Payment Error');
+        return redirect()->route('projects.index')->with('success', 'Payment Error');
     }
- 
+
 }

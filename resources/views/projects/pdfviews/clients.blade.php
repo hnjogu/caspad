@@ -69,7 +69,7 @@
 		            </thead>
 		            <tbody>
 		              <tr>
-		                  <td>{{$Project->body}}</td>
+		                  <td>{!!$Project->body!!}</td>
 		              </tr>
 		            </tbody>
 	            </table>

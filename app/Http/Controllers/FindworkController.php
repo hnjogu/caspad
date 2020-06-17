@@ -49,7 +49,17 @@ class FindworkController extends Controller
     public function workspace($id)
     {
         $row = Project::find($id);
+        $row->status = 'Claimed';
+        $row->save();
         return view('projects.workspace', compact('row'));
+    }
+
+    public function graderWorkspace($id)
+    {
+        $row = Project::find($id);
+        $row->status = 'Grading';
+        $row->save();
+        return view('projects.grader_workspace', compact('row'));
     }
 
     public function unclaim($id)
@@ -91,6 +101,7 @@ class FindworkController extends Controller
         return view('projects.grader_index', compact('rows'));
     }
 
+
     public function gradedJobs()
     {
         $rows = Project::all()->where('status', 'Completed')->where('grader_id', Auth::user()->id);
@@ -110,9 +121,25 @@ class FindworkController extends Controller
         $row ->status = 'Submitted';
         $row ->freelancer = Auth::user()->name;
         $row ->freelancer_id = Auth::user()->id;
+        $row->body = $request->input('body');
         $row->save();
 
         return redirect()->route('findwork.index')->with('success', 'Project Submitted successfully.');
+    }
+
+    public function graderworkspaceStore(Request $request, $id)
+    {
+
+        $row = Project::find($id);
+        $row ->status = 'Completed';
+        $row ->graded_by = Auth::user()->name;
+        $row->body = $request->input('body');
+        $row->accuracy = $request->input('accuracy');
+        $row->formatting = $request->input('formatting');
+        $row->comments = $request->input('comments');
+        $row->save();
+
+        return redirect()->route('grader.index')->with('success', 'Project Completed successfully.');
     }
 
 }

@@ -62,7 +62,7 @@
                   <a href="/transcription">How It Works</a>
                 </li>
                 <li>
-                  <a href="subtitles">FAQs</a>
+                  <a href="/faqs">FAQs</a>
                 </li>
               </ul>
 
