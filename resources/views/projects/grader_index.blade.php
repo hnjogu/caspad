@@ -12,26 +12,44 @@
           <table class="table table-striped text-center">
             <thead>
               <tr>
+                <th>No</th>
                 <th>Customer Name</th>
                 <th>Project Length</th>
                 <th>Pay / Min</th>
                 <th>Total Pay</th>
                 <th>Subject</th>
+                <th>Play</th>
                 <th>Options</th>
               </tr>
             </thead>
             <tbody>
                 @foreach ($rows as $row)
                     <tr>
+                        <td>{{ $loop->index+1 }}</td>
                         <td> {{$row->customer_name}} </td>
-                        <td> {{$row->length}} </td>
+                        <td class="length"> {{$row->length}} </td>
                         <td> 0.40 </td>
-                        <td> {{$row->total_amount}} </td>
+                        <td id="total">  </td>
                         <td> {{$row->subject}} </td>
-                    <td> <a class="btn btn-success btn-sm" href="/grader/workspace/{{$row->id}}">Claim</a> </td>
+                        <td>
+                            <video id="myVideo" width="300" height="100" controls>
+                              <source src="{{asset('/files/' .$row->file_name)}}" type="audio/ogg">
+                              Your browser does not support HTML5 video.
+                            </video>
+{{--                             <audio controls>
+                                <source src="{{asset('/files/' .$row->file_name)}}" type="audio/ogg">
+                            </audio> --}}
+                        </td>
+                        <td>
+                           
+                                <a class="btn btn-success btn-sm" href="/graderWorkspace/{{$row->id}}">Claim
+                                </a>
+                           
+                        </td>
                     </tr>
                 @endforeach
             </tbody>
+
           </table>
         </div>
         <div class="card-footer">
@@ -39,4 +57,25 @@
         </div>
       </div>
 </div>
+
+<script type="text/javascript">
+    var vid = document.getElementById("myVideo");
+    vid.onplay = function() {
+      //alert("The video has started to play");
+    };
+</script>
+
+<script type="text/javascript">
+     $(document).ready(function(){
+        $('tr').each(function(){
+            var total = 0;
+
+            $(this).find('.length').each(function(){
+                var price = $(this).text();
+                var a = price.split(':');
+                var seconds =  (+a[0]) + (+a[1]) / 60;
+
+                total = parseFloat(seconds) * 0.40;
+            });
+    </script>
 @endsection

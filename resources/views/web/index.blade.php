@@ -5,7 +5,7 @@
         @include('inc.carousel')
     </div>
     <div class="container-fluid mt-4 text-center">
-        <div class="jumbotron">
+        <div class="jumbotron new-link">
             <h1 class="upper border-bottom border-primary border-width-20">Popular Transcription Services</h1>
             <div class="row mt-4">
                 <div class="col-md-4">
@@ -105,7 +105,7 @@
                   <img src="{{asset('storage/images/turnaround.png')}}" class="icons">
                   <h3 class="mt-4 text-success">Quick Turnaround</h3>
                   <p>
-                        Our professionals are always standby to work on your order.
+                        Our professionals are always standby to work on your order. 15 hours turnaround time.
                   </p>
               </div>
             </div>

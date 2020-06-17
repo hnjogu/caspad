@@ -29,7 +29,7 @@
                 </div>
             </div> --}}
             <div class="col-md-4 mb-3">
-                <label for="validationServer024">Upload Tax Compliance Certificate</label>
+                <label for="validationServer024">Choose Audio / Video to upload</label>
                 <div class="form-group">
                     <div class="input-group input-file" name="Fichier1">
                         <span class="input-group-btn">

@@ -22,7 +22,7 @@
         <div class="carousel-item">
           <img src="{{ asset('storage/pics/banner3.jpg') }}" class="d-block w-100" alt="...">
           <div class="carousel-caption d-none d-md-block">
-              <h1>99% ACCURACY GUARANTEE</h1>
+              <h1>99% Accuracy Guarantee</h1>
           </div>
         </div>
       </div>

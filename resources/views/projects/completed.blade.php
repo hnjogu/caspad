@@ -23,7 +23,7 @@
                 <th>Project Length</th>
                 <th>Subject</th>
                 <th>Status</th>
-                <th>Rating Job</th>
+                <th>Rate Job</th>
                 <th>Options</th>
               </tr>
             </thead>

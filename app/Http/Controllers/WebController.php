@@ -90,4 +90,9 @@ class WebController extends Controller
     {
         return view('web.podcast');
     }
+    
+    public function faqs()
+    {
+        return view('web.faq');
+    }
 }

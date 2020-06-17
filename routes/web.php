@@ -20,6 +20,7 @@ Route::get('/business', 'WebController@business');
 Route::get('/academic', 'WebController@academic');
 Route::get('/legal', 'WebController@legal');
 Route::get('/podcast', 'WebController@podcast');
+Route::get('/faqs', 'WebController@faqs');
 
 
 Auth::routes();
@@ -80,17 +81,19 @@ Route::group(['middleware' => ['auth']], function() {
 			Route::resource('users','UserController');
 			// Find work routes
         Route::get('/findwork', 'FindworkController@index')->name('findwork.index');
-        Route::get('/findwork/grader', 'FindworkController@graderIndex');
+        Route::get('/findwork/grader', 'FindworkController@graderIndex')->name('grader.index');
         Route::get('/findwork/graded-jobs', 'FindworkController@gradedJobs');
         Route::get('/findwork/{id}/unclaim', 'FindworkController@unclaim')->name('findwork.unclaim');
         Route::get('/workspace/{id}', 'FindworkController@workspace')->name('workspace.index');
+        Route::get('/graderWorkspace/{id}', 'FindworkController@graderWorkspace')->name('workspace.index');
         Route::get('/freelancer-completed-projects', 'FindworkController@completedProjects');
         Route::get('/metrics', 'FindworkController@metrics');
         Route::get('/metrics/{id}/view', 'FindworkController@viewMetrics');
         Route::get('/freelancer-earnings', 'FindworkController@freelancerEarnings');
         Route::get('/grader-earnings', 'FindworkController@graderEarnings');
-				Route::get('/workspace', 'FindworkController@workspace')->name('workspace.index');
-				Route::post('/workspace/store/{id}', 'FindworkController@workspaceStore')->name('workspace.store');
+		Route::get('/workspace', 'FindworkController@workspace')->name('workspace.index');
+		Route::post('/workspace/store/{id}', 'FindworkController@workspaceStore')->name('workspace.store');
+		Route::post('/grader-workspace/store/{id}', 'FindworkController@graderworkspaceStore')->name('graderworkspace.store');
 
 				// Manage Account route
 				Route::get('/accounts', 'AccountsController@index')->name('accounts');
@@ -99,6 +102,8 @@ Route::group(['middleware' => ['auth']], function() {
 
 	// Payments
 	Route::get('payment/{id}/pay', 'PaymentController@pay');
+	Route::get('paymentsuccess', 'PaymentController@payment_success')->name('paymentsuccess');
+	Route::get('paymenterror', 'PaymentController@payment_error')->name('paymenterror');
 
 });
 Route::get('logout', 'Auth\LoginController@logout', function () {

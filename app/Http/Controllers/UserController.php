@@ -91,12 +91,10 @@ class UserController extends Controller
     {
         $this->validate($request, [
             'name' => 'required',
-            'lastname' => 'required',
             'email' => 'required|email|unique:users,email',
             'password' => 'required|same:confirm-password',
             'country' => 'required',
             'mobile' => 'required|unique:users,mobile,|min:6|max:15',
-            'id_number' => 'required|unique:users,id_number',
 
         ]);
 
@@ -159,22 +157,10 @@ class UserController extends Controller
     {
         $user = new User();
         $this->validate($request, [
-            'name' => 'required',
-            'lastname' => 'required',
-            'email' => 'required|email|unique:users,email,'.$id,
-            'password' => 'same:confirm-password',
+           'name' => 'required',
+            'email' => 'required',
             'country' => 'required',
-            'capitalcity' => 'required',
-            'company' => 'required',
-            'type' => 'required',
-            //'mobile' => 'required|mobile|unique:users,mobile,|min:10|max:13'.$id,
-            //'mobile' => 'required|string|min:10|max:13|unique:users,mobile,'.$user->id,
-            //'mobile' => 'required|string|min:10|max:13|unique:users,mobile,'.Auth::user()->id,
-            'mobile' => 'required|string|min:10|max:13',
-            //'mobile' => 'required|unique:users,mobile,|min:10|max:13',
-           //'id_number' => 'required|id_number|unique:users,id_number,'.$user->id,
-            //'id_number' => 'required|unique:users,id_number,'.Auth::user()->id,
-            'id_number' => 'required',
+            
 
         ]);
 

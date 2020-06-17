@@ -98,7 +98,7 @@
           <!-- /.info-box -->
         </div>
         <!-- /.col -->
-      </div>     
+      </div>
     @endif
     @if($role_user == 'Freelancer')
       <div class="row">
@@ -109,6 +109,19 @@
             <div class="info-box-content">
               <span class="info-box-text">My jobs</span>
               <span class="badge badge-success">jobs({{count($Freelancer_jobs)}})</span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
+        </div>
+
+        <div class="col-md-3 col-sm-6 col-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-info"><i class="fa fa-tasks"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text">Resume Job</span>
+              <span class="badge badge-success"></span>
             </div>
             <!-- /.info-box-content -->
           </div>
@@ -169,4 +182,3 @@
   @endforeach
 </div>
 @endsection
-
