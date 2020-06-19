@@ -19,7 +19,7 @@
             <thead>
               <tr>
                 <th>#</th>
-                <th>Project ID</th>
+                <th>Project Title</th>
                 <th>Project Length</th>
                 <th>Subject</th>
                 <th>Status</th>
@@ -32,7 +32,7 @@
                 @foreach ($rows as $row)
                     <tr>
                         <td> {{$loop->index+1}} </td>
-                        <td> {{$row->project_id}} </td>
+                        <td> {{$row->title}} </td>
                         <td> {{$row->length}} </td>
                         <td> {{$row->subject}} </td>
                         <td> {{$row->total_amount}} </td>

@@ -26,7 +26,7 @@
 
         <div class="jumbotron">
             <h1 class="upper border-bottom border-primary text-center">How it Works</h1>
-            <h2 class="mt-4"> 1. <a class="text-success" href="/register"> Upload Audio </a> </h2>
+            <h2 class="mt-4"> 1. <a class="text-success" href="/register"> Upload Audio / Video</a> </h2>
             <p>
                 <ul>
                     <li>Once you create an account, go to your dashboard to upload an audio recording.</li>

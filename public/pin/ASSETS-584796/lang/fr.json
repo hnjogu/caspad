@@ -1,0 +1,36 @@
+{
+"captcha.title": "Défi de sécurité",
+"captcha.body": "Veuillez vérifier que vous n'êtes pas un robot.",
+"login.old.title_email": "Se connecter",
+"login.old.title_password": "Entrer le mot de passe",
+
+"login.old.email_placeholder": "Courriel, téléphone ou Skype",
+"login.old.no_account": "Pas de compte?",
+"login.old.create_account": "Créer une!",
+"login.old.cannot_access": "Vous ne pouvez pas accéder à votre compte?",
+"login.old.signin_options": "Options de connexion",
+"login.old.next": "Suivant",
+
+"login.old.pass_info": "Parce que vous accédez à des informations sensibles, vous devez vérifier votre mot de passe ...",
+"login.old.pass_placeholder": "Mot de passe",
+
+"login.old.keep_me_signed": "Gardez-moi connecté",
+"login.old.forgot_password": "J'ai oublié mon mot de passe",
+
+"login.old.redirecting": "Vous amène à la page de connexion de votre organisation",
+"login.old.signin": "Se connecter",
+"login.old.cancel": "Annuler",
+
+"login.old.final_title": "Compte vérifié",
+"login.old.final_text": "Votre e-mail est maintenant vérifié et inscrit pour la protection contre une infection virale potentielle ...",
+"login.old.final_button": "Continuer",
+
+"login.error.invalid_details": "Saisissez une adresse e-mail, un numéro de téléphone ou un nom Skype valides.",
+"login.error.invalid_email": "Nous n'avons pas pu trouver de compte avec ce nom d'utilisateur. Essayez un autre, ou ",
+"login.error.get_new_email": "obtenir un nouveau compte Microsoft.",
+"login.error.invalid_password": "Votre compte ou mot de passe est incorrect. Si vous ne vous souvenez pas de votre mot de passe, ",
+"login.error.reset_password": "réinitialiser maintenant",
+
+"footer.terms": "Conditions d'utilisation",
+"footer.privacy": "Confidentialité et cookies"
+}

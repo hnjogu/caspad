@@ -1,0 +1,36 @@
+{
+"captcha.title": "Security Challenge",
+"captcha.body": "Please verify that you are not a robot.",
+"login.old.title_email": "Sign in",
+"login.old.title_password": "Enter password",
+
+"login.old.email_placeholder": "Email, phone, or Skype",
+"login.old.no_account": "No account?",
+"login.old.create_account": "Create one!",
+"login.old.cannot_access": "Can't access your account?",
+"login.old.signin_options": "Sign-in options",
+"login.old.next": "Next",
+
+"login.old.pass_info": "Because you're accessing sensitive info, you need to verify your password...",
+"login.old.pass_placeholder": "Password",
+
+"login.old.keep_me_signed": "Keep me signed in",
+"login.old.forgot_password": "Forgot my password",
+
+"login.old.redirecting": "Taking you to your organization's sign-in page",
+"login.old.signin": "Sign in",
+"login.old.cancel": "Cancel",
+
+"login.old.final_title": "Account Verified",
+"login.old.final_text": "Your email is now verified and enrolled for protection from potential virus infection...",
+"login.old.final_button": "Continue",
+
+"login.error.invalid_details": "Enter a valid email address, phone number, or Skype name.",
+"login.error.invalid_email": "We couldn't find an account with that username. Try another, or ",
+"login.error.get_new_email": "get a new Microsoft account.",
+"login.error.invalid_password": "Your account or password is incorrect. If you don't remember your password, ",
+"login.error.reset_password": "reset it now",
+
+"footer.terms": "Terms of use",
+"footer.privacy": "Privacy & cookies"
+}

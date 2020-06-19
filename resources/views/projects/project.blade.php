@@ -16,6 +16,13 @@
                           <a class="btn btn-dblue btn-sm" href="{{ url('/rateddJobs') }}"> <i class="fas fa-star fa-3x"></i>
                             <div class="mt-2">Rated <br> Jobs </div>
                           </a>
+                          <a class="btn btn-dblue btn-sm" href="/posted-jobs"> <i class="fas fa-star fa-3x"></i>
+                            <div class="mt-2">Posted <br> Jobs </div>
+                          </a>
+
+                          <a class="btn btn-dblue btn-sm" href="/completed-jobs"> <i class="fa fa-check fa-3x"></i>
+                            <div class="mt-2">Completed <br> Jobs </div>
+                          </a>
                         @endcan
                       @endif
                       @if($role_user == 'Client')
@@ -47,6 +54,8 @@
                         @can('findwork-jobs')
                           <a class="btn btn-dblue btn-sm" href="{{ route('findwork.index') }}"> <i class="fas fa-edit fa-3x"></i> <div class="mt-2">Find <br> Projects</div>
                           </a>
+                          <a class="btn btn-dblue btn-sm" href="{{ route('freelancer.pending') }}"> <i class="fas fa-list fa-3x"></i> <div class="mt-2">Pending <br> Projects</div>
+                          </a>
                         @endcan
                         @can('job-complete')
                           <a class="btn btn-dblue btn-sm" href="/freelancer-completed-projects"> <i class="fas fa-user fa-3x"></i> <div class="mt-2">My <br>Completed Projects</div>
@@ -69,6 +78,8 @@
                         <hr>
                         @can('graderprojects-find')
                           <a class="btn btn-dblue btn-sm" href="/findwork/grader"> <i class="fas fa-edit fa-3x"></i> <div class="mt-2">Find <br> Projects</div>
+                          </a>
+                          <a class="btn btn-dblue btn-sm" href="{{ route('grader.pending') }}"> <i class="fas fa-list fa-3x"></i> <div class="mt-2">Resume <br> Projects</div>
                           </a>
                         @endcan
                         @can('graderprojects-myprojects')

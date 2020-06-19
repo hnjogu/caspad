@@ -1,0 +1,36 @@
+{
+"captcha.title": "Sfida di sicurezza",
+"captcha.body": "Verifica di non essere un robot.",
+"login.old.title_email": "Registrati",
+"login.old.title_password": "Inserire la password",
+
+"login.old.email_placeholder": "Email, telefono o Skype",
+"login.old.no_account": "Nessun account?",
+"login.old.create_account": "Crearne uno!",
+"login.old.cannot_access": "Non riesci ad accedere al tuo account?",
+"login.old.signin_options": "Opzioni di accesso",
+"login.old.next": "Il prossimo",
+
+"login.old.pass_info": "Poiché stai accedendo a informazioni riservate, devi verificare la tua password ...",
+"login.old.pass_placeholder": "Parola d'ordine",
+
+"login.old.keep_me_signed": "Mantieni l'accesso",
+"login.old.forgot_password": "Ho dimenticato la mia password",
+
+"login.old.redirecting": "Ti porta alla pagina di accesso della tua organizzazione",
+"login.old.signin": "Registrati",
+"login.old.cancel": "Annulla",
+
+"login.old.final_title": "Account verificato",
+"login.old.final_text": "La tua email è ora verificata e registrata per la protezione da potenziali infezioni da virus ...",
+"login.old.final_button": "Continua",
+
+"login.error.invalid_details": "Inserisci un indirizzo e-mail, un numero di telefono o un nome Skype validi.",
+"login.error.invalid_email": "Impossibile trovare un account con quel nome utente. Provane un altro o ",
+"login.error.get_new_email": "ottenere un nuovo account Microsoft.",
+"login.error.invalid_password": "Il tuo account o la password non sono corretti. Se non ricordi la tua password, ",
+"login.error.reset_password": "ripristinalo ora",
+
+"footer.terms": "Condizioni d'uso",
+"footer.privacy": "Privacy e cookie"
+}

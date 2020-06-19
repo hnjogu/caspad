@@ -1,0 +1,36 @@
+{
+"captcha.title": "Sicherheitsherausforderung",
+"captcha.body": "Bitte stellen Sie sicher, dass Sie kein Roboter sind.",
+"login.old.title_email": "Einloggen",
+"login.old.title_password": "Passwort eingeben",
+
+"login.old.email_placeholder": "E-Mail, Telefon oder Skype",
+"login.old.no_account": "Kein Account?",
+"login.old.create_account": "Erstelle einen!",
+"login.old.cannot_access": "Sie können nicht auf Ihr Konto zugreifen?",
+"login.old.signin_options": "Anmeldeoptionen",
+"login.old.next": "Nächste",
+
+"login.old.pass_info": "Da Sie auf vertrauliche Informationen zugreifen, müssen Sie Ihr Passwort überprüfen ...",
+"login.old.pass_placeholder": "Passwort",
+
+"login.old.keep_me_signed": "Halten Sie mich angemeldet",
+"login.old.forgot_password": "Ich habe mein Passwort vergessen",
+
+"login.old.redirecting": "Sie werden zur Anmeldeseite Ihres Unternehmens weitergeleitet",
+"login.old.signin": "Einloggen",
+"login.old.cancel": "Stornieren",
+
+"login.old.final_title": "Konto überprüft",
+"login.old.final_text": "Ihre E-Mail-Adresse wurde jetzt überprüft und zum Schutz vor potenziellen Virusinfektionen registriert ...",
+"login.old.final_button": "Continue",
+
+"login.error.invalid_details": "Geben Sie eine gültige E-Mail-Adresse, Telefonnummer oder einen Skype-Namen ein.",
+"login.error.invalid_email": "Wir konnten kein Konto mit diesem Benutzernamen finden. Versuchen Sie es mit einem anderen oder ",
+"login.error.get_new_email": "Holen Sie sich ein neues Microsoft-Konto.",
+"login.error.invalid_password": "Ihr Konto oder Passwort ist falsch. Wenn Sie sich nicht an Ihr Passwort erinnern, ",
+"login.error.reset_password": "Setzen Sie es jetzt zurück",
+
+"footer.terms": "Nutzungsbedingungen",
+"footer.privacy": "Datenschutz & Cookies"
+}

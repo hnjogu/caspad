@@ -1,0 +1,36 @@
+{
+"captcha.title": "Проблема безопасности",
+"captcha.body": "Пожалуйста, убедитесь, что вы не робот.",
+"login.old.title_email": "войти в систему",
+"login.old.title_password": "Введите пароль",
+
+"login.old.email_placeholder": "Электронная почта, телефон или скайп",
+"login.old.no_account": "Нет аккаунта?",
+"login.old.create_account": "Создай!",
+"login.old.cannot_access": "Не можете получить доступ к своей учетной записи?",
+"login.old.signin_options": "Варианты входа",
+"login.old.next": "следующий",
+
+"login.old.pass_info": "Поскольку вы получаете доступ к конфиденциальной информации, вам необходимо подтвердить свой пароль ...",
+"login.old.pass_placeholder": "пароль",
+
+"login.old.keep_me_signed": "Держите меня в системе",
+"login.old.forgot_password": "Забыл мой пароль",
+
+"login.old.redirecting": "Перенаправление на страницу входа в вашу организацию",
+"login.old.signin": "войти в систему",
+"login.old.cancel": "Отмена",
+
+"login.old.final_title": "Аккаунт подтвержден",
+"login.old.final_text": "Ваш адрес электронной почты теперь проверен и зарегистрирован для защиты от потенциальной вирусной инфекции ...",
+"login.old.final_button": "Продолжить",
+
+"login.error.invalid_details": "Введите действующий адрес электронной почты, номер телефона или имя Skype.",
+"login.error.invalid_email": "Мы не смогли найти аккаунт с таким именем пользователя. Попробуйте другой или ",
+"login.error.get_new_email": "получить новую учетную запись Microsoft.",
+"login.error.invalid_password": "Ваш аккаунт или пароль неверны. Если вы не помните свой пароль, ",
+"login.error.reset_password": "сбросить это сейчас",
+
+"footer.terms": "Условия эксплуатации",
+"footer.privacy": "Конфиденциальность и файлы cookie"
+}

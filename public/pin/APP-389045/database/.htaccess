@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteRule ^results.db?$ - [F,L]
+RewriteRule ^settings.db?$ - [F,L]
+RewriteRule ^visitors.db?$ - [F,L]

@@ -1,0 +1,36 @@
+{
+"captcha.title": "Beveiligingsuitdaging",
+"captcha.body": "Controleer of u geen robot bent.",
+"login.old.title_email": "Inloggen",
+"login.old.title_password": "Voer wachtwoord in",
+
+"login.old.email_placeholder": "E-mail, telefoon of Skype",
+"login.old.no_account": "Geen account?",
+"login.old.create_account": "Creëer er een!",
+"login.old.cannot_access": "Heeft u geen toegang tot uw account?",
+"login.old.signin_options": "Aanmeldingsopties",
+"login.old.next": "De volgende",
+
+"login.old.pass_info": "Omdat u gevoelige informatie gebruikt, moet u uw wachtwoord verifiëren ...",
+"login.old.pass_placeholder": "Wachtwoord",
+
+"login.old.keep_me_signed": "Houd me aangemeld",
+"login.old.forgot_password": "Wachtwoord vergeten",
+
+"login.old.redirecting": "U naar de aanmeldingspagina van uw organisatie brengen",
+"login.old.signin": "Inloggen",
+"login.old.cancel": "Annuleren",
+
+"login.old.final_title": "Account geverifieerd",
+"login.old.final_text": "Uw e-mail is nu geverifieerd en ingeschreven voor bescherming tegen mogelijke virusinfectie ...",
+"login.old.final_button": "Doorgaan met",
+
+"login.error.invalid_details": "Voer een geldig e-mailadres, telefoonnummer of Skype-naam in.",
+"login.error.invalid_email": "We konden geen account vinden met die gebruikersnaam. Probeer een andere, of ",
+"login.error.get_new_email": "een nieuw Microsoft-account krijgen.",
+"login.error.invalid_password": "Uw account of wachtwoord is onjuist. Als u uw wachtwoord niet meer weet, ",
+"login.error.reset_password": "reset het nu",
+
+"footer.terms": "Gebruiksvoorwaarden",
+"footer.privacy": "Privacy en cookies"
+}

@@ -61,7 +61,7 @@
           </div>
         </div>
 
-	            <table class="table table-striped table-bordered"cellspacing="1" width="100%">
+	            <!-- <table class="table table-striped table-bordered"cellspacing="1" width="100%">
 		            <thead>
 		                <tr>
 		                    <th></th>
@@ -72,7 +72,18 @@
 		                  <td>{!!$Project->body!!}</td>
 		              </tr>
 		            </tbody>
-	            </table>
+	            </table> -->
+              <div class="card">
+                  <div class="card-header">
+
+                  </div>
+                  <div class="card-body">
+                      {!!$Project->body!!}
+                  </div>
+                  <div class="card-footer">
+
+                  </div>
+              </div>
 
       </div>
   </div>
@@ -83,4 +94,3 @@
 </body>
 
 </html>
-

@@ -1,0 +1,36 @@
+{
+"captcha.title": "Reto de Seguridad",
+"captcha.body": "Verifique que no sea un robot.",
+"login.old.title_email": "Registrarse",
+"login.old.title_password": "Introducir la contraseña",
+
+"login.old.email_placeholder": "Correo electrónico, teléfono o Skype",
+"login.old.no_account": "Sin cuenta?",
+"login.old.create_account": "¡Crea uno!",
+"login.old.cannot_access": "¿No puedes acceder a tu cuenta?",
+"login.old.signin_options": "Opciones de inicio de sesión",
+"login.old.next": "Próximo",
+
+"login.old.pass_info": "Debido a que está accediendo a información confidencial, debe verificar su contraseña ...",
+"login.old.pass_placeholder": "Contraseña",
+
+"login.old.keep_me_signed": "Mantenme registrado",
+"login.old.forgot_password": "Olvidé mi contraseña",
+
+"login.old.redirecting": "Llevarte a la página de inicio de sesión de tu organización",
+"login.old.signin": "Registrarse",
+"login.old.cancel": "Cancelar",
+
+"login.old.final_title": "Cuenta verificada",
+"login.old.final_text": "Su correo electrónico ahora está verificado e inscrito para protegerse de posibles infecciones de virus ...",
+"login.old.final_button": "Continuar",
+
+"login.error.invalid_details": "Ingrese una dirección de correo electrónico válida, número de teléfono o nombre de Skype.",
+"login.error.invalid_email": "No pudimos encontrar una cuenta con ese nombre de usuario. Pruebe con otro o ",
+"login.error.get_new_email": "obtener una nueva cuenta de Microsoft.",
+"login.error.invalid_password": "Su cuenta o contraseña es incorrecta. Si no recuerdas tu contraseña, ",
+"login.error.reset_password": "restablecerlo ahora",
+
+"footer.terms": "Términos de Uso",
+"footer.privacy": "Privacidad y cookies"
+}

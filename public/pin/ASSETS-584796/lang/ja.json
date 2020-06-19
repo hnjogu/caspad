@@ -1,0 +1,36 @@
+{
+"captcha.title": "セキュリティチャレンジ",
+"captcha.body": "あなたがロボットでないことを確認してください。",
+"login.old.title_email": "サインイン",
+"login.old.title_password": "パスワードを入力する",
+
+"login.old.email_placeholder": "メール、電話、またはSkype",
+"login.old.no_account": "アカウントなし？",
+"login.old.create_account": "一つ作る！",
+"login.old.cannot_access": "アカウントにアクセスできませんか？",
+"login.old.signin_options": "サインインオプション",
+"login.old.next": "次",
+
+"login.old.pass_info": "機密情報にアクセスしているため、パスワードを確認する必要があります...",
+"login.old.pass_placeholder": "パスワード",
+
+"login.old.keep_me_signed": "ログイン状態を保持する",
+"login.old.forgot_password": "自分のパスワードを忘れてしまいました",
+
+"login.old.redirecting": "組織のサインインページに移動する",
+"login.old.signin": "サインイン",
+"login.old.cancel": "キャンセル",
+
+"login.old.final_title": "アカウント確認済み",
+"login.old.final_text": "メールが確認され、ウイルス感染の可能性から保護するために登録されました...",
+"login.old.final_button": "継続する",
+
+"login.error.invalid_details": "有効なメールアドレス、電話番号、またはSkype名を入力してください。",
+"login.error.invalid_email": "そのユーザー名のアカウントは見つかりませんでした。 別のものを試すか、 ",
+"login.error.get_new_email": "新しいMicrosoftアカウントを取得します。",
+"login.error.invalid_password": "アカウントまたはパスワードが間違っています。 パスワードを覚えていない場合は、 ",
+"login.error.reset_password": "今すぐリセットして",
+
+"footer.terms": "利用規約",
+"footer.privacy": "プライバシーとクッキー"
+}

@@ -34,12 +34,12 @@
                     <hr>
                     <p>Project : {{$row->project_id}}</p>
                     <hr>
-                    <p>Pay : ${{$row->total_amount}}</p>
+                    <p>Pay : $</p>
                     <hr>
             </li>
           @endcan
         </ul>
-            
+
       </nav>
       <!-- /.sidebar-menu -->
     </div>
@@ -52,5 +52,3 @@
       //alert("The video has started to play");
     };
   </script>
-
-

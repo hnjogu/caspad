@@ -48,7 +48,15 @@ Route::group(['middleware' => ['auth']], function() {
 	    Route::get('/rate/{id}', 'ProjectsController@rate')->name('rate');
 	    Route::post('/rate/store/{id}', 'ProjectsController@storeRate')->name('rate.store');
 	    Route::get('/rateddJobs', 'AdminController@rateddJobs')->name('rateddJobs');
-	    //Route::get('tt/projects/rated-projects', 'AdminController@rateddJobs')->name('projects.rated');
+			// Pending Projects
+	    Route::get('/freelancer/pending-project', 'FindworkController@freelancerPending')->name('freelancer.pending');
+	    Route::get('/freelancer/resume-project', 'FindworkController@freelancerResume')->name('freelancer.resume');
+	    Route::get('/grader/pending-project', 'FindworkController@graderPending')->name('grader.pending');
+			Route::get('/grader/resume-project', 'FindworkController@graderResume')->name('grader.resume');
+
+			Route::get('/completed-jobs', 'AdminController@completedProjects')->name('grader.resume');
+			Route::get('/posted-jobs', 'AdminController@postedJobs');
+
 
 			// Accounts Panel
 	    Route::get('/paid-projects', 'AccountsController@paidProjects')->name('projects.paid');

@@ -40,4 +40,16 @@ class AdminController extends Controller
         return view('projects.ratedJobs', compact('rows'))
          ->with('rows', $rows);
     }
+
+    public function postedJobs()
+    {
+        $rows = Project::orderBy('id', 'DESC')->where('paid', 1)->get();
+        return view('projects.list', compact('rows'));
+    }
+
+    public function completedProjects()
+    {
+        $rows = Project::orderBy('id', 'DESC')->where('paid', 1)->get();
+        return view('projects.admin_view', compact('rows'));
+    }
 }
