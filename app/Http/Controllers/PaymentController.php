@@ -49,9 +49,9 @@ class PaymentController extends Controller
                 ))->send();
 
                 if ($response->isRedirect()) {
-                    $row = Project::find($id);
-                    $row->paid = 1;
-                    $row->save();
+                   // $row = Project::find($id);
+                    // $row->paid = 1;
+                    // $row->save();
 
                     $response->redirect(); // this will automatically forward the customer
                 } else {
@@ -77,6 +77,10 @@ class PaymentController extends Controller
 
             if ($response->isSuccessful())
             {
+                $row = Project::find($id);
+                $row->paid = 1;
+                $row->save();
+
                 // The customer has successfully paid.
                 $arr_body = $response->getData();
 
