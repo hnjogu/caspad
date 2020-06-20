@@ -7,6 +7,8 @@ use Omnipay\Omnipay;
 use App\Payment;
 use App\Project;
 use Illuminate\Support\Facades\Auth;
+use DB;
+use Illuminate\Support\Facades\Input;
 
 class PaymentController extends Controller
 {
