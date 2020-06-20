@@ -77,9 +77,9 @@ class PaymentController extends Controller
 
             if ($response->isSuccessful())
             {
-                $row = Project::find($id);
-                $row->paid = 1;
-                $row->save();
+                // $row = Project::find($id);
+                // $row->paid = 1;
+                // $row->save();
 
                 // The customer has successfully paid.
                 $arr_body = $response->getData();
@@ -98,6 +98,11 @@ class PaymentController extends Controller
                     $payment->currency = env('PAYPAL_CURRENCY');
                     $payment->payment_status = $arr_body['state'];
                     $payment->save();
+                    
+                    $Project = new Project;
+                    $Project = Project::find($id);
+                    $Project->paid = 1;
+                    $Project->save();
 
                 }
 
