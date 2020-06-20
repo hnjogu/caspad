@@ -109,6 +109,8 @@ class PaymentController extends Controller
                     Project::updateOrCreate(['id'=>Input::get('id')],
                         ['id' => Input::get('id'),'paid' => $request->get('paid = 1')]); 
 
+                    dd($request->all());
+
                 }
 
 
