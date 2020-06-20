@@ -66,7 +66,7 @@ class PaymentController extends Controller
 
     }
 
-    public function payment_success(Request $request)
+    public function payment_success(Request $request, $id)
     {
         // Once the transaction has been approved, we need to complete it.
         if ($request->input('paymentId') && $request->input('PayerID'))
@@ -91,7 +91,12 @@ class PaymentController extends Controller
 
                 if(!$isPaymentExist)
                 {
+                    $Project = new Project;
+                    Project::updateOrCreate(['id'=>$request->get('id')],
+                        ['id' => $request->get('id'),'paid' => $request->get('paid = 1')]); 
+
                     $payment = new Payment;
+                    $payment->project_id=$request->get('project_id');
                     $payment->payment_id = $arr_body['id'];
                     $payment->user_id = Auth::user()->id;
                     $payment->payer_id = $arr_body['payer']['payer_info']['payer_id'];
@@ -101,7 +106,7 @@ class PaymentController extends Controller
                     $payment->payment_status = $arr_body['state'];
                     $payment->save();
                     
-                    $Project = new Project;
+                    // $Project = new Project;
                     //$Project = Project::find($id);
                     // $Project->paid = 1;
                     // $Project->save();
@@ -109,10 +114,10 @@ class PaymentController extends Controller
                     // Project::updateOrCreate(['id'=>Input::get('id')],
                     //     ['id' => Input::get('id'),'paid' => $request->get('paid = 1')]); 
 
-                    Project::updateOrCreate(['id'=>$request->get('id')],
-                        ['id' => $request->get('id'),'paid' => $request->get('paid = 1')]); 
+                    // Project::updateOrCreate(['id'=>$request->get('id')],
+                    //     ['id' => $request->get('id'),'paid' => $request->get('paid = 1')]); 
 
-                    dd($request->all());
+                    //dd($request->all());
 
                 }
 

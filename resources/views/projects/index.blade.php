@@ -40,6 +40,7 @@
                 @endforeach
             </tbody>
           </table>
+          <input type="hidden"  name="project_id" value="{{ $row->id }}">
         </div>
         <div class="card-footer">
             <a class="btn btn-primary btn-sm" href="{{ route('getprojectsindex') }}"> <i class="fa fa-reply"></i> Back</a>
