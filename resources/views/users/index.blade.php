@@ -106,21 +106,21 @@
                             </tr>
                           </thead>
                           <tbody>
-                             @foreach ($approved_data as $key => $approved)
+                             @foreach ($approved_data as $key => $user)
                             <tr>
                               <td>{{ $key +1 }}</td>
-                              <td>{{ $approved->name }}</td>
-                              <td>{{ $approved->mobile }}</td>
-                              <td>{{ $approved->email }}</td>
+                              <td>{{ $user->name }}</td>
+                              <td>{{ $user->mobile }}</td>
+                              <td>{{ $user->email }}</td>
                               <td>
-                                  @if($approved->approved_at == '1')
+                                  @if($user->approved_at == '1')
                                     <span class="badge badge-success">Approved</span>
                                   @endif
-                                  @if($approved->approved_at == '0')
+                                  @if($user->approved_at == '0')
                                     <span class="badge badge-warning">Not Approved</span>
                                   @endif
                               </td>
-                              <td>{{ $approved->type }}</td>
+                              <td>{{ $user->type }}</td>
                               <td>
                                 @if(!empty($user->getRoleNames()))
                                   @foreach($user->getRoleNames() as $v)
@@ -131,17 +131,17 @@
                               <td>
                                  <a class="btn btn-info btn-sm" href="{{ route('users.show',$user->id) }}"> <i class="fa fa-eye"></i> </a>
                                     @can('user-edit')
-                                      <a class="btn btn-primary btn-sm" href="{{ route('users.edit',$approved->id) }}"><i class="fa fa-edit"></i></a>
+                                      <a class="btn btn-primary btn-sm" href="{{ route('users.edit',$user->id) }}"><i class="fa fa-edit"></i></a>
                                     @endcan
                                     @can('user-delete')
-                                      {!! Form::open(['method' => 'DELETE','route' => ['users.destroy', $approved->id],'style'=>'display:inline']) !!}
+                                      {!! Form::open(['method' => 'DELETE','route' => ['users.destroy', $user->id],'style'=>'display:inline']) !!}
                                           {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-sm']) !!}
                                       {!! Form::close() !!}
                                     @endcan
                                     @can('user-activeDeactive')
                                       {{ Form::open(['route' => ['users.activeDeactive'], 'method' => 'POST']) }}
-                                          {{ Form::hidden('user_id', $approved->id) }}
-                                          {{ Form::submit(($approved->active == 0) ? 'Reactive' : 'Deactivate', ['name' => 'submit', 'class' => 'btn btn-warning btn-sm']) }}
+                                          {{ Form::hidden('user_id', $user->id) }}
+                                          {{ Form::submit(($user->active == 0) ? 'Reactive' : 'Deactivate', ['name' => 'submit', 'class' => 'btn btn-warning btn-sm']) }}
                                       {{ Form::close() }}
                                     @endcan
                               </td>

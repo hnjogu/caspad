@@ -73,17 +73,6 @@
 		              </tr>
 		            </tbody>
 	            </table>
-              {{-- <div class="card">
-                  <div class="card-header">
-
-                  </div>
-                  <div class="card-body">
-                      {!!$Project->body!!}
-                  </div>
-                  <div class="card-footer">
-
-                  </div>
-              </div> --}}
 
       </div>
   </div>
@@ -94,3 +83,4 @@
 </body>
 
 </html>
+

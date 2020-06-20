@@ -114,21 +114,6 @@
           </div>
           <!-- /.info-box -->
         </div>
-
-        <div class="col-md-3 col-sm-6 col-12">
-          <a href="#">
-            <div class="info-box">
-                <span class="info-box-icon bg-info"><i class="fa fa-forward"></i></span>
-
-                <div class="info-box-content">
-                  <span class="info-box-text">Resume Job</span>
-                  <span class="badge badge-success"></span>
-                </div>
-                <!-- /.info-box-content -->
-              </div>  
-          </a>
-          <!-- /.info-box -->
-        </div>
         <!-- /.col -->
       </div>
     @endif
