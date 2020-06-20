@@ -106,8 +106,11 @@ class PaymentController extends Controller
                     // $Project->paid = 1;
                     // $Project->save();
 
-                    Project::updateOrCreate(['id'=>Input::get('id')],
-                        ['id' => Input::get('id'),'paid' => $request->get('paid = 1')]); 
+                    // Project::updateOrCreate(['id'=>Input::get('id')],
+                    //     ['id' => Input::get('id'),'paid' => $request->get('paid = 1')]); 
+
+                    Project::updateOrCreate(['id'=>$request->get('id')],
+                        ['id' => $request->get('id'),'paid' => $request->get('paid = 1')]); 
 
                     dd($request->all());
 
