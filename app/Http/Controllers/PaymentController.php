@@ -100,7 +100,7 @@ class PaymentController extends Controller
                     $payment->save();
                     
                     $Project = new Project;
-                    $Project = Project::find($id);
+                    //$Project = Project::find($id);
                     $Project->paid = 1;
                     $Project->save();
 
