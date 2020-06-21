@@ -66,7 +66,8 @@ class PaymentController extends Controller
 
     }
 
-    public function payment_success(Request $request, $id)
+    //public function payment_success(Request $request, $id)
+    public function payment_success(Request $request)
     {
         // Once the transaction has been approved, we need to complete it.
         if ($request->input('paymentId') && $request->input('PayerID'))
@@ -93,7 +94,11 @@ class PaymentController extends Controller
                 {
                     // $Project = new Project;
                     // Project::updateOrCreate(['id'=>$request->get('id')],
+<<<<<<< HEAD
                     //     ['id' => $request->get('id'),'paid' => $request->get('paid = 1')]);
+=======
+                    //     ['id' => $request->get('id'),'paid' => $request->get('paid = 1')]); 
+>>>>>>> d074dbf73e4b15e655af44de35c7b0c4b0f0bc4b
 
                     $payment = new Payment;
                     $payment->project_id=$request->get('project_id');
@@ -123,12 +128,14 @@ class PaymentController extends Controller
 
 
                 // return "Payment is successful. Your transaction id is: ". $arr_body['id'];
-                return redirect()->route('projects.index')->with('success', 'Payment Success');
+                //return redirect()->route('projects.index')->with('success', 'Payment Success');
+                return redirect('index')->with('message','Payment Updated successfully');
             } else {
                 return $response->getMessage();
             }
         } else {
-            return redirect()->route('project.index')->with('success', 'Payment Cancelled');
+            //return redirect()->route('project.index')->with('success', 'Payment Cancelled');
+            return redirect('index')->with('message','Payment Cancelled');
         }
     }
 
