@@ -111,9 +111,9 @@ Route::group(['middleware' => ['auth']], function() {
 	// Payments
 	Route::get('payment/{id}/pay', 'PaymentController@pay');
 
-	Route::get('/paymentsuccess', 'PaymentController@payment_success')->name('paymentsuccess');
+	// Route::get('/paymentsuccess', 'PaymentController@payment_success')->name('paymentsuccess');
 
-	// Route::get('paymentsuccess/{id}', 'PaymentController@payment_success')->name('paymentsuccess');
+	Route::get('paymentsuccess/{id}', 'PaymentController@payment_success')->name('paymentsuccess');
 
 	//Route::get('paymentsuccess', 'PaymentController@payment_success')->name('paymentsuccess');
 

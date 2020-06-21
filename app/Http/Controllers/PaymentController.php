@@ -58,8 +58,8 @@ class PaymentController extends Controller
 
     }
 
-    //public function payment_success(Request $request, $id)
-    public function payment_success(Request $request)
+    public function payment_success(Request $request, $id)
+    // public function payment_success(Request $request)
     {
         // Once the transaction has been approved, we need to complete it.
         if ($request->input('paymentId') && $request->input('PayerID'))
@@ -87,7 +87,9 @@ class PaymentController extends Controller
                 {
 
                     // $payment = new Payment;
-                    $payment = new Project;
+                     $payment = new Project;
+                    Project::updateOrCreate(['id'=>$request->get('id')],
+                      ['id' => $request->get('id'),'paid' => $request->get('paid = 1')]);
                     // $payment->project_id=$request->get('project_id');
                     $payment->payment_id = $arr_body['id'];
                     // $payment->user_id = Auth::user()->id;
