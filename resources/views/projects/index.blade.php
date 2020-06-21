@@ -29,22 +29,15 @@
                         <td> {{$row->length}} </td>
                         <td> {{$row->subject}} </td>
                         <td> ${{$row->total_amount}} </td>
-                        @can('pay-projects')
                         <td>
+                        @can('pay-projects')
                             @if ($row->payment_status == 'approved')
                                 <td> Paid </td>
                             @elseif($row->payment_status == 0)
                                 <td> <a class="btn btn-warning btn-sm" href="/payment/{{ $row->id }}/pay"> <i class="fa fa-paypal"></i>  Pay ${{$row->total_amount}}</a></td>
                             @endif
-
-                            <!-- @if($row->payment_status == 'approved')
-                                  <span class="badge badge-success">Paid</span>
-                            @endif
-                            @if($row->payment_status == '0')
-                                  <span class="badge badge-warning">Not Paid</span>
-                                <a class="btn btn-warning btn-sm" href="/payment/{{ $row->id }}/pay"> <i class="fa fa-paypal"></i>  Pay ${{$row->total_amount}}</a><td>
-                            @endif -->
                         @endcan
+                        </td>
                     </tr>
                 @endforeach
             </tbody>

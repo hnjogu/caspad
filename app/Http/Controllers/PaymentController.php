@@ -87,18 +87,21 @@ class PaymentController extends Controller
                 {
 
                     // $payment = new Payment;
-                     $payment = new Project;
+                    // $payment = new Project;
+                    $Project = new Project;
                     Project::updateOrCreate(['id'=>$request->get('id')],
-                      ['id' => $request->get('id'),'paid' => $request->get('paid = 1')]);
+                      ['id' => $request->get('id'),'payment_id' => $request->get('id'),'payment_status' => $request->get('state')]);
+
+
                     // $payment->project_id=$request->get('project_id');
-                    $payment->payment_id = $arr_body['id'];
+                    //$payment->payment_id = $arr_body['id'];
                     // $payment->user_id = Auth::user()->id;
                     // $payment->payer_id = $arr_body['payer']['payer_info']['payer_id'];
                     // $payment->payer_email = $arr_body['payer']['payer_info']['email'];
                     // $payment->amount = $arr_body['transactions'][0]['amount']['total'];
                     // $payment->currency = env('PAYPAL_CURRENCY');
-                    $payment->payment_status = $arr_body['state'];
-                    $payment->save();
+                    //$payment->payment_status = $arr_body['state'];
+                   // $payment->save();
 
                     // $Project = new Project;
                     //$Project = Project::find($id);
