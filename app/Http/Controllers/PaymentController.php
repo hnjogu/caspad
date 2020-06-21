@@ -27,14 +27,6 @@ class PaymentController extends Controller
 
     public $gateway;
 
-    // public function __construct()
-    // {
-    //     $this->gateway = Omnipay::create('PayPal_Rest');
-    //     $this->gateway->setClientId(env('PAYPAL_CLIENT_ID'));
-    //     $this->gateway->setSecret(env('PAYPAL_CLIENT_SECRET'));
-    //     $this->gateway->setTestMode(false); //set it to 'false' when go live
-    // }
-
     public function pay(Request $request, $id)
     {
             $user = Auth::user()->id;
@@ -88,26 +80,21 @@ class PaymentController extends Controller
                 $arr_body = $response->getData();
 
                 // Insert transaction data into the database
-                $isPaymentExist = Payment::where('payment_id', $arr_body['id'])->first();
+                // $isPaymentExist = Payment::where('payment_id', $arr_body['id'])->first();
+                $isPaymentExist = Project::where('payment_id', $arr_body['id'])->first();
 
                 if(!$isPaymentExist)
                 {
-                    // $Project = new Project;
-                    // Project::updateOrCreate(['id'=>$request->get('id')],
-<<<<<<< HEAD
-                    //     ['id' => $request->get('id'),'paid' => $request->get('paid = 1')]);
-=======
-                    //     ['id' => $request->get('id'),'paid' => $request->get('paid = 1')]); 
->>>>>>> d074dbf73e4b15e655af44de35c7b0c4b0f0bc4b
 
-                    $payment = new Payment;
-                    $payment->project_id=$request->get('project_id');
+                    // $payment = new Payment;
+                    $payment = new Project;
+                    // $payment->project_id=$request->get('project_id');
                     $payment->payment_id = $arr_body['id'];
-                    $payment->user_id = Auth::user()->id;
-                    $payment->payer_id = $arr_body['payer']['payer_info']['payer_id'];
-                    $payment->payer_email = $arr_body['payer']['payer_info']['email'];
-                    $payment->amount = $arr_body['transactions'][0]['amount']['total'];
-                    $payment->currency = env('PAYPAL_CURRENCY');
+                    // $payment->user_id = Auth::user()->id;
+                    // $payment->payer_id = $arr_body['payer']['payer_info']['payer_id'];
+                    // $payment->payer_email = $arr_body['payer']['payer_info']['email'];
+                    // $payment->amount = $arr_body['transactions'][0]['amount']['total'];
+                    // $payment->currency = env('PAYPAL_CURRENCY');
                     $payment->payment_status = $arr_body['state'];
                     $payment->save();
 
