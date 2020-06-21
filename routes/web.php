@@ -110,12 +110,15 @@ Route::group(['middleware' => ['auth']], function() {
 
 	// Payments
 	Route::get('payment/{id}/pay', 'PaymentController@pay');
-<<<<<<< HEAD
-	Route::get('paymentsuccess', 'PaymentController@payment_success')->name('paymentsuccess');
-=======
-	// Route::get('paymentsuccess/{id}', 'PaymentController@payment_success')->name('paymentsuccess');
+
 	Route::get('/paymentsuccess', 'PaymentController@payment_success')->name('paymentsuccess');
->>>>>>> d074dbf73e4b15e655af44de35c7b0c4b0f0bc4b
+
+	// Route::get('paymentsuccess/{id}', 'PaymentController@payment_success')->name('paymentsuccess');
+
+	//Route::get('paymentsuccess', 'PaymentController@payment_success')->name('paymentsuccess');
+
+	//Route::get('/paymentsuccess', 'PaymentController@payment_success')->name('paymentsuccess');
+
 	Route::get('paymenterror', 'PaymentController@payment_error')->name('paymenterror');
 
 });
