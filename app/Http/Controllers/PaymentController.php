@@ -128,14 +128,14 @@ class PaymentController extends Controller
 
 
                 // return "Payment is successful. Your transaction id is: ". $arr_body['id'];
-                //return redirect()->route('projects.index')->with('success', 'Payment Success');
-                return redirect('projects/index')->with('message','Payment Updated successfully');
+                return redirect()->route('projects.index')->with('success', 'Payment Success');
+                //return redirect('projects/index')->with('message','Payment Updated successfully');
             } else {
                 return $response->getMessage();
             }
         } else {
-            //return redirect()->route('project.index')->with('success', 'Payment Cancelled');
-            return redirect('projects/index')->with('message','Payment Cancelled');
+            return redirect()->route('project.index')->with('success', 'Payment Cancelled');
+            //return redirect('projects/index')->with('message','Payment Cancelled');
         }
     }
 
