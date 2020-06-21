@@ -91,9 +91,9 @@ class PaymentController extends Controller
 
                 if(!$isPaymentExist)
                 {
-                    $Project = new Project;
-                    Project::updateOrCreate(['id'=>$request->get('id')],
-                        ['id' => $request->get('id'),'paid' => $request->get('paid = 1')]); 
+                    // $Project = new Project;
+                    // Project::updateOrCreate(['id'=>$request->get('id')],
+                    //     ['id' => $request->get('id'),'paid' => $request->get('paid = 1')]);
 
                     $payment = new Payment;
                     $payment->project_id=$request->get('project_id');
@@ -105,17 +105,17 @@ class PaymentController extends Controller
                     $payment->currency = env('PAYPAL_CURRENCY');
                     $payment->payment_status = $arr_body['state'];
                     $payment->save();
-                    
+
                     // $Project = new Project;
                     //$Project = Project::find($id);
                     // $Project->paid = 1;
                     // $Project->save();
 
                     // Project::updateOrCreate(['id'=>Input::get('id')],
-                    //     ['id' => Input::get('id'),'paid' => $request->get('paid = 1')]); 
+                    //     ['id' => Input::get('id'),'paid' => $request->get('paid = 1')]);
 
                     // Project::updateOrCreate(['id'=>$request->get('id')],
-                    //     ['id' => $request->get('id'),'paid' => $request->get('paid = 1')]); 
+                    //     ['id' => $request->get('id'),'paid' => $request->get('paid = 1')]);
 
                     //dd($request->all());
 
