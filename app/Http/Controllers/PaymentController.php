@@ -21,7 +21,7 @@ class PaymentController extends Controller
         $this->gateway = Omnipay::create('PayPal_Rest');
         $this->gateway->setClientId(env('PAYPAL_CLIENT_ID'));
         $this->gateway->setSecret(env('PAYPAL_CLIENT_SECRET'));
-        $this->gateway->setTestMode(false); //set it to 'false' when go live
+        $this->gateway->setTestMode(true); //set it to 'false' when go live
 
     }
 
@@ -58,8 +58,8 @@ class PaymentController extends Controller
 
     }
 
-    public function payment_success(Request $request, $id)
-    // public function payment_success(Request $request)
+    //public function payment_success(Request $request, $id)
+    public function payment_success(Request $request)
     {
         // Once the transaction has been approved, we need to complete it.
         if ($request->input('paymentId') && $request->input('PayerID'))
@@ -88,9 +88,9 @@ class PaymentController extends Controller
 
                     // $payment = new Payment;
                     // $payment = new Project;
-                    $Project = new Project;
+                    //$Project = new Project;
                     Project::updateOrCreate(['id'=>$request->get('id')],
-                      ['id' => $request->get('id'),'payment_id' => $request->get('id'),'payment_status' => $request->get('state')]);
+                      ['id' => $request->get('id'),'payment_id' => $request->get('id'),'payment_status' => $request->get('payment_status')]);
 
 
                     // $payment->project_id=$request->get('project_id');
@@ -100,8 +100,8 @@ class PaymentController extends Controller
                     // $payment->payer_email = $arr_body['payer']['payer_info']['email'];
                     // $payment->amount = $arr_body['transactions'][0]['amount']['total'];
                     // $payment->currency = env('PAYPAL_CURRENCY');
-                    //$payment->payment_status = $arr_body['state'];
-                   // $payment->save();
+                    $payment->payment_status = $arr_body['state'];
+                    $payment->save();
 
                     // $Project = new Project;
                     //$Project = Project::find($id);
