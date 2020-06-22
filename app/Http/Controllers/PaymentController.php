@@ -27,7 +27,7 @@ class PaymentController extends Controller
 
     public $gateway;
 
-    public function pay(Request $request, $id)
+    public function pay(Request $request)
     {
             $user = Auth::user()->id;
             $job = Project::find($id);
@@ -94,8 +94,7 @@ class PaymentController extends Controller
                     $payment->currency = env('PAYPAL_CURRENCY');
                     $payment->payment_status = $arr_body['state'];
                     $payment->save();
-
-                    
+                
 
                 }
 
