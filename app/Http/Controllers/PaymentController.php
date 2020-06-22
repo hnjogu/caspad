@@ -30,22 +30,22 @@ class PaymentController extends Controller
     public function pay(Request $request, $id)
     {
             $user = Auth::user()->id;
-            $job = Project::find($id);
+            $row = Project::find($id);
 
             try {
                 $response = $this->gateway->purchase(array(
-                    'amount' => $job->total_amount,
-                    'project_id' => $job->project_id,
-                    'user_id' => $job->$user,
+                    'amount' => $row->total_amount,
+                    'project_id' => $row->project_id,
+                    'user_id' => $row->$user,
                     'currency' => env('PAYPAL_CURRENCY'),
                     'returnUrl' => url('paymentsuccess'),
                     'cancelUrl' => url('paymenterror'),
                 ))->send();
 
                 if ($response->isRedirect()) {
-                   // $row = Project::find($id);
-                    // $row->paid = 1;
-                    // $row->save();
+                    $row = Project::find($id);
+                    $row->paid = 1;
+                    $row->save();
 
                     $response->redirect(); // this will automatically forward the customer
                 } else {
@@ -60,6 +60,7 @@ class PaymentController extends Controller
 
     //public function payment_success(Request $request, $id)
     public function payment_success(Request $request)
+    // public function payment_success(Request $request)
     {
         // Once the transaction has been approved, we need to complete it.
         if ($request->input('paymentId') && $request->input('PayerID'))
@@ -72,16 +73,13 @@ class PaymentController extends Controller
 
             if ($response->isSuccessful())
             {
-                // $row = Project::find($id);
-                // $row->paid = 1;
-                // $row->save();
+
 
                 // The customer has successfully paid.
                 $arr_body = $response->getData();
 
                 // Insert transaction data into the database
-                // $isPaymentExist = Payment::where('payment_id', $arr_body['id'])->first();
-                $isPaymentExist = Project::where('payment_id', $arr_body['id'])->first();
+                $isPaymentExist = Payment::where('payment_id', $arr_body['id'])->first();
 
                 if(!$isPaymentExist)
                 {
@@ -110,11 +108,18 @@ class PaymentController extends Controller
 
                     // Project::updateOrCreate(['id'=>Input::get('id')],
                     //     ['id' => Input::get('id'),'paid' => $request->get('paid = 1')]);
+                    $payment = new Payment;
 
-                    // Project::updateOrCreate(['id'=>$request->get('id')],
-                    //     ['id' => $request->get('id'),'paid' => $request->get('paid = 1')]);
+                    $payment->project_id=$request->get('project_id');
+                    $payment->payment_id = $arr_body['id'];
+                    $payment->user_id = Auth::user()->id;
+                    $payment->payer_id = $arr_body['payer']['payer_info']['payer_id'];
+                    $payment->payer_email = $arr_body['payer']['payer_info']['email'];
+                    $payment->amount = $arr_body['transactions'][0]['amount']['total'];
+                    $payment->currency = env('PAYPAL_CURRENCY');
+                    $payment->payment_status = $arr_body['state'];
+                    $payment->save();
 
-                    //dd($request->all());
 
                 }
 
