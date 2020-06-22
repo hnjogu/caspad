@@ -27,16 +27,16 @@ class PaymentController extends Controller
 
     public $gateway;
 
-    public function pay(Request $request)
+    public function pay(Request $request, $id)
     {
             $user = Auth::user()->id;
-            $job = Project::find($id);
+            $row = Project::find($id);
 
             try {
                 $response = $this->gateway->purchase(array(
-                    'amount' => $job->total_amount,
-                    'project_id' => $job->project_id,
-                    'user_id' => $job->$user,
+                    'amount' => $row->total_amount,
+                    'project_id' => $row->project_id,
+                    'user_id' => $row->$user,
                     'currency' => env('PAYPAL_CURRENCY'),
                     'returnUrl' => url('paymentsuccess'),
                     'cancelUrl' => url('paymenterror'),
@@ -94,7 +94,7 @@ class PaymentController extends Controller
                     $payment->currency = env('PAYPAL_CURRENCY');
                     $payment->payment_status = $arr_body['state'];
                     $payment->save();
-                
+
 
                 }
 
