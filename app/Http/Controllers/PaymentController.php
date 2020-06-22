@@ -43,9 +43,9 @@ class PaymentController extends Controller
                 ))->send();
 
                 if ($response->isRedirect()) {
-                   // $row = Project::find($id);
-                    // $row->paid = 1;
-                    // $row->save();
+                    $row = Project::find($id);
+                    $row->paid = 1;
+                    $row->save();
 
                     $response->redirect(); // this will automatically forward the customer
                 } else {
@@ -58,7 +58,7 @@ class PaymentController extends Controller
 
     }
 
-    public function payment_success(Request $request, $id)
+    public function payment_success(Request $request)
     // public function payment_success(Request $request)
     {
         // Once the transaction has been approved, we need to complete it.
@@ -72,46 +72,30 @@ class PaymentController extends Controller
 
             if ($response->isSuccessful())
             {
-                // $row = Project::find($id);
-                // $row->paid = 1;
-                // $row->save();
+
 
                 // The customer has successfully paid.
                 $arr_body = $response->getData();
 
                 // Insert transaction data into the database
-                // $isPaymentExist = Payment::where('payment_id', $arr_body['id'])->first();
-                $isPaymentExist = Project::where('payment_id', $arr_body['id'])->first();
+                $isPaymentExist = Payment::where('payment_id', $arr_body['id'])->first();
 
                 if(!$isPaymentExist)
                 {
 
-                    // $payment = new Payment;
-                     $payment = new Project;
-                    Project::updateOrCreate(['id'=>$request->get('id')],
-                      ['id' => $request->get('id'),'paid' => $request->get('paid = 1')]);
-                    // $payment->project_id=$request->get('project_id');
+                    $payment = new Payment;
+
+                    $payment->project_id=$request->get('project_id');
                     $payment->payment_id = $arr_body['id'];
-                    // $payment->user_id = Auth::user()->id;
-                    // $payment->payer_id = $arr_body['payer']['payer_info']['payer_id'];
-                    // $payment->payer_email = $arr_body['payer']['payer_info']['email'];
-                    // $payment->amount = $arr_body['transactions'][0]['amount']['total'];
-                    // $payment->currency = env('PAYPAL_CURRENCY');
+                    $payment->user_id = Auth::user()->id;
+                    $payment->payer_id = $arr_body['payer']['payer_info']['payer_id'];
+                    $payment->payer_email = $arr_body['payer']['payer_info']['email'];
+                    $payment->amount = $arr_body['transactions'][0]['amount']['total'];
+                    $payment->currency = env('PAYPAL_CURRENCY');
                     $payment->payment_status = $arr_body['state'];
                     $payment->save();
 
-                    // $Project = new Project;
-                    //$Project = Project::find($id);
-                    // $Project->paid = 1;
-                    // $Project->save();
-
-                    // Project::updateOrCreate(['id'=>Input::get('id')],
-                    //     ['id' => Input::get('id'),'paid' => $request->get('paid = 1')]);
-
-                    // Project::updateOrCreate(['id'=>$request->get('id')],
-                    //     ['id' => $request->get('id'),'paid' => $request->get('paid = 1')]);
-
-                    //dd($request->all());
+                    
 
                 }
 
