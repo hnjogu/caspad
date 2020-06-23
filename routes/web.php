@@ -116,6 +116,8 @@ Route::group(['middleware' => ['auth']], function() {
 	//Route::get('paymentsuccess/{id}', 'PaymentController@payment_success')->name('paymentsuccess');
 
 	// Route::get('paymentsuccess/{id}', 'PaymentController@payment_success')->name('paymentsuccess');
+	// Route::get('paymentsuccess/{id}', 'PaymentController@payment_success')->name('paymentsuccess');
+
 
 	Route::get('paymentsuccess', 'PaymentController@payment_success')->name('paymentsuccess');
 
