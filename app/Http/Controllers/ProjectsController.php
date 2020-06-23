@@ -89,7 +89,7 @@ class ProjectsController extends Controller
         ]);
 
         $file = $request->file('file_name');
-        $destination_path = public_path(). '/files';
+        $destination_path = public_path(). '/storage/files';
         $extension = $file->getClientOriginalExtension();
         $files = $file->getClientOriginalName();
         $fileName = $files.'_'.time().'_'.$extension;
