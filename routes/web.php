@@ -113,15 +113,6 @@ Route::group(['middleware' => ['auth']], function() {
 	Route::get('paymentsuccess', 'PaymentController@payment_success');
 	Route::get('paymenterror', 'PaymentController@payment_error');
 
-	// Route::get('payment/{id}/pay', 'PaymentController@pay');
-
-	// Route::get('/paymentsuccess', 'PaymentController@payment_success')->name('paymentsuccess');
-	//
-	// Route::get('paymentsuccess', 'PaymentController@payment_success')->name('paymentsuccess');
-	//
-	// Route::get('paymenterror', 'PaymentController@payment_error')->name('paymenterror');
-
-});
 Route::get('logout', 'Auth\LoginController@logout', function () {
 		    return abort(404);
 	});

@@ -30,6 +30,7 @@
                         <td> {{$row->subject}} </td>
                         <td> ${{$row->total_amount}} </td>
                         <td>
+<<<<<<< HEAD
                           @can('pay-projects')
                               @if ($row->paid == 1)
                                   Paid
@@ -43,6 +44,16 @@
                               @endif
                           @endcan
                       </td>
+=======
+                            @can('pay-projects')
+                                 @if($row->paid == 0)
+                                    <a class="btn btn-warning btn-sm" href="/payment/{{ $row->id }}/pay"> <i class="fa fa-paypal"></i>  Pay ${{$row->total_amount}}</a>
+                                @else
+                                    Paid
+                                @endif
+                            @endcan
+                        </td>
+>>>>>>> 099b492ae9f6b2ce66a98deb7ff393dd3f36a2f5
                     </tr>
                 @endforeach
             </tbody>
