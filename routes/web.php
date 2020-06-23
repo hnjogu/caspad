@@ -109,19 +109,17 @@ Route::group(['middleware' => ['auth']], function() {
 	});
 
 	// Payments
-	Route::get('payment/{id}/pay', 'PaymentController@pay');
+	Route::post('charge', 'PaymentController@charge');
+	Route::get('paymentsuccess', 'PaymentController@payment_success');
+	Route::get('paymenterror', 'PaymentController@payment_error');
 
-	Route::get('/paymentsuccess', 'PaymentController@payment_success')->name('paymentsuccess');
+	// Route::get('payment/{id}/pay', 'PaymentController@pay');
 
-	//Route::get('paymentsuccess/{id}', 'PaymentController@payment_success')->name('paymentsuccess');
-	// Route::get('paymentsuccess/{id}', 'PaymentController@payment_success')->name('paymentsuccess');
-
-
-	Route::get('paymentsuccess', 'PaymentController@payment_success')->name('paymentsuccess');
-
-	//Route::get('/paymentsuccess', 'PaymentController@payment_success')->name('paymentsuccess');
-
-	Route::get('paymenterror', 'PaymentController@payment_error')->name('paymenterror');
+	// Route::get('/paymentsuccess', 'PaymentController@payment_success')->name('paymentsuccess');
+	//
+	// Route::get('paymentsuccess', 'PaymentController@payment_success')->name('paymentsuccess');
+	//
+	// Route::get('paymenterror', 'PaymentController@payment_error')->name('paymenterror');
 
 });
 Route::get('logout', 'Auth\LoginController@logout', function () {

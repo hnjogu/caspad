@@ -30,30 +30,23 @@
                         <td> {{$row->subject}} </td>
                         <td> ${{$row->total_amount}} </td>
                         <td>
-<<<<<<< HEAD
-                            @if ($row->paid == 1)
-                              Paid
-                            @elseif($row->paid == 0)
-                                <a class="btn btn-warning btn-sm" href="/payment/{{ $row->id }}/pay"> <i class="fa fa-paypal"></i>  Pay ${{$row->total_amount}}</a>
-=======
-                        @can('pay-projects')
-                            @if ($row->payment_status == 'approved')
-                                <td> Paid </td>
-                            @elseif($row->payment_status == 0)
-                                <td> <a class="btn btn-warning btn-sm" href="/payment/{{ $row->id }}/pay"> <i class="fa fa-paypal"></i>  Pay ${{$row->total_amount}}</a></td>
->>>>>>> 792175b804c024d6a9e3d7be1907c8b8adee88d5
-                            @endif
-                        @endcan
-<<<<<<< HEAD
+                          @can('pay-projects')
+                              @if ($row->paid == 1)
+                                  Paid
+                              @elseif($row->paid == 0)
+                                <form action="{{ url('charge') }}" method="post">
+                                    {{ csrf_field() }}
+                                    <input type="hidden" name="amount" value="{{$row->total_amount}}"/>
+                                    <input type="hidden" name="project_id" value="{{$row->project_id}}"/>
+                                    <input class="btn btn-warning btn-sm" type="submit" name="submit" value="Pay ${{$row->total_amount}}">
+                                </form>
+                              @endif
+                          @endcan
                       </td>
-=======
-                        </td>
->>>>>>> 792175b804c024d6a9e3d7be1907c8b8adee88d5
                     </tr>
                 @endforeach
             </tbody>
           </table>
-          <input type="hidden"  name="project_id" value="{{ $row->id }}">
         </div>
         <div class="card-footer">
             <a class="btn btn-primary btn-sm" href="{{ route('getprojectsindex') }}"> <i class="fa fa-reply"></i> Back</a>
