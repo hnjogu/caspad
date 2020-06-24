@@ -38,7 +38,8 @@
                         <td> {{$row->subject}} </td>
                         <td>
                             <video id="myVideo" width="300" height="100" controls>
-                              <source src="{{asset('/files/' .$row->file_name)}}" type="audio/ogg">
+                              <!-- <source src="{{asset('/files/' .$row->file_name)}}" type="audio/ogg"> -->
+                              <source src="{{url('/files/' .$row->file_name)}}" type="audio/ogg">
                               Your browser does not support HTML5 video.
                             </video>
 {{--                             <audio controls>
