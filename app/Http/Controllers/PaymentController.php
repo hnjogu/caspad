@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Omnipay\Omnipay;
 use App\Payment;
+use App\Project;
 use Illuminate\Support\Facades\Auth;
 
 class PaymentController extends Controller
@@ -17,24 +18,31 @@ class PaymentController extends Controller
         $this->gateway = Omnipay::create('PayPal_Rest');
         $this->gateway->setClientId(env('PAYPAL_CLIENT_ID'));
         $this->gateway->setSecret(env('PAYPAL_CLIENT_SECRET'));
-        $this->gateway->setTestMode(true); //set it to 'false' when go live
+        $this->gateway->setTestMode(false); //set it to 'false' when go live
     }
 
 
-    public function charge(Request $request)
+    public function charge(Request $request, $id)
     {
-        if($request->input('submit'))
-        {
+        $user = Auth::user()->id;
+        $row = Project::find($id);
+
             try {
                 $response = $this->gateway->purchase(array(
-                    'amount' => $request->input('amount'),
-                    'project_id' => $request->input('project_id'),
-                    'currency' => env('PAYPAL_CURRENCY'),
-                    'returnUrl' => url('paymentsuccess'),
-                    'cancelUrl' => url('paymenterror'),
+                  'amount' => $row->total_amount,
+                  'project_id' => $row->project_id,
+                  'user_id' => $row->$user,
+                  'currency' => env('PAYPAL_CURRENCY'),
+                  'returnUrl' => url('paymentsuccess'),
+                  'cancelUrl' => url('paymenterror'),
                 ))->send();
 
                 if ($response->isRedirect()) {
+                      // Update projects paid status
+                      $row = Project::find($id);
+                      $row->paid = 1;
+                      $row->save();
+
                     $response->redirect(); // this will automatically forward the customer
                 } else {
                     // not successful
@@ -43,7 +51,6 @@ class PaymentController extends Controller
             } catch(Exception $e) {
                 return $e->getMessage();
             }
-        }
     }
 
     public function payment_success(Request $request)
@@ -70,7 +77,6 @@ class PaymentController extends Controller
                     $payment = new Payment;
                     $payment->payment_id = $arr_body['id'];
                     $payment->user_id = Auth::user()->id;
-                    // $payment->project_id = $arr_body['project_id']['project_id'];
                     $payment->payer_id = $arr_body['payer']['payer_info']['payer_id'];
                     $payment->payer_email = $arr_body['payer']['payer_info']['email'];
                     $payment->amount = $arr_body['transactions'][0]['amount']['total'];
@@ -81,18 +87,18 @@ class PaymentController extends Controller
                 }
 
                 // return "Payment is successful. Your transaction id is: ". $arr_body['id'];
-                return redirect()->route('projects.index')->with('success', 'Payment Success');
+                return redirect()->route('projects.index')->with('success', 'Payment successful transaction ID is: '. $arr_body['id']);
             } else {
                 return $response->getMessage();
             }
         } else {
-            return 'Transaction is declined';
+            return redirect()->route('project.index')->with('success', 'Payment Cancelled');
         }
     }
 
     public function payment_error()
     {
-        return 'User is canceled the payment.';
+      return redirect()->route('projects.index')->with('success', 'Payment Error');
     }
 
 }

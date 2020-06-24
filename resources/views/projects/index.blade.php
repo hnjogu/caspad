@@ -6,7 +6,7 @@
 <div class="mt-4">
     <div class="card">
         <div class="card-header text-center bg-success">
-            <h3>Posted Projects</h3>
+            <h4>Posted Projects</h4>
         </div>
         <!-- /.card-header -->
         <div class="card-body p-0">
@@ -30,30 +30,20 @@
                         <td> {{$row->subject}} </td>
                         <td> ${{$row->total_amount}} </td>
                         <td>
-<<<<<<< HEAD
-                          @can('pay-projects')
-                              @if ($row->paid == 1)
-                                  Paid
-                              @elseif($row->paid == 0)
-                                <form action="{{ url('charge') }}" method="post">
-                                    {{ csrf_field() }}
-                                    <input type="hidden" name="amount" value="{{$row->total_amount}}"/>
-                                    <input type="hidden" name="project_id" value="{{$row->project_id}}"/>
-                                    <input class="btn btn-warning btn-sm" type="submit" name="submit" value="Pay ${{$row->total_amount}}">
-                                </form>
-                              @endif
-                          @endcan
-                      </td>
-=======
                             @can('pay-projects')
                                  @if($row->paid == 0)
-                                    <a class="btn btn-warning btn-sm" href="/payment/{{ $row->id }}/pay"> <i class="fa fa-paypal"></i>  Pay ${{$row->total_amount}}</a>
+                                    <a class="btn btn-warning btn-sm" href="/charge/{{ $row->id }}/pay"> <i class="fa fa-paypal"></i>  Pay ${{$row->total_amount}}</a>
+                                    <!-- <form action="{{ url('charge') }}" method="post">
+                                      {{ csrf_field() }}
+                                        <input type="hidden" name="amount" />
+                                        <input type="hidden" name="project_id" />
+                                        <input class="btn btn-warning btn-sm" type="submit" name="submit" value="Pay ${{$row->total_amount}}">
+                                    </form> -->
                                 @else
-                                    Paid
+                                    <h5><span class="badge badge-success"> <i class="fa fa-check-circle"></i> Paid</span></h5>
                                 @endif
                             @endcan
                         </td>
->>>>>>> 099b492ae9f6b2ce66a98deb7ff393dd3f36a2f5
                     </tr>
                 @endforeach
             </tbody>

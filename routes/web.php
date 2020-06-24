@@ -109,10 +109,12 @@ Route::group(['middleware' => ['auth']], function() {
 	});
 
 	// Payments
-	Route::post('charge', 'PaymentController@charge');
+	Route::get('charge/{id}/pay', 'PaymentController@charge');
 	Route::get('paymentsuccess', 'PaymentController@payment_success');
 	Route::get('paymenterror', 'PaymentController@payment_error');
 
+
+});
 Route::get('logout', 'Auth\LoginController@logout', function () {
 		    return abort(404);
 	});
